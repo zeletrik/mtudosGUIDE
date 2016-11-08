@@ -313,6 +313,10 @@ public class MainActivity extends AppCompatActivity {
 
 	}
 
+	public boolean getSaverMode(){
+		return dataSaver;
+	}
+
     public void  startTutorial(View view){
         Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
         startActivity(intent);
@@ -328,9 +332,6 @@ public class MainActivity extends AppCompatActivity {
 		if(mDrawer.isDrawerOpen(GravityCompat.START)){
 			mDrawer.closeDrawers();
 		} else finish();
-	}
-	public boolean getSaverMode(){
-		return dataSaver;
 	}
 
 
@@ -536,7 +537,6 @@ public class MainActivity extends AppCompatActivity {
 	public void tab6Click(View view){
 		SpecAct(true,"6");
 	}
-
 
 }
 
