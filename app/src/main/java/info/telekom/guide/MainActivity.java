@@ -244,7 +244,8 @@ public class MainActivity extends AppCompatActivity {
 				break;
 
 			case R.id.magicbook_frag:
-				fragment = new ConstructionFragment();
+				fragment = new MagicbookFragment();
+				break;
 
 			case R.id.others_frag:
 				fragment = new ConstructionFragment();
@@ -435,6 +436,48 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+	public void magicbookClick(View view){
+		Intent i = new Intent(this, WebViewActivity.class);
+		i.putExtra("URL","http://magicbook.telekom.intra/");
+		i.putExtra("title","Magic Book");
+		startActivity(i);
+	}
+
+	public void phoneBookClick(View view){
+		Intent i = new Intent(this, WebViewActivity.class);
+		i.putExtra("URL","http://telefonkonyv.telekom.intra/applications/phonebook/");
+		i.putExtra("title","Telefonkönyv");
+		startActivity(i);
+	}
+
+	public void phoneListkClick(View view){
+		Intent i = new Intent(this, WebViewActivity.class);
+		i.putExtra("URL","https://docs.google.com/gview?embedded=true&url=http://www.telekom.hu/static-la/sw/file/Akcios_keszulek_arlista_kijelolt_dijcsomagokhoz.pdf");
+		i.putExtra("title","Készülék árlista");
+		startActivity(i);
+	}
+
+	public void repairListClick(View view){
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		String url = "http://magicbook.telekom.intra/mb/tmobile/tevekenysegek/jav_kesz_atv/gyartok_gyartoi_szervizek.pdf";
+		intent.setData(Uri.parse(url));
+		startActivity(intent);
+	}
+
+	public void stickCompClick(View view){
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		String url = "http://magicbook.telekom.intra/mb/tmobile/tevekenysegek/jav_kesz_atv/Adateszkozok_operacios_rendszer_kompatibilitasa.pdf";
+		intent.setData(Uri.parse(url));
+		startActivity(intent);
+	}
+
+	public void accessoryListClick(View view){
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		String url = "http://magicbook.telekom.intra/mb/tmobile/arlistak/tartozek_arlista.xls";
+		intent.setData(Uri.parse(url));
+		startActivity(intent);
+	}
 
 
     /**

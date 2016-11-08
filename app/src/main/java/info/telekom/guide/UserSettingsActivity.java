@@ -2,7 +2,6 @@ package info.telekom.guide;
 
 
 
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;

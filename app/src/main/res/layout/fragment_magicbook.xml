@@ -1,0 +1,175 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_background"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/magicbookRSS">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="Magicbook hírfolyam"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/magicbookURL"
+            android:onClick="magicbookClick">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="Magicbook"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/phoneBook"
+            android:onClick="phoneBookClick">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="Telefonkönyv"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/repPDF"
+            android:onClick="repairListClick">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="gyártói szervizek"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/stickPDF"
+            android:onClick="stickCompClick">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="Stick kompatibilitás"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/accessoryXLS"
+            android:onClick="accessoryListClick">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="Tartozék árlista"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/phonesPDF"
+            android:onClick="phoneListkClick">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="Készülék árlista"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

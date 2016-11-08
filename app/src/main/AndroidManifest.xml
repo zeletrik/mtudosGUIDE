@@ -42,6 +42,10 @@
             android:label="Settings"
             android:theme="@style/SpecTheme" />
 
+        <activity android:name="info.telekom.guide.WebViewActivity"
+            android:label="Webview"
+            android:theme="@style/SpecTheme" />
+
 
     </application>
 
