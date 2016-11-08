@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Telefonok">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/alcatel_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Alcatel" />
+                <item
+                    android:id="@+id/apple_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Apple" />
+                <item
+                    android:id="@+id/balckberry_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="BlackBerry" />
+                <item
+                    android:id="@+id/coolpad_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Coolpad" />
+                <item
+                    android:id="@+id/honor_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Honor" />
+
+                <item
+                    android:id="@+id/HTC_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="HTC" />
+                <item
+                    android:id="@+id/huawei_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Huawei" />
+                <item
+                    android:id="@+id/lg_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="LG" />
+                <item
+                    android:id="@+id/microsoft_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Microsoft" />
+                <item
+                    android:id="@+id/samsung_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Samsung" />
+                <item
+                    android:id="@+id/sony_frag"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Sony" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Egyéb készülékek">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/watch_frag"
+                android:icon="@drawable/ic_watch"
+                android:title="Okosórák" />
+            <item
+                android:id="@+id/tablet_frag"
+                android:icon="@drawable/ic_tablet"
+                android:title="Tabletek" />
+            </group>
+            </menu>
+        </item>
+    <item android:title="Csomagok">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/postpaid_frag"
+                    android:icon="@drawable/ic_bill"
+                    android:title="Előfizetések" />
+                <item
+                    android:id="@+id/prepaid_frag"
+                    android:icon="@drawable/ic_domino"
+                    android:title="Domino" />
+                <item
+                    android:id="@+id/net_frag"
+                    android:icon="@drawable/ic_internet"
+                    android:title="Mobilinternet" />
+                </group>
+            </menu>
+     </item>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/magicbook_frag"
+            android:icon="@drawable/ic_magicbook"
+            android:title="Magicbook" />
+        <item
+            android:id="@+id/others_frag"
+            android:icon="@drawable/ic_settings"
+            android:title="Egyéb" />
+    </group>
+
+
+
+</menu>

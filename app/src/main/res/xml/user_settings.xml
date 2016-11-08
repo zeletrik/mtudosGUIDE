@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Mobiltudós Guide">
+
+        <Preference
+            android:title="Verzió"
+            android:summary="2.0.0"
+            android:key="version" />
+        <Preference
+            android:title="Verziótörténet"
+            android:summary="Unreleased"
+            android:key="chnageLog" />
+        <Preference
+            android:title="Visszajelzés"
+            android:summary="zelena.patrikgergo@ext.telekom.hu"
+            android:key="feedback" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Advanced">
+
+        <CheckBoxPreference
+            android:title="Data kímélő mód"
+            android:summary="Csak az információk letöltése a képek nélkül"
+            android:key="dataSaver"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:title="Offline mód"
+            android:summary="A készülék adatbázis letöltése"
+            android:key="offline"
+            android:defaultValue="false" />
+        <Preference
+            android:title="Frissítés"
+            android:key="update"
+            android:enabled="false"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Experimental">
+
+        <PreferenceScreen
+            android:key="experimental_category"
+            android:title="Kísérleti"
+            android:persistent="false">
+
+            <CheckBoxPreference
+                android:title="Sötét mód"
+                android:summary="Kísérleti - Instabilitást okozhat"
+                android:key="darkMode"
+                android:defaultValue="false" />
+
+            <!-- and other preference objects ... -->
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

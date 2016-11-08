@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_background"
+    android:layout_marginTop="70dp">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="15dp"
+            android:textSize="25dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:text="mobiltudós guide"
+            android:layout_gravity="center"
+            android:textColor="@color/magenta"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="A Mobiltudós kézikönyv digitális formája mely információkkal szolgál készülékekről, szolgáltatásokról és egyéb módokon segíti a Mobiltudósok munkáját."/>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mt_logo" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:text="Folyamatos fejlesztés alatt álló alkalmazás"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:layout_margin="15dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/magenta"
+            android:textSize="22dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Tutorial"
+            android:background="@drawable/item_bg"
+            android:onClick="startTutorial"/>
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

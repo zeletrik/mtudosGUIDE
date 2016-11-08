@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/magenta</item>
+        <item name="colorAccent">@color/magenta</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:textColor">@color/almostBlack</item>
+        <item name="theme_background">@color/white</item>
+        <item name="item_background">@color/white</item>
+    </style>
+
+    <style name="AppDarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/magenta</item>
+        <item name="colorAccent">@color/magenta</item>
+        <item name="theme_background">@color/almostBlack</item>
+        <item name="item_background">@color/black</item>
+
+    </style>
+
+    <style name="AppIntroTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/magenta</item>
+        <item name="colorAccent">@color/magenta</item>
+    </style>
+
+    <style name="SettingsDarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/magenta</item>
+        <item name="colorAccent">@color/magenta</item>
+       <item name="android:background">@color/almostBlack</item>
+    </style>
+
+    <style name="SpecTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/magenta</item>
+        <item name="colorAccent">@color/magenta</item>
+        <item name="theme_background">@color/white</item>
+        <item name="item_background">@color/white</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:textColor">@color/magenta</item>
+    </style>
+
+    <style name="SpecDarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/magenta</item>
+        <item name="colorAccent">@color/magenta</item>
+        <item name="theme_background">@color/almostBlack</item>
+        <item name="item_background">@color/black</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:textColor">@color/magenta</item>
+    </style>
+
+</resources>
