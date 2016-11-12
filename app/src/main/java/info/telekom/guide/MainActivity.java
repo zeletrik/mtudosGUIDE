@@ -38,10 +38,6 @@ import org.springframework.web.client.RestTemplate;
 
 public class MainActivity extends AppCompatActivity {
 
-	// fejléc tárolás
-	private CharSequence mTitle;
-	// pozíció megtartást segítő változók
-
 	private String brand;
 
     String verName;
@@ -55,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
      */
 	private DrawerLayout mDrawer;
 	private Toolbar toolbar;
-	private NavigationView nvDrawer;
+	private  NavigationView nvDrawer;
 	private ActionBarDrawerToggle drawerToggle;
 
 	private boolean isDark = false;
