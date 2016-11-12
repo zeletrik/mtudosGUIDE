@@ -1,0 +1,51 @@
+<!-- postitem.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_margin="5dp"
+
+    >
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/postTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:maxLines="2"
+        android:text="This is a good Post, I hope it will have 2 lines. Please give me 2 lines"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/postCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:maxLines="2"
+        android:text="April 12, 2013"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/postDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:maxLines="1"
+        android:text="April 12, 2013"
+        android:textSize="12sp"
+        />
+</LinearLayout>
+</RelativeLayout>

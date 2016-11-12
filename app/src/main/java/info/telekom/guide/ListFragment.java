@@ -25,8 +25,8 @@ import java.io.InputStream;
 import java.net.URL;
 
 
-import info.telekom.guide.rest.Counter;
-import info.telekom.guide.rest.Info;
+import info.telekom.guide.rest_modell.Counter;
+import info.telekom.guide.rest_modell.Info;
 
 public class ListFragment extends Fragment {
 

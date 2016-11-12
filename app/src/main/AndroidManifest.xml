@@ -46,6 +46,10 @@
             android:label="Webview"
             android:theme="@style/SpecTheme" />
 
+        <activity android:name="info.telekom.guide.RssActivity"
+            android:label="RSS"
+            android:theme="@style/SpecTheme" />
+
 
     </application>
 

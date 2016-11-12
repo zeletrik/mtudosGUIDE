@@ -39,5 +39,4 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.3.2'
     compile 'com.android.support:design:23.1.1'
     compile 'com.android.support:support-annotations:24.2.0'
-
 }

@@ -22,7 +22,7 @@ import android.view.MenuItem;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-import info.telekom.guide.rest.Version;
+import info.telekom.guide.rest_modell.Version;
 
 /**
  * Created by patrik on 2016.11.03..

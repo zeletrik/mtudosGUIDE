@@ -1,4 +1,4 @@
-package info.telekom.guide.rest;
+package info.telekom.guide.rest_modell;
 
 /**
  * Created by patrik on 2016.10.09..

@@ -1,7 +1,7 @@
 package info.telekom.guide;
 
 
-import info.telekom.guide.rest.Version;
+import info.telekom.guide.rest_modell.Version;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -12,7 +12,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -20,7 +19,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -33,7 +31,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import android.support.design.widget.Snackbar;
-import android.widget.TextView;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
@@ -479,6 +476,10 @@ public class MainActivity extends AppCompatActivity {
 		startActivity(intent);
 	}
 
+	public void rssRead(View view) {
+		Intent i = new Intent(this, RssActivity.class);
+		startActivity(i);
+	}
 
     /**
 	 *  Phone/Tablet Click-ek
