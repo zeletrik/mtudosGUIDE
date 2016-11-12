@@ -5,6 +5,8 @@ package info.telekom.guide.rest_modell;
  */
 public class Specs {
 
+    private String name;
+
     private String displayType;
     private String displaySize;
     private String displayRes;
@@ -28,6 +30,7 @@ public class Specs {
     private String radio;
     private String ipCertified;
 
+    public String getName() { return name; }
 
     public String getDisplayType() {
         return displayType;

@@ -40,11 +40,12 @@
             android:layout_margin="16dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
+            android:padding="5dp"
             android:id="@+id/watch1"
             android:background="@drawable/item_bg">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -54,10 +55,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_1"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_1"
                 android:text="Apple Watch S1"/>
@@ -67,46 +68,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_1"
                 android:layout_toRightOf="@+id/pic_1"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip1Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_1"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip1Fix"
-                android:text="X7"
-                android:id="@+id/ip1" />
+                android:text="IP : X7 "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip1Fix"
                 android:layout_toRightOf="@+id/pic_1"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp1Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip1Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp1Fix"
-                android:text="iOS 8.2"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp1" />
+                android:text="Kompatibilis: iOS8.2"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -115,11 +93,12 @@
             android:layout_margin="16dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
+            android:padding="5dp"
             android:id="@+id/watch2"
             android:background="@drawable/item_bg">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -129,10 +108,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_2"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_2"
                 android:text="Apple Watch S2"/>
@@ -142,46 +121,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_2"
                 android:layout_toRightOf="@+id/pic_2"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip2Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_2"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip2Fix"
-                android:text="ISO 22810:2010"
-                android:id="@+id/ip2" />
+                android:text="IP : ISO 22810:2010"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip2Fix"
                 android:layout_toRightOf="@+id/pic_2"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp2Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip2Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp2Fix"
-                android:text="iOS 8.2"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp2" />
+                android:text="Kompatibilis: iOS8.2"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -192,7 +148,8 @@
             android:padding="10dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
-            android:id="@+id/androidWatch">
+            android:id="@+id/androidWatch"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -214,10 +171,12 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch3"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp"
+            >
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -227,10 +186,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_3"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_3"
                 android:text="Huawei Watch"/>
@@ -240,46 +199,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_3"
                 android:layout_toRightOf="@+id/pic_3"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip3Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_3"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip3Fix"
-                android:text="67"
-                android:id="@+id/ip3" />
+                android:text="IP : 67"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip3Fix"
                 android:layout_toRightOf="@+id/pic_3"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp3Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip3Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp3Fix"
-                android:text="Android 4.3 / iOS 8.2"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp3" />
+                android:text="Kompatibilis: Android 4.3 / iOS8.2"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -289,10 +225,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch4"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -302,10 +239,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_4"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_4"
                 android:text="LG Watch Urbane"/>
@@ -315,46 +252,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_4"
                 android:layout_toRightOf="@+id/pic_4"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip4Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_4"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip4Fix"
-                android:text="67"
-                android:id="@+id/ip4" />
+                android:text="IP : 67"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip4Fix"
                 android:layout_toRightOf="@+id/pic_4"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp4Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip4Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp4Fix"
-                android:text="Android 4.3 / iOS 8.2"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp4" />
+                android:text="Kompatibilis: Android 4.3 / iOS8.2"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -387,10 +301,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch5"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -400,10 +315,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_5"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_5"
                 android:text="Samsung Gear Fit2"/>
@@ -413,46 +328,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_5"
                 android:layout_toRightOf="@+id/pic_5"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip5Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_5"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip5Fix"
-                android:text="68"
-                android:id="@+id/ip5" />
+                android:text="IP: 68"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip5Fix"
                 android:layout_toRightOf="@+id/pic_5"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp5Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip5Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp5Fix"
-                android:text="Galaxy eszközök: Android 4.3 és 1,5 GB RAM / Android 4.4 és 1,5 GB RAM"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp5" />
+                android:text="Kompatibilis: Galaxy eszközök: Android 4.3 és 1,5 GB RAM / Android 4.4 és 1,5 GB RAM" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -462,10 +354,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch6"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -475,10 +368,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_6"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_6"
                 android:text="RUNTASTIC BASIC"/>
@@ -488,46 +381,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_6"
                 android:layout_toRightOf="@+id/pic_6"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip6Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_6"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip6Fix"
-                android:text="100 m-ig vízálló"
-                android:id="@+id/ip6" />
+                android:text="IP : 100 m-ig vízálló"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip6Fix"
                 android:layout_toRightOf="@+id/pic_6"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp6Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip6Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp6Fix"
-                android:text="Android 4.3 / iOS 7 /  WP 8.1"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp6" />
+                android:text="Kompatibilis: Android 4.3 / iOS7 /  WP 8.1"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -537,10 +407,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch7"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -550,10 +421,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_7"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_7"
                 android:text="RUNTASTIC FUN"/>
@@ -563,46 +434,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_7"
                 android:layout_toRightOf="@+id/pic_7"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip7Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_7"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip7Fix"
-                android:text="100 m-ig vízálló"
-                android:id="@+id/ip7" />
+                android:text="IP : 100 m-ig vízálló"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip7Fix"
                 android:layout_toRightOf="@+id/pic_7"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp7Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip7Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp7Fix"
-                android:text="Android 4.3 / iOS 7 /  WP 8.1"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp7" />
+                android:text="Kompatibilis: Android 4.3 / iOS7 /  WP 8.1"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -612,10 +460,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch8"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -625,10 +474,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_8"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_8"
                 android:text="RUNTASTIC GPS WATCH"/>
@@ -638,47 +487,25 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_8"
                 android:layout_toRightOf="@+id/pic_8"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip8Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_8"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip8Fix"
-                android:text=" n/a"
-                android:id="@+id/ip8" />
+                android:text="IP : n/a"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip8Fix"
                 android:layout_toRightOf="@+id/pic_8"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp8Fix"
-                android:text="Egyéb:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip8Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp8Fix"
-                android:paddingBottom="5dp"
-                android:paddingRight="5dp"
-                android:text=" A Connect szoftver segítségével gyorsan és egyszerűen feltölthetőek a rögzített adatok a runtastic.com oldalra. Csak csatlakoztassa az órát a számítógépéhez, és már töltődik is minden adat a személyes fiókjába, ahol megtekintheti a statisztikákat és grafikonokat, elemezheti és megoszthatja az adatokat, melyek újabb célok elérésére ösztönöznek."
-                android:id="@+id/comp8" />
+                android:text="Egyéb: A Connect szoftver segítségével gyorsan és egyszerűen feltölthetőek a rögzített adatok a runtastic.com oldalra. Csak csatlakoztassa az órát a számítógépéhez, és már töltődik is minden adat a személyes fiókjába, ahol megtekintheti a statisztikákat és grafikonokat, elemezheti és megoszthatja az adatokat, melyek újabb célok elérésére ösztönöznek."
+                />
         </RelativeLayout>
 
         <RelativeLayout
@@ -711,10 +538,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch9"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -724,10 +552,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_9"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_9"
                 android:text="Huawei B0"/>
@@ -737,46 +565,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_9"
                 android:layout_toRightOf="@+id/pic_9"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip9Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_9"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip9Fix"
-                android:text="68"
-                android:id="@+id/ip9" />
+                android:text="IP : 68"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip9Fix"
                 android:layout_toRightOf="@+id/pic_9"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp9Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip9Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp9Fix"
-                android:text="Android 4.4 / iOS 7"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp9" />
+                android:text="Kompatibilis: Android 4.4 / iOS7"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -786,10 +591,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch10"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -799,10 +605,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_10"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_10"
                 android:text="Samsung Gear S2"/>
@@ -812,46 +618,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_10"
                 android:layout_toRightOf="@+id/pic_10"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip10Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_10"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip10Fix"
-                android:text="68"
-                android:id="@+id/ip10" />
+                android:text="IP : 68"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip10Fix"
                 android:layout_toRightOf="@+id/pic_10"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp10Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip10Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp10Fix"
-                android:text="Android 4.3"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp10" />
+                android:text="Kompatibilis: Android 4.3"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -861,10 +644,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch11"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -874,10 +658,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_11"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_11"
                 android:text="Alcatel GO Watch"/>
@@ -887,46 +671,24 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_11"
                 android:layout_toRightOf="@+id/pic_11"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip11Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_11"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip11Fix"
-                android:text="67"
-                android:id="@+id/ip11" />
+                android:text="IP : 67"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip11Fix"
                 android:layout_toRightOf="@+id/pic_11"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp11Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip11Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp11Fix"
-                android:text="Android 4.3 / iOS 7"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp11" />
+                android:text="Kompatibilis: Android 4.3 / iOS7"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -936,10 +698,11 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/watch12"
-            android:background="@drawable/item_bg">
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:paddingStart="10dp"
                 android:layout_margin="5dp"
                 android:layout_centerVertical="true"
@@ -949,10 +712,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/pic_12"
-                android:textSize="20dp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:textColor="#E20074"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_12"
                 android:text="MYKRONOZ ZeClock"/>
@@ -962,46 +725,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_12"
                 android:layout_toRightOf="@+id/pic_12"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/ip12Fix"
-                android:text="IP:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/name_12"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/ip12Fix"
-                android:text="100m-ig vízálló"
-                android:id="@+id/ip12" />
+                android:text="IP : 100m-ig vízálló"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ip12Fix"
                 android:layout_toRightOf="@+id/pic_12"
-                android:textSize="16dp"
-                android:layout_marginStart="15dp"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/comp12Fix"
-                android:text="Kompatibilis:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/ip12Fix"
-                android:textSize="14dp"
-                android:textColor="#E20074"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/comp12Fix"
-                android:text="Android 4.3 / iOS 7"
-                android:paddingBottom="5dp"
-                android:id="@+id/comp12" />
+                android:text="Kompatibilis: Android 4.3 / iOS7"/>
         </RelativeLayout>
 
     </LinearLayout>

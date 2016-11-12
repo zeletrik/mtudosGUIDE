@@ -427,7 +427,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void CheckVersion(){
 
-        if (checkInternet() == true) {
+        if (checkInternet()) {
             new HttpRequestVersion().execute();
         }
 

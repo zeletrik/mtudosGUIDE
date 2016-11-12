@@ -1,19 +1,22 @@
 package info.telekom.guide;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * Created by patrik on 2016.11.04..
  */
 
 public class SpecsAvtivity extends ActionBarActivity {
+
+    View rootView;
+    String brand;
+    String phone;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,13 +44,15 @@ public class SpecsAvtivity extends ActionBarActivity {
         Fragment fragment = new SpecsFragment();
 
         mainBundle  = getIntent().getExtras();
-        String brand = mainBundle.getString("brand");
-        String phone = mainBundle.getString("phone");
-
+        brand = mainBundle.getString("brand");
+        phone = mainBundle.getString("phone");
 
         Bundle bundle = new Bundle();
         bundle.putString("brand", brand);
         bundle.putString("phone", phone);
+
+
+
         fragment.setArguments(bundle);
 
         getFragmentManager().beginTransaction()
@@ -74,4 +79,4 @@ public class SpecsAvtivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-}
+    }
