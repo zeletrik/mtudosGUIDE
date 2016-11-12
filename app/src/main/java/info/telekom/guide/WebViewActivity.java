@@ -1,5 +1,6 @@
 package info.telekom.guide;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
@@ -17,6 +18,18 @@ public class WebViewActivity extends ActionBarActivity {
     private WebView webView;
 
     public void onCreate(Bundle savedInstanceState) {
+
+        Bundle mainBundle  = getIntent().getExtras();
+
+        boolean tabletMode = mainBundle.getBoolean("tabMode");
+
+        if (tabletMode) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+
+
         super.onCreate(savedInstanceState);
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
@@ -24,7 +37,6 @@ public class WebViewActivity extends ActionBarActivity {
 
         setContentView(R.layout.webview);
 
-        Bundle mainBundle  = getIntent().getExtras();
         String title = mainBundle.getString("title");
         String URL = mainBundle.getString("URL");
 

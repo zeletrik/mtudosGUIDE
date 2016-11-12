@@ -7,16 +7,15 @@
     android:paddingRight="16dp"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
-    android:layout_margin="5dp"
-
+    android:background="@drawable/item_bg"
     >
 
 
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:padding="5dp">
     <TextView
         android:id="@+id/postTitleLabel"
         android:layout_width="wrap_content"
@@ -25,8 +24,9 @@
         android:maxLines="2"
         android:text="This is a good Post, I hope it will have 2 lines. Please give me 2 lines"
         android:textIsSelectable="false"
-        android:textSize="16sp"
-        android:ellipsize="end"/>
+        android:textSize="14sp"
+        android:ellipsize="end"
+        />
 
     <TextView
         android:id="@+id/postCategoryLabel"
@@ -35,7 +35,7 @@
         android:layout_alignParentRight="true"
         android:maxLines="2"
         android:text="April 12, 2013"
-        android:textSize="14sp"
+        android:textSize="12sp"
         />
 
     <TextView
@@ -45,7 +45,7 @@
         android:layout_alignParentRight="true"
         android:maxLines="1"
         android:text="April 12, 2013"
-        android:textSize="12sp"
+        android:textSize="10sp"
         />
 </LinearLayout>
 </RelativeLayout>

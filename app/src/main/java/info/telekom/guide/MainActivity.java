@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
 	private boolean isDark = false;
 	private boolean dataSaver = false;
+	private boolean tabletMode = false;
+
 
     @SuppressWarnings("ResourceType")
 	@Override
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
 		if (smallestWidth > 720) {
 			// Ha több mint 720 DP (~Tablet) akkor landscape
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+			tabletMode = true;
 		}else {
 			// Különben portrait
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -438,6 +441,7 @@ public class MainActivity extends AppCompatActivity {
 		Intent i = new Intent(this, WebViewActivity.class);
 		i.putExtra("URL","http://magicbook.telekom.intra/");
 		i.putExtra("title","Magic Book");
+        i.putExtra("tabMode",tabletMode);
 		startActivity(i);
 	}
 
@@ -445,6 +449,7 @@ public class MainActivity extends AppCompatActivity {
 		Intent i = new Intent(this, WebViewActivity.class);
 		i.putExtra("URL","http://telefonkonyv.telekom.intra/applications/phonebook/");
 		i.putExtra("title","Telefonkönyv");
+        i.putExtra("tabMode",tabletMode);
 		startActivity(i);
 	}
 
@@ -452,6 +457,7 @@ public class MainActivity extends AppCompatActivity {
 		Intent i = new Intent(this, WebViewActivity.class);
 		i.putExtra("URL","https://docs.google.com/gview?embedded=true&url=http://www.telekom.hu/static-la/sw/file/Akcios_keszulek_arlista_kijelolt_dijcsomagokhoz.pdf");
 		i.putExtra("title","Készülék árlista");
+        i.putExtra("tabMode",tabletMode);
 		startActivity(i);
 	}
 
@@ -459,6 +465,7 @@ public class MainActivity extends AppCompatActivity {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		String url = "http://magicbook.telekom.intra/mb/tmobile/tevekenysegek/jav_kesz_atv/gyartok_gyartoi_szervizek.pdf";
 		intent.setData(Uri.parse(url));
+        intent.putExtra("tabMode",tabletMode);
 		startActivity(intent);
 	}
 
@@ -466,6 +473,7 @@ public class MainActivity extends AppCompatActivity {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		String url = "http://magicbook.telekom.intra/mb/tmobile/tevekenysegek/jav_kesz_atv/Adateszkozok_operacios_rendszer_kompatibilitasa.pdf";
 		intent.setData(Uri.parse(url));
+        intent.putExtra("tabMode",tabletMode);
 		startActivity(intent);
 	}
 
@@ -473,11 +481,14 @@ public class MainActivity extends AppCompatActivity {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		String url = "http://magicbook.telekom.intra/mb/tmobile/arlistak/tartozek_arlista.xls";
 		intent.setData(Uri.parse(url));
+        intent.putExtra("tabMode",tabletMode);
 		startActivity(intent);
 	}
 
 	public void rssRead(View view) {
 		Intent i = new Intent(this, RssActivity.class);
+        i.putExtra("tabMode",tabletMode);
+        i.putExtra("darkMode",isDark);
 		startActivity(i);
 	}
 
@@ -492,12 +503,14 @@ public class MainActivity extends AppCompatActivity {
 			i.putExtra("brand", brand);
 			i.putExtra("phone", no);
 			i.putExtra("darkMode", isDark);
+            i.putExtra("tabMode",tabletMode);
 			startActivity(i);
 		} else{
 			Intent i = new Intent(MainActivity.this, SpecsAvtivity.class);
 			i.putExtra("brand", "tablet");
 			i.putExtra("phone", no);
 			i.putExtra("darkMode", isDark);
+            i.putExtra("tabMode",tabletMode);
 			startActivity(i);
 		}
 	}

@@ -2,6 +2,7 @@ package info.telekom.guide;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -20,6 +21,14 @@ public class SpecsAvtivity extends ActionBarActivity {
         Bundle mainBundle  = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
 
+        boolean tabletMode = mainBundle.getBoolean("tabMode");
+
+        if (tabletMode) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+
         if(isDark){
             setTheme(R.style.SpecDarkTheme);
         }
@@ -34,6 +43,7 @@ public class SpecsAvtivity extends ActionBarActivity {
         mainBundle  = getIntent().getExtras();
         String brand = mainBundle.getString("brand");
         String phone = mainBundle.getString("phone");
+
 
         Bundle bundle = new Bundle();
         bundle.putString("brand", brand);
