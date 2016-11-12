@@ -23,7 +23,6 @@ public class RssHandler extends DefaultHandler {
     private boolean parsingPubDate;
 
     public RssHandler() {
-        //Initializes a new ArrayList that will hold all the generated RSS items.
         rssItemList = new ArrayList<RssItem>();
     }
 
@@ -32,7 +31,7 @@ public class RssHandler extends DefaultHandler {
     }
 
 
-    //Called when an opening tag is reached, such as <item> or <title>
+    //Kezdő elem
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         if (qName.equals("item"))
@@ -47,7 +46,7 @@ public class RssHandler extends DefaultHandler {
             parsingPubDate = true;
     }
 
-    //Called when a closing tag is reached, such as </item> or </title>
+    //Záró elem
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if (qName.equals("item")) {
@@ -64,7 +63,7 @@ public class RssHandler extends DefaultHandler {
             parsingPubDate = false;
     }
 
-    //Goes through character by character when parsing whats inside of a tag.
+    //Kezdő és záró tag közötti feldolgozás
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         if (currentItem != null) {
