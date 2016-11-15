@@ -1,0 +1,1080 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_background"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/NetPlusz">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:text="NetPlusz"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netplusS">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netplusStext"
+                android:text="NetPlusz S"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusStext"
+                android:id="@+id/price1FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusStext"
+                android:layout_toRightOf="@+id/price1FIX"
+                android:id="@+id/price1"
+                android:text="690 Ft (1090 Ft)"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price1FIX"
+                android:id="@+id/internet1FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price1FIX"
+                android:layout_toRightOf="@+id/internet1FIX"
+                android:id="@+id/internet1"
+                android:text="200 mb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet1FIX"
+                android:id="@+id/speed1Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet1FIX"
+                android:layout_toRightOf="@+id/speed1Fix"
+                android:id="@+id/speed1"
+                android:text="30 Mbit/S vagy díjcsomagtól függően"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netplusM">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netplusMtext"
+                android:text="NetPlusz M"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusMtext"
+                android:id="@+id/price2FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusMtext"
+                android:layout_toRightOf="@+id/price2FIX"
+                android:id="@+id/price2"
+                android:text="1190 Ft (1990 Ft)"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price2FIX"
+                android:id="@+id/internet2FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price2FIX"
+                android:layout_toRightOf="@+id/internet2FIX"
+                android:id="@+id/internet2"
+                android:text="500 mb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet2FIX"
+                android:id="@+id/speed2Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet2FIX"
+                android:layout_toRightOf="@+id/speed2Fix"
+                android:id="@+id/speed2"
+                android:text="30 Mbit/S vagy díjcsomagtól függően"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netplusL">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netplusLtext"
+                android:text="NetPlusz M"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusLtext"
+                android:id="@+id/price3FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusLtext"
+                android:layout_toRightOf="@+id/price3FIX"
+                android:id="@+id/price3"
+                android:text="1590 Ft (2490 Ft)"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price3FIX"
+                android:id="@+id/internet3FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price3FIX"
+                android:layout_toRightOf="@+id/internet3FIX"
+                android:id="@+id/internet3"
+                android:text="1 Gb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet3FIX"
+                android:id="@+id/speed3Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet3FIX"
+                android:layout_toRightOf="@+id/speed3Fix"
+                android:id="@+id/speed3"
+                android:text="300 Mbit/S"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netplusXL">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netplusXLtext"
+                android:text="NetPlusz XL"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusXLtext"
+                android:id="@+id/price4FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusXLtext"
+                android:layout_toRightOf="@+id/price4FIX"
+                android:id="@+id/price4"
+                android:text="2590 Ft (4490 Ft)"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price4FIX"
+                android:id="@+id/internet4FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price4FIX"
+                android:layout_toRightOf="@+id/internet4FIX"
+                android:id="@+id/internet4"
+                android:text="3 Gb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet4FIX"
+                android:id="@+id/speed4Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet4FIX"
+                android:layout_toRightOf="@+id/speed4Fix"
+                android:id="@+id/speed4"
+                android:text="300 Mbit/S"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netplusXXL">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netplusXXLtext"
+                android:text="NetPlusz XXL"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusXXLtext"
+                android:id="@+id/price5FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netplusXXLtext"
+                android:layout_toRightOf="@+id/price5FIX"
+                android:id="@+id/price5"
+                android:text="3290 Ft (6390 Ft)"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price5FIX"
+                android:id="@+id/internet5FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price5FIX"
+                android:layout_toRightOf="@+id/internet5FIX"
+                android:id="@+id/internet5"
+                android:text="5 Gb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet5FIX"
+                android:id="@+id/speed5Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet5FIX"
+                android:layout_toRightOf="@+id/speed5Fix"
+                android:id="@+id/speed5"
+                android:text="300 Mbit/S"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netandroll">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:text="Net&amp;Roll (Csak data)"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netrollXS">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netrollXStext"
+                android:text="Net&amp;Roll XS"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollXStext"
+                android:id="@+id/price6FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollXStext"
+                android:layout_toRightOf="@+id/price6FIX"
+                android:id="@+id/price6"
+                android:text="3390 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price6FIX"
+                android:id="@+id/atk6FIX"
+                android:text="ATK Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price6FIX"
+                android:layout_toRightOf="@+id/atk6FIX"
+                android:id="@+id/atk6"
+                android:text="2690 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/atk6FIX"
+                android:id="@+id/internet6FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/atk6FIX"
+                android:layout_toRightOf="@+id/internet6FIX"
+                android:id="@+id/internet6"
+                android:text="3 Gb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet6FIX"
+                android:id="@+id/speed6Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet6FIX"
+                android:layout_toRightOf="@+id/speed6Fix"
+                android:id="@+id/speed6"
+                android:text="30 Mbit/S"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netrollS">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netrollStext"
+                android:text="Net&amp;Roll S"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollStext"
+                android:id="@+id/price7FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollStext"
+                android:layout_toRightOf="@+id/price7FIX"
+                android:id="@+id/price7"
+                android:text="4390 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price7FIX"
+                android:id="@+id/atk7FIX"
+                android:text="ATK Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price7FIX"
+                android:layout_toRightOf="@+id/atk7FIX"
+                android:id="@+id/atk7"
+                android:text="3490 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/atk7FIX"
+                android:id="@+id/internet7FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/atk7FIX"
+                android:layout_toRightOf="@+id/internet7FIX"
+                android:id="@+id/internet7"
+                android:text="8 Gb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet7FIX"
+                android:id="@+id/speed7Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet7FIX"
+                android:layout_toRightOf="@+id/speed7Fix"
+                android:id="@+id/speed7"
+                android:text="30 Mbit/S"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netrollM">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netrollMtext"
+                android:text="Net&amp;Roll M"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollMtext"
+                android:id="@+id/price8FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollMtext"
+                android:layout_toRightOf="@+id/price8FIX"
+                android:id="@+id/price8"
+                android:text="7690 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price8FIX"
+                android:id="@+id/atk8FIX"
+                android:text="ATK Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price8FIX"
+                android:layout_toRightOf="@+id/atk8FIX"
+                android:id="@+id/atk8"
+                android:text="6090 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/atk8FIX"
+                android:id="@+id/internet8FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/atk8FIX"
+                android:layout_toRightOf="@+id/internet8FIX"
+                android:id="@+id/internet8"
+                android:text="20 Gb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet8FIX"
+                android:id="@+id/speed8Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet8FIX"
+                android:layout_toRightOf="@+id/speed8Fix"
+                android:id="@+id/speed8"
+                android:text="300 Mbit/S"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netrollL">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netrollLtext"
+                android:text="Net&amp;Roll L"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollLtext"
+                android:id="@+id/price9FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollLtext"
+                android:layout_toRightOf="@+id/price9FIX"
+                android:id="@+id/price9"
+                android:text="9890 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price9FIX"
+                android:id="@+id/atk9FIX"
+                android:text="ATK Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price9FIX"
+                android:layout_toRightOf="@+id/atk9FIX"
+                android:id="@+id/atk9"
+                android:text="7890 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/atk9FIX"
+                android:id="@+id/internet9FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/atk9FIX"
+                android:layout_toRightOf="@+id/internet9FIX"
+                android:id="@+id/internet9"
+                android:text="30 Gb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet9FIX"
+                android:id="@+id/speed9Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet9FIX"
+                android:layout_toRightOf="@+id/speed9Fix"
+                android:id="@+id/speed9"
+                android:text="300 Mbit/S"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/netrollDom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/netrollDomtext"
+                android:text="Domino Net&amp;Roll Plus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollDomtext"
+                android:id="@+id/price10FIX"
+                android:text="Díj: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/netrollDomtext"
+                android:layout_toRightOf="@+id/price10FIX"
+                android:id="@+id/price10"
+                android:text="1000 Ft"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/price10FIX"
+                android:id="@+id/internet10FIX"
+                android:text="Adatforgalom: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/price10FIX"
+                android:layout_toRightOf="@+id/internet10FIX"
+                android:id="@+id/internet10"
+                android:text="500 Mb"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/internet10FIX"
+                android:id="@+id/speed10Fix"
+                android:text="Max sávszél: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/internet10FIX"
+                android:layout_toRightOf="@+id/speed10Fix"
+                android:id="@+id/speed10"
+                android:text="30 Mbit/S"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>

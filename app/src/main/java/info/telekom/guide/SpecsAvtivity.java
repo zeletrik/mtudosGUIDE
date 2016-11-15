@@ -60,11 +60,7 @@ public class SpecsAvtivity extends ActionBarActivity {
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
                 .commit();
-
-
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

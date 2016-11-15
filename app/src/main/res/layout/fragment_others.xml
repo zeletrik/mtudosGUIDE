@@ -88,30 +88,6 @@
             android:padding="10dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
-            android:id="@+id/appProposer"
-            android:onClick="AppsActivity">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="16dp"
-                android:text="App ajánló"/>
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
             android:id="@+id/apn"
             >
 

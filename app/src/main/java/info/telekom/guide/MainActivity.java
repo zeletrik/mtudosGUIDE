@@ -5,6 +5,7 @@ import info.telekom.guide.fragments.AboutFragment;
 import info.telekom.guide.fragments.ChangeLogFragment;
 import info.telekom.guide.fragments.ConstructionFragment;
 import info.telekom.guide.fragments.HomeFragment;
+import info.telekom.guide.fragments.InternetFragment;
 import info.telekom.guide.fragments.ListFragment;
 import info.telekom.guide.fragments.MagicbookFragment;
 import info.telekom.guide.fragments.OthersFragment;
@@ -15,6 +16,7 @@ import info.telekom.guide.fragments.WatchFragment;
 import info.telekom.guide.rest_modell.Schedule;
 import info.telekom.guide.rest_modell.Version;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.Notification;
@@ -250,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
 				break;
 
 			case R.id.net_frag:
-				fragment = new ConstructionFragment();
+				fragment = new InternetFragment();
 				break;
 
 			case R.id.magicbook_frag:
@@ -482,7 +484,6 @@ public class MainActivity extends AppCompatActivity {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		String url = "http://magicbook.telekom.intra/mb/tmobile/tevekenysegek/jav_kesz_atv/gyartok_gyartoi_szervizek.pdf";
 		intent.setData(Uri.parse(url));
-        intent.putExtra("tabMode",tabletMode);
 		startActivity(intent);
 	}
 
@@ -490,7 +491,6 @@ public class MainActivity extends AppCompatActivity {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		String url = "http://magicbook.telekom.intra/mb/tmobile/tevekenysegek/jav_kesz_atv/Adateszkozok_operacios_rendszer_kompatibilitasa.pdf";
 		intent.setData(Uri.parse(url));
-        intent.putExtra("tabMode",tabletMode);
 		startActivity(intent);
 	}
 
@@ -517,11 +517,11 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public void emailCollectIn(View view){
-		Intent i = new Intent(this, WebViewActivity.class);
-		i.putExtra("URL","http://ugyfelelmeny.telekom.intra/mobiltudik/Default.aspx");
-		i.putExtra("title","Email gyűjtő - INTRANET");
-		i.putExtra("tabMode",tabletMode);
-		startActivity(i);
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		String url ="http://ugyfelelmeny.telekom.intra/mobiltudik/Default.aspx";
+		intent.setData(Uri.parse(url));
+		startActivity(intent);
+
 	}
 
 	public void emailCollectOut(View view){

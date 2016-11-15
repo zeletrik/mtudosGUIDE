@@ -13,6 +13,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
@@ -30,6 +31,9 @@ import info.telekom.guide.rest_modell.Version;
 
 
 public class UserSettingsActivity  extends ActionBarActivity {
+
+    private int saverMode = 0;
+    private  int offline = 0;
 
 
     @Override
@@ -60,7 +64,26 @@ public class UserSettingsActivity  extends ActionBarActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
+
             addPreferencesFromResource(R.xml.user_settings);
+
+            Preference offlinePref = findPreference("offline");
+            Preference saverPref = findPreference("dataSaver");
+            Preference updatePref = findPreference("update");
+
+            SharedPreferences sharedPrefs = PreferenceManager
+                    .getDefaultSharedPreferences(UserSettingsActivity.this);
+
+            if(sharedPrefs.getBoolean("offline",false)){
+                saverPref.setEnabled(false);
+                offlinePref.setEnabled(true);
+                updatePref.setEnabled(true);
+            }else if(sharedPrefs.getBoolean("dataSaver",false)){
+                saverPref.setEnabled(true);
+                offlinePref.setEnabled(false);
+                updatePref.setEnabled(false);
+            }
+
 
             Preference myPref = findPreference("feedback");
             myPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -85,6 +108,9 @@ public class UserSettingsActivity  extends ActionBarActivity {
                     return true;
                 }
             });
+
+
+
         }
 
         @Override
@@ -108,8 +134,10 @@ public class UserSettingsActivity  extends ActionBarActivity {
 
                 if(sharedPreferences.getBoolean("dataSaver",false)){
                     pref.setEnabled(false);
+                    saverMode = 1;
                 }else{
                     pref.setEnabled(true);
+                    saverMode = -1;
                 }
                 restartApp();
             }

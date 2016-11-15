@@ -36,6 +36,7 @@
         <Preference
             android:title="Frissítés"
             android:key="update"
+            android:persistent="true"
             android:enabled="false"/>
 
 
