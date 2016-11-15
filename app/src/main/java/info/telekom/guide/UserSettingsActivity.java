@@ -32,18 +32,19 @@ import info.telekom.guide.rest_modell.Version;
 
 public class UserSettingsActivity  extends ActionBarActivity {
 
-    private int saverMode = 0;
-    private  int offline = 0;
-
+    private boolean darkMode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
 
         Bundle mainBundle  = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
 
         if(isDark){
             setTheme(R.style.SettingsDarkTheme);
+            darkMode = true;
         }
 
         super.onCreate(savedInstanceState);
@@ -78,15 +79,16 @@ public class UserSettingsActivity  extends ActionBarActivity {
                 saverPref.setEnabled(false);
                 offlinePref.setEnabled(true);
                 updatePref.setEnabled(true);
-            }else if(sharedPrefs.getBoolean("dataSaver",false)){
+            }else
+            if(sharedPrefs.getBoolean("dataSaver",false)){
                 saverPref.setEnabled(true);
                 offlinePref.setEnabled(false);
                 updatePref.setEnabled(false);
             }
 
 
-            Preference myPref = findPreference("feedback");
-            myPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            Preference fPref = findPreference("feedback");
+            fPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 public boolean onPreferenceClick(Preference preference) {
 
                    String version = BuildConfig.VERSION_NAME;
@@ -109,7 +111,25 @@ public class UserSettingsActivity  extends ActionBarActivity {
                 }
             });
 
+            Preference tutPref = findPreference("tutorial");
+            tutPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent intent = new Intent(UserSettingsActivity.this, TutorialActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+            });
 
+           Preference clPref = findPreference("changelog");
+            clPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                public boolean onPreferenceClick(Preference preference) {
+
+                    Intent intent = new Intent(UserSettingsActivity.this,ChangeLogActivity.class);
+                    intent.putExtra("darkMode",darkMode);
+                    startActivity(intent);
+                    return true;
+                }
+            });
 
         }
 
@@ -134,10 +154,8 @@ public class UserSettingsActivity  extends ActionBarActivity {
 
                 if(sharedPreferences.getBoolean("dataSaver",false)){
                     pref.setEnabled(false);
-                    saverMode = 1;
                 }else{
                     pref.setEnabled(true);
-                    saverMode = -1;
                 }
                 restartApp();
             }

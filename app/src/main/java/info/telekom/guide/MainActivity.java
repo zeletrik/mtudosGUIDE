@@ -3,7 +3,6 @@ package info.telekom.guide;
 
 import info.telekom.guide.fragments.AboutFragment;
 import info.telekom.guide.fragments.ChangeLogFragment;
-import info.telekom.guide.fragments.ConstructionFragment;
 import info.telekom.guide.fragments.HomeFragment;
 import info.telekom.guide.fragments.InternetFragment;
 import info.telekom.guide.fragments.ListFragment;
@@ -15,14 +14,12 @@ import info.telekom.guide.fragments.TabletFragment;
 import info.telekom.guide.fragments.WatchFragment;
 import info.telekom.guide.rest_modell.Schedule;
 import info.telekom.guide.rest_modell.Version;
-
-import android.app.Activity;
+;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -39,7 +36,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.style.URLSpan;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
@@ -116,25 +112,22 @@ public class MainActivity extends AppCompatActivity {
 
         CheckVersion();
 
-		// Set a Toolbar to replace the ActionBar.
+		// Toolbar az ActionBar helyére
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
-		// Find our drawer view
+		// DrawerLayout beálíltása
 		mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 		drawerToggle = setupDrawerToggle();
 
-		// Tie DrawerLayout events to the ActionBarToggle
+		// Toogle beállítása
 		mDrawer.addDrawerListener(drawerToggle);
 
-		// Find our drawer view
+		// DrawerView beállítása
 		nvDrawer = (NavigationView) findViewById(R.id.nvView);
-		// Setup drawer view
 		setupDrawerContent(nvDrawer);
 
-
-		Fragment fragment = new HomeFragment();
-
+		Fragment fragment = new AboutFragment();
 		if (fragment != null) {
 			FragmentManager fragmentManager = getFragmentManager();
 			fragmentManager.beginTransaction()

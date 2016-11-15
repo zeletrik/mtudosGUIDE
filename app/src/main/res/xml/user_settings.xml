@@ -11,11 +11,15 @@
         <Preference
             android:title="Verziótörténet"
             android:summary="Unreleased"
-            android:key="chnageLog" />
-        <Preference
+            android:key="changelog" />
+         <Preference
             android:title="Visszajelzés"
             android:summary="zelena.patrikgergo@ext.telekom.hu"
             android:key="feedback" />
+        <Preference
+            android:title="Bemutató"
+            android:summary="Az alkalmazás gyors áttekintése"
+            android:key="tutorial" />
 
 
     </PreferenceCategory>

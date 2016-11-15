@@ -29,7 +29,6 @@ public class UssdCodeActivity extends ActionBarActivity {
         boolean tabletMode = mainBundle.getBoolean("tabMode");
 
         if (tabletMode) {
-            tabletMode = true;
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }else {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);

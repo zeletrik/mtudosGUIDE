@@ -59,6 +59,12 @@
             android:label="USSD Codes"
             android:theme="@style/SpecTheme" />
 
+        <activity android:name="info.telekom.guide.ChangeLogActivity"
+            android:label="ChangeLog"
+            android:theme="@style/SettingsTheme">
+
+        </activity>
+
     </application>
 
 </manifest>
