@@ -12,6 +12,7 @@ import info.telekom.guide.fragments.PostPaidFragment;
 import info.telekom.guide.fragments.PrePaidFragment;
 import info.telekom.guide.fragments.TabletFragment;
 import info.telekom.guide.fragments.WatchFragment;
+import info.telekom.guide.rest_modell.Schedule;
 import info.telekom.guide.rest_modell.Version;
 
 import android.app.Fragment;
@@ -19,6 +20,7 @@ import android.app.FragmentManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -35,6 +37,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.style.URLSpan;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 	private String brand;
 
-    String verName;
+	String verName;
 
 	private static final int RESULT_SETTINGS = 1;
 
@@ -444,6 +447,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+	/**
+	 *
+	 *   View clicekre iterakciók
+     */
+
+
+
 	public void magicbookClick(View view){
 		Intent i = new Intent(this, WebViewActivity.class);
 		i.putExtra("URL","http://magicbook.telekom.intra/");
@@ -504,6 +514,56 @@ public class MainActivity extends AppCompatActivity {
 		i.putExtra("tabMode",tabletMode);
 		i.putExtra("darkMode",isDark);
 		startActivity(i);
+	}
+
+	public void emailCollectIn(View view){
+		Intent i = new Intent(this, WebViewActivity.class);
+		i.putExtra("URL","http://ugyfelelmeny.telekom.intra/mobiltudik/Default.aspx");
+		i.putExtra("title","Email gyűjtő - INTRANET");
+		i.putExtra("tabMode",tabletMode);
+		startActivity(i);
+	}
+
+	public void emailCollectOut(View view){
+		Intent i = new Intent(this, WebViewActivity.class);
+		i.putExtra("URL","http://www.telekom.hu/lakossagi/szolgaltatasok/mobiltudos");
+		i.putExtra("title","Email gyűjtő - Public");
+		i.putExtra("tabMode",tabletMode);
+		startActivity(i);
+	}
+
+	public void workSchedules(View view){
+		new HttpRequestSchedule().execute();
+	}
+
+	private class HttpRequestSchedule extends AsyncTask<Void, Void, Schedule> {
+
+
+		@Override
+		protected Schedule doInBackground(Void... params) {
+			try {
+
+
+				final String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/schedule/current";
+				RestTemplate restTemplate = new RestTemplate();
+				restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+				Schedule sch = restTemplate.getForObject(url, Schedule.class);
+				return sch;
+			} catch (Exception e) {
+				Log.e("Main Activity", e.getMessage(), e);
+			}
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(Schedule sch) {
+			Intent i = new Intent(MainActivity.this, WebViewActivity.class);
+			i.putExtra("URL", sch.getSchedule());
+			i.putExtra("title","Beosztás");
+			i.putExtra("tabMode",tabletMode);
+			startActivity(i);
+
+		}
 	}
 
     /**

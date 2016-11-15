@@ -1,12 +1,20 @@
 package info.telekom.guide;
 
+import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
+
+import info.telekom.guide.rest_modell.Schedule;
 
 /**
  * Created by patrik on 2016.11.08..
@@ -16,6 +24,7 @@ import android.webkit.WebViewClient;
 public class WebViewActivity extends ActionBarActivity {
 
     private WebView webView;
+    private String URL;
 
     public void onCreate(Bundle savedInstanceState) {
 
@@ -38,10 +47,9 @@ public class WebViewActivity extends ActionBarActivity {
         setContentView(R.layout.webview);
 
         String title = mainBundle.getString("title");
-        String URL = mainBundle.getString("URL");
+        URL = mainBundle.getString("URL");
 
         setTitle(title);
-
 
 
         webView = (WebView) findViewById(R.id.webView1);
@@ -83,6 +91,7 @@ public class WebViewActivity extends ActionBarActivity {
 
         }
     }
+
 
 
 }
