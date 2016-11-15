@@ -1,6 +1,17 @@
 package info.telekom.guide;
 
 
+import info.telekom.guide.fragments.AboutFragment;
+import info.telekom.guide.fragments.ChangeLogFragment;
+import info.telekom.guide.fragments.ConstructionFragment;
+import info.telekom.guide.fragments.HomeFragment;
+import info.telekom.guide.fragments.ListFragment;
+import info.telekom.guide.fragments.MagicbookFragment;
+import info.telekom.guide.fragments.OthersFragment;
+import info.telekom.guide.fragments.PostPaidFragment;
+import info.telekom.guide.fragments.PrePaidFragment;
+import info.telekom.guide.fragments.TabletFragment;
+import info.telekom.guide.fragments.WatchFragment;
 import info.telekom.guide.rest_modell.Version;
 
 import android.app.Fragment;
@@ -244,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
 				break;
 
 			case R.id.others_frag:
-				fragment = new ConstructionFragment();
+				fragment = new OthersFragment();
 				break;
 			default:
 				break;
@@ -485,6 +496,13 @@ public class MainActivity extends AppCompatActivity {
 		Intent i = new Intent(this, RssActivity.class);
         i.putExtra("tabMode",tabletMode);
         i.putExtra("darkMode",isDark);
+		startActivity(i);
+	}
+
+	public void ussdCodeActivity(View view){
+		Intent i = new Intent(this, UssdCodeActivity.class);
+		i.putExtra("tabMode",tabletMode);
+		i.putExtra("darkMode",isDark);
 		startActivity(i);
 	}
 

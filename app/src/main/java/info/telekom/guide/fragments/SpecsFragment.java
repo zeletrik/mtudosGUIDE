@@ -1,4 +1,4 @@
-package info.telekom.guide;
+package info.telekom.guide.fragments;
 
 /**
  * Created by patrik on 2016.02.13..
@@ -16,6 +16,7 @@ import android.widget.TextView;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import info.telekom.guide.R;
 import info.telekom.guide.rest_modell.Specs;
 
 public class SpecsFragment extends Fragment {

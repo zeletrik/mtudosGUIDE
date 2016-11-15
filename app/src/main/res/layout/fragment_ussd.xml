@@ -1,0 +1,238 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#E20074"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:text="Gyakori kódok"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text="*121# "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text=" Hívószám kijelzés"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text="*102# "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text=" Telefonegyenleg"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text="*111# "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text=" Önkiszolgáló ÜF.sz"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text="*104# "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text=" Domino Roaming BE"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text="*105# "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text=" Domino Roaming KI"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text="*#006# "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text=" IMEI lekérdezés"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text="##002# "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginTop="15dp"
+                android:text=" Hívásátriányítás törlése"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:layout_margin="15dp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/magenta"
+                    android:textSize="22dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="További USSD kódok"
+                    android:background="@drawable/item_bg"
+                    android:onClick="ussdCode"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:layout_margin="15dp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/magenta"
+                    android:textSize="22dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="További GSM kódok"
+                    android:background="@drawable/item_bg"
+                    android:onClick="gsmCode"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>

@@ -1,4 +1,4 @@
-package info.telekom.guide;
+package info.telekom.guide.fragments;
 
 /**
  * Created by patrik on 2016.02.13..
@@ -25,6 +25,8 @@ import java.io.InputStream;
 import java.net.URL;
 
 
+import info.telekom.guide.MainActivity;
+import info.telekom.guide.R;
 import info.telekom.guide.rest_modell.Counter;
 import info.telekom.guide.rest_modell.Info;
 

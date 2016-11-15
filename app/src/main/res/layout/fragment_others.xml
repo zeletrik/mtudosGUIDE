@@ -19,8 +19,8 @@
             android:padding="10dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
-            android:id="@+id/magicbookRSS"
-            android:onClick="rssRead">
+            android:id="@+id/emailCollectIntra"
+            android:onClick="emailCollectIn">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
                 android:textColor="#E20074"
                 android:textStyle="bold"
                 android:padding="16dp"
-                android:text="Magicbook hírfolyam"/>
+                android:text="E-mail gyűjtő (INTRANET)"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -42,8 +42,8 @@
             android:padding="10dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
-            android:id="@+id/magicbookURL"
-            android:onClick="magicbookClick">
+            android:id="@+id/emailCollectInter"
+            android:onClick="emailCollectOut">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
                 android:textColor="#E20074"
                 android:textStyle="bold"
                 android:padding="16dp"
-                android:text="Magicbook"/>
+                android:text="E-mail gyűjtő"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -65,8 +65,8 @@
             android:padding="10dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
-            android:id="@+id/phoneBook"
-            android:onClick="phoneBookClick">
+            android:id="@+id/workSchedules"
+            android:onClick="workSchedules">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
                 android:textColor="#E20074"
                 android:textStyle="bold"
                 android:padding="16dp"
-                android:text="Telefonkönyv"/>
+                android:text="Beosztás"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -88,8 +88,8 @@
             android:padding="10dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
-            android:id="@+id/repPDF"
-            android:onClick="repairListClick">
+            android:id="@+id/appProposer"
+            android:onClick="AppsActivity">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -100,8 +100,9 @@
                 android:textColor="#E20074"
                 android:textStyle="bold"
                 android:padding="16dp"
-                android:text="gyártói szervizek"/>
+                android:text="App ajánló"/>
         </RelativeLayout>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -111,8 +112,8 @@
             android:padding="10dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
-            android:id="@+id/stickPDF"
-            android:onClick="stickCompClick">
+            android:id="@+id/apn"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -123,10 +124,20 @@
                 android:textColor="#E20074"
                 android:textStyle="bold"
                 android:padding="16dp"
-                android:text="Stick kompatibilitás"/>
+                android:text="APN"
+                android:id="@+id/apnHead"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:paddingBottom="16dp"
+                android:layout_below="@id/apnHead"
+                android:text="Hozzáférési pont: internet.telekom"/>
         </RelativeLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/item_bg"
@@ -134,65 +145,121 @@
             android:padding="10dp"
             android:translationZ="1.5dp"
             android:elevation="8dp"
-            android:id="@+id/accessoryXLS"
-            android:onClick="accessoryListClick">
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="APN MMS" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:text="Android:" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:textColor="#E20074"
+                android:paddingBottom="6dp"
+                android:text="APN típusa:  mms"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:text="Windows:" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#E20074"
+                android:paddingBottom="6dp"
+                android:layout_gravity="center"
+                android:text="Hozzáférési pont: mms"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:textColor="#E20074"
+                android:paddingBottom="6dp"
+                android:text="Felhasználó és jelszó: mms"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:textColor="#E20074"
+                android:paddingBottom="6dp"
+                android:text="MMS központ: mms.t-mobile.hu/servlets/mms"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:textColor="#E20074"
+                android:paddingBottom="6dp"
+                android:text="MMS proxy: 212.051.126.010"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:textColor="#E20074"
+                android:paddingBottom="16dp"
+                android:text="MMS port: 8080"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true"
                 android:textSize="15dp"
-                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:textColor="#E20074"
                 android:textStyle="bold"
                 android:padding="16dp"
-                android:text="Tartozék árlista"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/phonesPDF"
-            android:onClick="phoneListkClick">
+                android:text="SMS" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:layout_centerHorizontal="true"
+                android:textSize="14dp"
+                android:layout_gravity="center"
                 android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="16dp"
-                android:text="Készülék árlista"/>
-        </RelativeLayout>
+                android:paddingBottom="16dp"
+                android:text="SMS központ száma: +36309888000"/>
+        </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:onClick="ussdCodeActivity">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="true"
-                    android:textSize="15dp"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="#E20074"
-                    android:textStyle="bold"
-                    android:padding="16dp"
-                    android:text="USSD/GSM kódok"/>
-        </RelativeLayout>
+
 
     </LinearLayout>
 </ScrollView>
