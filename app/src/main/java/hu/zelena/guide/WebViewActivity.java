@@ -1,12 +1,13 @@
 package hu.zelena.guide;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import hu.zelena.guide.util.ActivityHelper;
 
 /**
  * Created by patrik on 2016.11.08..
@@ -22,13 +23,7 @@ public class WebViewActivity extends ActionBarActivity {
 
         Bundle mainBundle  = getIntent().getExtras();
 
-        boolean tabletMode = mainBundle.getBoolean("tabMode");
-
-        if (tabletMode) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
+        ActivityHelper.initialize(this);
 
 
         super.onCreate(savedInstanceState);

@@ -1,25 +1,32 @@
 package hu.zelena.guide;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import hu.zelena.guide.fragments.ChangeLogFragment;
+
+import hu.zelena.guide.fragments.ErrorFragment;
+import hu.zelena.guide.fragments.SettingsFragment;
 import hu.zelena.guide.util.ActivityHelper;
 
 /**
- * Created by patrik on 2016.11.15..
+ * Created by patrik on 2016.11.27..
  */
 
-public class ChangeLogActivity extends ActionBarActivity {
+public class ErrorActivity extends ActionBarActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
         Bundle mainBundle = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
+        String msg = mainBundle.getString("error");
+
+        Bundle bundle = new Bundle();
+        bundle.putString("error", msg);
 
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -32,10 +39,8 @@ public class ChangeLogActivity extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
 
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
-        Fragment fragment = new ChangeLogFragment();
+        Fragment fragment = new ErrorFragment();
+        fragment.setArguments(bundle);
 
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
@@ -56,5 +61,14 @@ public class ChangeLogActivity extends ActionBarActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+            Intent i = getBaseContext().getPackageManager()
+                    .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
+
     }
 }

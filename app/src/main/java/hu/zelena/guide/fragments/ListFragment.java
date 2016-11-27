@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,8 +28,8 @@ import java.net.URL;
 
 import hu.zelena.guide.MainActivity;
 import hu.zelena.guide.R;
-import hu.zelena.guide.rest_modell.Counter;
-import hu.zelena.guide.rest_modell.Info;
+import hu.zelena.guide.modell.Counter;
+import hu.zelena.guide.modell.Info;
 
 public class ListFragment extends Fragment {
 
@@ -41,11 +42,11 @@ public class ListFragment extends Fragment {
     ImageView img;
     Bitmap bitmap;
     private int counts = -1;
-    private boolean isLoaded = false;
-    private boolean isLoaded2 = false;
 
     private boolean first = true;
+    private boolean saver = false;
     private boolean offline = false;
+
 
     public ListFragment() {}
 
@@ -63,7 +64,12 @@ public class ListFragment extends Fragment {
        }
 
         if (activity.getSaverMode()){
+           saver = true;
+        }
+
+        if (true){
             offline = true;
+            baseURL ="file://"+ Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/offline/phones/";
         }
 
         Bundle bundle = this.getArguments();
@@ -72,6 +78,7 @@ public class ListFragment extends Fragment {
         rootView = inflater.inflate(R.layout.phone_list_layout, container, false);
 
          super.onStart();
+
 
         /**
          *  Get counter from server
@@ -98,8 +105,8 @@ public class ListFragment extends Fragment {
 
         }else{
             rootView = inflater.inflate(R.layout.error_layout, container, false);
-            activity.sendSnack("Error creating Fragment (FR-01)");
-            Log.e("List Fragment", "Error creating Fragment (FR-01)");
+            activity.sendSnack("Error creating Fragment ");
+            Log.e("List Fragment", "Error creating Fragment");
            return rootView;
        }
 
@@ -113,7 +120,7 @@ public class ListFragment extends Fragment {
         @Override
         protected Counter doInBackground(Void... params) {
             try {
-                final String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones/"+brand+"/document";
+                final String url = baseURL+brand+"/document.json";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 Counter count= restTemplate.getForObject(url, Counter.class);
@@ -127,8 +134,6 @@ public class ListFragment extends Fragment {
         @Override
         protected void onPostExecute(Counter count) {
             counts = Integer.valueOf(count.getQuantity());
-
-           isLoaded2 = true;
         }
     }
 
@@ -140,7 +145,7 @@ public class ListFragment extends Fragment {
         protected Info doInBackground(Void... params) {
             try {
 
-                    final String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones/"+brand+"/info";
+                    final String url = baseURL + brand + "/info";
                     RestTemplate restTemplate = new RestTemplate();
                     restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                     Info inf = restTemplate.getForObject(url, Info.class);
@@ -2141,7 +2146,7 @@ public class ListFragment extends Fragment {
      *  Async Image loader
      */
 
-        private class LoadImage extends AsyncTask<String, String, Bitmap> {
+    private class LoadImage extends AsyncTask<String, String, Bitmap> {
 
        private final ProgressDialog dialog = new ProgressDialog(getActivity());
 
@@ -2156,12 +2161,13 @@ public class ListFragment extends Fragment {
             }
 
             protected Bitmap doInBackground(String... args) {
-                if(!offline){
 
+                if(!saver){
                     try {
-
+                        if(offline){
+                            bitmap = BitmapFactory.decodeFile(baseURL + brand + "/1.jpg");
+                        }else
                         bitmap = BitmapFactory.decodeStream((InputStream) new URL(args[0]).getContent());
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -2172,8 +2178,7 @@ public class ListFragment extends Fragment {
             }
         protected void onPostExecute(Bitmap image) {
 
-          /*  isLoaded = true;
-            if(isLoaded)*/ dialog.dismiss();
+         dialog.dismiss();
 
             if(image != null){
 
@@ -2254,4 +2259,7 @@ public class ListFragment extends Fragment {
             }else dialog.dismiss();
         }
     }
+
+
+
 }

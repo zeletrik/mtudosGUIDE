@@ -1,4 +1,4 @@
-package hu.zelena.guide.rest_modell;
+package hu.zelena.guide.modell;
 
 /**
  * Created by patrik on 2016.08.16..

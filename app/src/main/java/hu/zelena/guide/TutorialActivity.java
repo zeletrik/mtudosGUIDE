@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import com.github.paolorotolo.appintro.AppIntro2;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
+import hu.zelena.guide.util.ActivityHelper;
+
 /**
  * Created by patrik on 2016.10.11..
  */
@@ -17,6 +19,7 @@ public class TutorialActivity extends AppIntro2 {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
+        ActivityHelper.initialize(this);
         super.onCreate(savedInstanceState);
 
 

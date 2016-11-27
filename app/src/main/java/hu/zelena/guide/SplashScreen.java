@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import hu.zelena.guide.util.ActivityHelper;
+
 /**
  * Created by patrik on 2016.11.14..
  */
@@ -16,6 +18,8 @@ public class SplashScreen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+       ActivityHelper.initialize(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 

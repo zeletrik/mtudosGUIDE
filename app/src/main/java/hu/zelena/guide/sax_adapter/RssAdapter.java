@@ -1,4 +1,4 @@
-package hu.zelena.guide.rss_adapter;
+package hu.zelena.guide.sax_adapter;
 
 /**
  * Created by patrik on 2016.11.12..
@@ -16,11 +16,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import hu.zelena.guide.rss_modell.RssItem;
+import hu.zelena.guide.modell.RssItem;
 
 public class RssAdapter extends ArrayAdapter<RssItem> {
     private Activity myContext;
-   // private RssItem[] datas;
     private  List<RssItem> datas;
 
     public RssAdapter(Context context, int textViewResourceId,

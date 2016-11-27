@@ -1,4 +1,4 @@
-package hu.zelena.guide.rest_modell;
+package hu.zelena.guide.modell;
 
 /**
  * Created by patrik on 2016.08.06..
@@ -102,5 +102,81 @@ public class Specs {
 
     public String getIpCertified() {
         return ipCertified;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDisplayType(String displayType) {
+        this.displayType = displayType;
+    }
+
+    public void setDisplaySize(String displaySize) {
+        this.displaySize = displaySize;
+    }
+
+    public void setDisplayRes(String displayRes) {
+        this.displayRes = displayRes;
+    }
+
+    public void setDisplayProtect(String displayProtect) {
+        this.displayProtect = displayProtect;
+    }
+
+    public void setOs_spec(String os_spec) {
+        this.os_spec = os_spec;
+    }
+
+    public void setChipset(String chipset) {
+        this.chipset = chipset;
+    }
+
+    public void setCpu(String cpu) {
+        this.cpu = cpu;
+    }
+
+    public void setGpu(String gpu) {
+        this.gpu = gpu;
+    }
+
+    public void setRam(String ram) {
+        this.ram = ram;
+    }
+
+    public void setRom(String rom) {
+        this.rom = rom;
+    }
+
+    public void setExpand(String expand) {
+        this.expand = expand;
+    }
+
+    public void setrCam(String rCam) {
+        this.rCam = rCam;
+    }
+
+    public void setfCam(String fCam) {
+        this.fCam = fCam;
+    }
+
+    public void setBatt(String batt) {
+        this.batt = batt;
+    }
+
+    public void setSpeaker(String speaker) {
+        this.speaker = speaker;
+    }
+
+    public void setNfc(String nfc) {
+        this.nfc = nfc;
+    }
+
+    public void setRadio(String radio) {
+        this.radio = radio;
+    }
+
+    public void setIpCertified(String ipCertified) {
+        this.ipCertified = ipCertified;
     }
 }

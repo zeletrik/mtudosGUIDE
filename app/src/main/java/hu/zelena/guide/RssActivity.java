@@ -2,9 +2,9 @@ package hu.zelena.guide;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -16,9 +16,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import hu.zelena.guide.rss_adapter.RssAdapter;
-import hu.zelena.guide.rss_modell.RssItem;
+import hu.zelena.guide.sax_adapter.RssAdapter;
+import hu.zelena.guide.modell.RssItem;
 import hu.zelena.guide.rss.RssReader;
+import hu.zelena.guide.util.ActivityHelper;
 
 /**
  * Created by patrik on 2016.11.08..
@@ -38,13 +39,7 @@ public class RssActivity extends AppCompatActivity {
         Bundle mainBundle  = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
 
-        boolean tabletMode = mainBundle.getBoolean("tabMode");
-
-        if (tabletMode) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
+        ActivityHelper.initialize(this);
 
         if(isDark){
             setTheme(R.style.SpecDarkTheme);
@@ -57,7 +52,6 @@ public class RssActivity extends AppCompatActivity {
 
         setContentView(R.layout.rss_feed_main);
         mList = (ListView) findViewById(R.id.list);
-       // adapter = new ArrayAdapter<String>(this, R.layout.rss_list_item);
         new GetRssFeed().execute("http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/rss.xml");
 
     }
@@ -83,10 +77,12 @@ public class RssActivity extends AppCompatActivity {
         protected Void doInBackground(String... params) {
             try {
                 rssReader = new RssReader(params[0]);
-               // for (RssItem item : rssReader.getItems())
                          aList = rssReader.getItems();
-                 //   adapter.add(item.getTitle());
             } catch (Exception e) {
+                Intent i = new Intent(RssActivity.this, ErrorActivity.class);
+                i.putExtra("darkMode", false);
+                i.putExtra("error", "Feldolgozási hiba: "+e.getMessage());
+                startActivity(i);
                 Log.v("Error Parsing Data", e + "");
             }
             return null;

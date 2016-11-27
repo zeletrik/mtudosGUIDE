@@ -2,18 +2,20 @@ package hu.zelena.guide;
 
 
 import hu.zelena.guide.fragments.AboutFragment;
-import hu.zelena.guide.fragments.ChangeLogFragment;
 import hu.zelena.guide.fragments.InternetFragment;
-import hu.zelena.guide.fragments.ListFragment;
 import hu.zelena.guide.fragments.MagicbookFragment;
 import hu.zelena.guide.fragments.OthersFragment;
+import hu.zelena.guide.fragments.PhonesFragment;
 import hu.zelena.guide.fragments.PostPaidFragment;
 import hu.zelena.guide.fragments.PrePaidFragment;
 import hu.zelena.guide.fragments.TabletFragment;
 import hu.zelena.guide.fragments.WatchFragment;
-import hu.zelena.guide.rest_modell.Schedule;
-import hu.zelena.guide.rest_modell.Version;
-;
+import hu.zelena.guide.modell.Schedule;
+import hu.zelena.guide.modell.Version;
+import hu.zelena.guide.util.ActivityHelper;
+import hu.zelena.guide.util.DownloadActivity;
+
+import android.Manifest;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.Notification;
@@ -22,7 +24,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -30,12 +32,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -67,12 +70,23 @@ public class MainActivity extends AppCompatActivity {
 
 	private boolean isDark = false;
 	private boolean dataSaver = false;
-	private boolean tabletMode = false;
+    private boolean writeStorage = true;
+    private boolean offlineMode=false;
 
+
+    final int MY_PERMISSIONS_REQUEST_READ_STORAGE = 0;
 
     @SuppressWarnings("ResourceType")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
+		/* Request user permissions in runtime */
+		ActivityCompat.requestPermissions(MainActivity.this,
+                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                MY_PERMISSIONS_REQUEST_READ_STORAGE);
+
+        /* Request user permissions in runtime */
 
 
 		SharedPreferences sharedPrefs = PreferenceManager
@@ -86,29 +100,14 @@ public class MainActivity extends AppCompatActivity {
 			dataSaver = true;
 		}
 
+        if(sharedPrefs.getBoolean("offline", false)){
+            offlineMode = true;
+        }
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// kijelző DP meghatározás
-
-		DisplayMetrics metrics = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics(metrics);
-		int widthPixels = metrics.widthPixels;
-		int heightPixels = metrics.heightPixels;
-		float scaleFactor = metrics.density;
-		float widthDp = widthPixels / scaleFactor;
-		float heightDp = heightPixels / scaleFactor;
-		float smallestWidth = Math.min(widthDp, heightDp);
-
-		if (smallestWidth > 720) {
-			// Ha több mint 720 DP (~Tablet) akkor landscape
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-			tabletMode = true;
-		}else {
-			// Különben portrait
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		}
-
+		ActivityHelper.initialize(this);
         CheckVersion();
 
 		// Toolbar az ActionBar helyére
@@ -131,7 +130,13 @@ public class MainActivity extends AppCompatActivity {
 			FragmentManager fragmentManager = getFragmentManager();
 			fragmentManager.beginTransaction()
 					.replace(R.id.frame_container, fragment).commit();
-		} else { Log.e("MainActivity", "Error in creating fragment"); }
+		} else {
+            Intent i = new Intent(this, ErrorActivity.class);
+            i.putExtra("darkMode",isDark);
+            i.putExtra("error", "Nem sikerült a HOME-FRAGMENT betöltése. [Null object]");
+            startActivity(i);
+
+            Log.e("MainActivity", "Error in creating fragment"); }
 	}
 
 	@Override
@@ -150,6 +155,17 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_settings:
                 Intent i = new Intent(this, UserSettingsActivity.class);
 				i.putExtra("darkMode", isDark);
+
+                if (ContextCompat.checkSelfPermission(MainActivity.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        == PackageManager.PERMISSION_GRANTED) {
+                    writeStorage = true;
+
+                } else {
+                    writeStorage = false;
+                }
+
+                i.putExtra("writeStorage",writeStorage);
                	startActivityForResult(i, RESULT_SETTINGS);
                 break;
 		}
@@ -168,101 +184,82 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public void selectDrawerItem(MenuItem menuItem) {
-		Fragment fragment = new ListFragment();
+		Fragment fragment = null;
 		Bundle bundle = new Bundle();
 
 		switch(menuItem.getItemId()) {
 			case R.id.alcatel_frag:
+				fragment = new PhonesFragment();
 				brand = "Alcatel";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.apple_frag:
 				brand = "Apple";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.balckberry_frag:
 				brand = "BlackBerry";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.coolpad_frag:
 				brand = "Coolpad";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.honor_frag:
 				brand = "Honor";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.HTC_frag:
 				brand = "HTC";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.huawei_frag:
 				brand = "Huawei";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.lg_frag:
 				brand = "LG";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.microsoft_frag:
 				brand = "Microsoft";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.samsung_frag:
 				brand = "Samsung";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
 			case R.id.sony_frag:
 				brand = "Sony";
-				bundle.putString("brand", brand);
-				fragment.setArguments(bundle);
 				break;
-
 			case R.id.watch_frag:
 				fragment = new WatchFragment();
 				break;
-
 			case R.id.tablet_frag:
 				fragment = new TabletFragment();
-				break;
-
+                break;
 			case R.id.postpaid_frag:
 				fragment = new PostPaidFragment();
 				break;
 			case R.id.prepaid_frag:
 				fragment = new PrePaidFragment();
 				break;
-
 			case R.id.net_frag:
 				fragment = new InternetFragment();
 				break;
-
 			case R.id.magicbook_frag:
 				fragment = new MagicbookFragment();
 				break;
-
 			case R.id.others_frag:
 				fragment = new OthersFragment();
 				break;
 			default:
-				break;
+                break;
 		}
 
 		if (fragment != null) {
+			bundle.putString("brand", brand);
+			fragment.setArguments(bundle);
 			FragmentManager fragmentManager = getFragmentManager();
 			fragmentManager.beginTransaction()
 					.replace(R.id.frame_container, fragment).commit();
-		} else { Log.e("MainActivity", "Error in creating fragment"); }
+		} else {
+			Intent i = new Intent(this, ErrorActivity.class);
+			i.putExtra("darkMode",isDark);
+			i.putExtra("error", "Nem sikerült a FRAGMENT betöltése. [Null object]");
+			startActivity(i);
+			Log.e("MainActivity", "Error in creating fragment");
+		}
 
 		// Highlight the selected item has been done by NavigationView
 		menuItem.setChecked(true);
@@ -286,6 +283,29 @@ public class MainActivity extends AppCompatActivity {
 	private ActionBarDrawerToggle setupDrawerToggle() {
 		return new ActionBarDrawerToggle(this, mDrawer, toolbar, R.string.drawer_open,  R.string.drawer_close);
 	}
+
+    /**
+     *
+     * Engedély kérés lekezelése
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_READ_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.d("REQUEST:","GRANTED");
+
+                } else {
+                    Log.d("REQUEST:","DENIED");
+                    sendSnack("Offline mód letiltva.");
+                }
+                return;
+            }
+        }
+    }
 
 	/**
 	 *  Publikus függvények / Metódusok
@@ -321,6 +341,11 @@ public class MainActivity extends AppCompatActivity {
 	public boolean getSaverMode(){
 		return dataSaver;
 	}
+
+    public boolean getOfflineMode(){
+        return offlineMode;
+    }
+
 
     public void  startTutorial(View view){
         Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
@@ -359,17 +384,8 @@ public class MainActivity extends AppCompatActivity {
 	}
 
     public void changelogClick(MenuItem item) {
-        Fragment fragment = new ChangeLogFragment();
-
-        if (fragment != null) {
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.frame_container, fragment).commit();
-			setTitle("Changelog");
-        } else {
-            // error in creating fragment
-            Log.e("MainActivity", "Error in creating fragment");
-        }
+		Intent i = new Intent(this, DownloadActivity.class);
+		startActivity(i);
     }
 
     /**
@@ -416,7 +432,7 @@ public class MainActivity extends AppCompatActivity {
                 Version ver= restTemplate.getForObject(url, Version.class);
                 return ver;
             } catch (Exception e) {
-                Log.e("List Fragment", e.getMessage(), e);
+                Log.e("VersionCheck", e.getMessage(), e);
             }
             return null;
         }
@@ -452,7 +468,6 @@ public class MainActivity extends AppCompatActivity {
 		Intent i = new Intent(this, WebViewActivity.class);
 		i.putExtra("URL","http://magicbook.telekom.intra/");
 		i.putExtra("title","Magic Book");
-        i.putExtra("tabMode",tabletMode);
 		startActivity(i);
 	}
 
@@ -460,7 +475,6 @@ public class MainActivity extends AppCompatActivity {
 		Intent i = new Intent(this, WebViewActivity.class);
 		i.putExtra("URL","http://telefonkonyv.telekom.intra/applications/phonebook/");
 		i.putExtra("title","Telefonkönyv");
-        i.putExtra("tabMode",tabletMode);
 		startActivity(i);
 	}
 
@@ -468,7 +482,6 @@ public class MainActivity extends AppCompatActivity {
 		Intent i = new Intent(this, WebViewActivity.class);
 		i.putExtra("URL","https://docs.google.com/gview?embedded=true&url=http://www.telekom.hu/static-la/sw/file/Akcios_keszulek_arlista_kijelolt_dijcsomagokhoz.pdf");
 		i.putExtra("title","Készülék árlista");
-        i.putExtra("tabMode",tabletMode);
 		startActivity(i);
 	}
 
@@ -490,20 +503,17 @@ public class MainActivity extends AppCompatActivity {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		String url = "http://magicbook.telekom.intra/mb/tmobile/arlistak/tartozek_arlista.xls";
 		intent.setData(Uri.parse(url));
-        intent.putExtra("tabMode",tabletMode);
 		startActivity(intent);
 	}
 
 	public void rssRead(View view) {
 		Intent i = new Intent(this, RssActivity.class);
-        i.putExtra("tabMode",tabletMode);
         i.putExtra("darkMode",isDark);
 		startActivity(i);
 	}
 
 	public void ussdCodeActivity(View view){
 		Intent i = new Intent(this, UssdCodeActivity.class);
-		i.putExtra("tabMode",tabletMode);
 		i.putExtra("darkMode",isDark);
 		startActivity(i);
 	}
@@ -520,7 +530,6 @@ public class MainActivity extends AppCompatActivity {
 		Intent i = new Intent(this, WebViewActivity.class);
 		i.putExtra("URL","http://www.telekom.hu/lakossagi/szolgaltatasok/mobiltudos");
 		i.putExtra("title","Email gyűjtő - Public");
-		i.putExtra("tabMode",tabletMode);
 		startActivity(i);
 	}
 
@@ -552,113 +561,40 @@ public class MainActivity extends AppCompatActivity {
 			Intent i = new Intent(MainActivity.this, WebViewActivity.class);
 			i.putExtra("URL", sch.getSchedule());
 			i.putExtra("title","Beosztás");
-			i.putExtra("tabMode",tabletMode);
 			startActivity(i);
 
 		}
 	}
 
     /**
-	 *  Phone/Tablet Click-ek
+	 *  Tablet Click-ek
 	 */
 
-	public void SpecAct(boolean isTab, String no){
+	public void SpecAct(String no){
 
-		if(!isTab){
-			Intent i = new Intent(MainActivity.this, SpecsAvtivity.class);
-			i.putExtra("brand", brand);
-			i.putExtra("phone", no);
-			i.putExtra("darkMode", isDark);
-            i.putExtra("tabMode",tabletMode);
-			startActivity(i);
-		} else{
 			Intent i = new Intent(MainActivity.this, SpecsAvtivity.class);
 			i.putExtra("brand", "tablet");
 			i.putExtra("phone", no);
 			i.putExtra("darkMode", isDark);
-            i.putExtra("tabMode",tabletMode);
 			startActivity(i);
-		}
 	}
-
-	public void phone1Click(View view){
-
-		SpecAct(false,"1");
-
-	}
-	public void phone2Click(View view){
-
-		SpecAct(false,"2");
-	}
-	public void phone3Click(View view){
-		SpecAct(false,"3");
-	}
-	public void phone4Click(View view){
-
-		SpecAct(false,"4");
-	}
-	public void phone5Click(View view){
-
-		SpecAct(false,"5");
-	}
-	public void phone6Click(View view){
-
-		SpecAct(false,"6");
-	}
-	public void phone7Click(View view){
-
-		SpecAct(false,"7");
-	}
-	public void phone8Click(View view){
-
-		SpecAct(false,"8");
-	}
-	public void phone9Click(View view){
-
-		SpecAct(false,"9");
-	}
-	public void phone10Click(View view){
-
-		SpecAct(false,"10");
-	}
-	public void phone11Click(View view){
-
-		SpecAct(false,"11");
-	}
-	public void phone12Click(View view){
-
-		SpecAct(false,"12");
-	}
-	public void phone13Click(View view){
-
-		SpecAct(false,"13");
-	}
-	public void phone14Click(View view){
-
-		SpecAct(false,"14");
-	}
-	public void phone15Click(View view){
-
-		SpecAct(false,"15");
-	}
-
 	public void tab1Click(View view){
-        SpecAct(true,"1");
+        SpecAct("1");
 	}
 	public void tab2Click(View view){
-		SpecAct(true,"2");
+		SpecAct("2");
 	}
 	public void tab3Click(View view){
-		SpecAct(true,"3");
+		SpecAct("3");
 	}
 	public void tab4Click(View view){
-		SpecAct(true,"4");
+		SpecAct("4");
 	}
 	public void tab5Click(View view){
-		SpecAct(true,"5");
+		SpecAct("5");
 	}
 	public void tab6Click(View view){
-		SpecAct(true,"6");
+		SpecAct("6");
 	}
 }
 

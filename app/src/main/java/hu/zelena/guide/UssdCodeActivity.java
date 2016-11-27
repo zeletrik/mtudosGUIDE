@@ -2,7 +2,6 @@ package hu.zelena.guide;
 
 import android.app.Fragment;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -10,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import hu.zelena.guide.fragments.UssdFragment;
+import hu.zelena.guide.util.ActivityHelper;
 
 /**
  * Created by patrik on 2016.11.15..
@@ -25,13 +25,7 @@ public class UssdCodeActivity extends ActionBarActivity {
         Bundle mainBundle  = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
 
-        boolean tabletMode = mainBundle.getBoolean("tabMode");
-
-        if (tabletMode) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
+        ActivityHelper.initialize(this);
 
         if(isDark){
             setTheme(R.style.SpecDarkTheme);

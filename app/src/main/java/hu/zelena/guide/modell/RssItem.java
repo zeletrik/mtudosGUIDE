@@ -1,4 +1,4 @@
-package hu.zelena.guide.rss_modell;
+package hu.zelena.guide.modell;
 
 /**
  * Created by patrik on 2016.11.08..

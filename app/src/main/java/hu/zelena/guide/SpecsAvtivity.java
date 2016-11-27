@@ -1,14 +1,15 @@
 package hu.zelena.guide;
 
 import android.app.Fragment;
-import android.content.pm.ActivityInfo;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import hu.zelena.guide.fragments.SpecsFragment;
+import hu.zelena.guide.util.ActivityHelper;
 
 /**
  * Created by patrik on 2016.11.04..
@@ -16,25 +17,26 @@ import hu.zelena.guide.fragments.SpecsFragment;
 
 public class SpecsAvtivity extends ActionBarActivity {
 
-    View rootView;
     String brand;
     String phone;
+
+    public SpecsAvtivity(){}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
+
+        ActivityHelper.initialize(this);
         Bundle mainBundle  = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
 
-        boolean tabletMode = mainBundle.getBoolean("tabMode");
-
-        if (tabletMode) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        if(isDark){
+            setTheme(R.style.SpecDarkTheme);
         }
 
-        if(isDark){
+        PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        if(preferences.getBoolean("darkMode",false)){
             setTheme(R.style.SpecDarkTheme);
         }
 
@@ -60,6 +62,7 @@ public class SpecsAvtivity extends ActionBarActivity {
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
                 .commit();
+
     }
 
     @Override

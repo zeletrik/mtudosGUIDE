@@ -7,9 +7,11 @@ package hu.zelena.guide.rss;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+
+import java.io.File;
 import java.util.List;
 
-import hu.zelena.guide.rss_modell.RssItem;
+import hu.zelena.guide.modell.RssItem;
 
 
 public class RssReader {

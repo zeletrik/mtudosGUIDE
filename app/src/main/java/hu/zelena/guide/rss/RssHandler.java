@@ -11,7 +11,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-import hu.zelena.guide.rss_modell.RssItem;
+import hu.zelena.guide.modell.RssItem;
 
 
 public class RssHandler extends DefaultHandler {
