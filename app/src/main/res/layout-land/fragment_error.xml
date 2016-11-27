@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hoppá..."
+        android:layout_gravity="center_horizontal"
+        android:textSize="45sp"
+        android:textColor="@color/magenta"
+        android:padding="15dp"
+        android:textAllCaps="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nem várt hiba történt"
+        android:layout_gravity="center_horizontal"
+        android:textSize="35sp"
+        android:padding="15dp"
+        android:textColor="@color/magenta"
+        android:textAllCaps="false"/>
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/ic_alert"
+        android:padding="15dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id/errorDetails"
+        android:layout_gravity="center_horizontal"
+        android:textSize="35sp"
+        android:padding="15dp"
+        android:textColor="@color/magenta"
+        android:textAllCaps="false"
+        android:gravity="center_horizontal"
+        android:id="@+id/errorDetails"/>
+</LinearLayout>
