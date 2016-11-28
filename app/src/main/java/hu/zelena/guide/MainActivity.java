@@ -393,11 +393,6 @@ public class MainActivity extends AppCompatActivity {
 		}
 	}
 
-    public void changelogClick(MenuItem item) {
-		Intent i = new Intent(this, DownloadActivity.class);
-		startActivity(i);
-    }
-
     /**
      * Verzió ellenőrzés (async)
      */
