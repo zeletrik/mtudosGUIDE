@@ -14,7 +14,8 @@ import hu.zelena.guide.R;
 
 public class AboutFragment extends Fragment {
 
-    public AboutFragment(){}
+    public AboutFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

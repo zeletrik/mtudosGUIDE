@@ -65,10 +65,10 @@ public class ErrorActivity extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-            Intent i = getBaseContext().getPackageManager()
-                    .getLaunchIntentForPackage( getBaseContext().getPackageName() );
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(i);
+        Intent i = getBaseContext().getPackageManager()
+                .getLaunchIntentForPackage(getBaseContext().getPackageName());
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
 
     }
 }

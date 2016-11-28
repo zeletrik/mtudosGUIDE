@@ -30,7 +30,9 @@ public class Specs {
     private String radio;
     private String ipCertified;
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
     public String getDisplayType() {
         return displayType;

@@ -14,7 +14,7 @@ import hu.zelena.guide.R;
 
 public class MagicbookFragment extends Fragment {
 
-    public MagicbookFragment(){
+    public MagicbookFragment() {
 
     }
 

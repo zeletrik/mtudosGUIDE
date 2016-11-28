@@ -20,23 +20,24 @@ public class SpecsAvtivity extends ActionBarActivity {
     String brand;
     String phone;
 
-    public SpecsAvtivity(){}
+    public SpecsAvtivity() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
 
         ActivityHelper.initialize(this);
-        Bundle mainBundle  = getIntent().getExtras();
+        Bundle mainBundle = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
 
-        if(isDark){
+        if (isDark) {
             setTheme(R.style.SpecDarkTheme);
         }
 
         PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        if(preferences.getBoolean("darkMode",false)){
+        if (preferences.getBoolean("darkMode", false)) {
             setTheme(R.style.SpecDarkTheme);
         }
 
@@ -47,14 +48,13 @@ public class SpecsAvtivity extends ActionBarActivity {
 
         Fragment fragment = new SpecsFragment();
 
-        mainBundle  = getIntent().getExtras();
+        mainBundle = getIntent().getExtras();
         brand = mainBundle.getString("brand");
         phone = mainBundle.getString("phone");
 
         Bundle bundle = new Bundle();
         bundle.putString("brand", brand);
         bundle.putString("phone", phone);
-
 
 
         fragment.setArguments(bundle);
@@ -80,4 +80,4 @@ public class SpecsAvtivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    }
+}

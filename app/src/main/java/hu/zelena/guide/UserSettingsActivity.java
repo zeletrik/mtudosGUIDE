@@ -1,7 +1,6 @@
 package hu.zelena.guide;
 
 
-
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
@@ -17,25 +16,26 @@ import hu.zelena.guide.util.ActivityHelper;
  */
 
 
-public class UserSettingsActivity  extends ActionBarActivity {
+public class UserSettingsActivity extends ActionBarActivity {
 
     private boolean darkMode = false;
     private boolean writeStorage = true;
     private boolean tabletMode = false;
 
-    public UserSettingsActivity(){}
+    public UserSettingsActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        Bundle mainBundle  = getIntent().getExtras();
+        Bundle mainBundle = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
         writeStorage = mainBundle.getBoolean("writeStorage");
 
         Bundle bundle = new Bundle();
         bundle.putBoolean("writeStorage", writeStorage);
 
-        if(isDark){
+        if (isDark) {
             setTheme(R.style.SettingsDarkTheme);
             darkMode = true;
         }
@@ -58,7 +58,6 @@ public class UserSettingsActivity  extends ActionBarActivity {
     }
 
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
@@ -73,13 +72,12 @@ public class UserSettingsActivity  extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         switch (item.getItemId()) {
             case android.R.id.home:
-                    finish();
+                finish();
                 return true;
         }
         return super.onOptionsItemSelected(item);
 
-        }
-
+    }
 
 
 }

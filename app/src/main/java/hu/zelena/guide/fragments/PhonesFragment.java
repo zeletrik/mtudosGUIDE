@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,12 +39,12 @@ public class PhonesFragment extends Fragment {
     String path;
     List<PhonesModell> aList = new ArrayList<PhonesModell>();
 
-    public PhonesFragment(){}
+    public PhonesFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
 
 
         View rootView = inflater.inflate(R.layout.phone_list_main, container, false);
@@ -53,14 +54,14 @@ public class PhonesFragment extends Fragment {
         brand = bundle.getString("brand");
         darkMode = bundle.getBoolean("darkMode");
 
-        MainActivity mActivity= (MainActivity) getActivity();
+        MainActivity mActivity = (MainActivity) getActivity();
 
         if (mActivity.checkInternet() == false) {
             Intent i = new Intent(getActivity(), ErrorActivity.class);
             i.putExtra("darkMode", darkMode);
             i.putExtra("error", "Ellenőrizd az internet kapcsolatot");
             startActivity(i);
-        }else {
+        } else {
 
             if (mActivity.getOfflineMode()) {
                 offline = true;
@@ -87,7 +88,7 @@ public class PhonesFragment extends Fragment {
             } catch (Exception e) {
                 Intent i = new Intent(getActivity(), ErrorActivity.class);
                 i.putExtra("darkMode", darkMode);
-                i.putExtra("error", "Feldolgozási hiba: "+e.getMessage());
+                i.putExtra("error", "Feldolgozási hiba: " + e.getMessage());
                 startActivity(i);
                 Log.v("Error Parsing Data", e + "");
             }

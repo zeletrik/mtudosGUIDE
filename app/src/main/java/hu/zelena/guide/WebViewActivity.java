@@ -21,7 +21,7 @@ public class WebViewActivity extends ActionBarActivity {
 
     public void onCreate(Bundle savedInstanceState) {
 
-        Bundle mainBundle  = getIntent().getExtras();
+        Bundle mainBundle = getIntent().getExtras();
 
         ActivityHelper.initialize(this);
 
@@ -78,7 +78,6 @@ public class WebViewActivity extends ActionBarActivity {
 
         }
     }
-
 
 
 }

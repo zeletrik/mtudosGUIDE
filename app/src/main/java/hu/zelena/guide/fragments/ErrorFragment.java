@@ -15,20 +15,21 @@ import hu.zelena.guide.R;
 
 public class ErrorFragment extends Fragment {
 
-        public ErrorFragment(){}
+    public ErrorFragment() {
+    }
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-            Bundle bundle = this.getArguments();
-            String msg = bundle.getString("error");
+        Bundle bundle = this.getArguments();
+        String msg = bundle.getString("error");
 
         View rootView = inflater.inflate(R.layout.fragment_error, container, false);
 
-          TextView error =  (TextView) rootView.findViewById(R.id.errorDetails);
-            error.setText(msg);
+        TextView error = (TextView) rootView.findViewById(R.id.errorDetails);
+        error.setText(msg);
 
         return rootView;
     }
-    }
+}

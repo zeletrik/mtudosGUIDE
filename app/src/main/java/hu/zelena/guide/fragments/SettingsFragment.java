@@ -34,7 +34,8 @@ import hu.zelena.guide.util.DownloadActivity;
 public class SettingsFragment extends PreferenceFragment
         implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-    public SettingsFragment(){}
+    public SettingsFragment() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,18 +53,17 @@ public class SettingsFragment extends PreferenceFragment
         SharedPreferences sharedPrefs = PreferenceManager
                 .getDefaultSharedPreferences(getActivity());
 
-        if(write){
-            if(sharedPrefs.getBoolean("offline",false)){
+        if (write) {
+            if (sharedPrefs.getBoolean("offline", false)) {
                 saverPref.setEnabled(false);
                 offlinePref.setEnabled(true);
                 updatePref.setEnabled(true);
-            }else
-            if(sharedPrefs.getBoolean("dataSaver",false)){
+            } else if (sharedPrefs.getBoolean("dataSaver", false)) {
                 saverPref.setEnabled(true);
                 offlinePref.setEnabled(false);
                 updatePref.setEnabled(false);
             }
-        }else{
+        } else {
             offlinePref.setEnabled(false);
             updatePref.setEnabled(false);
         }
@@ -106,8 +106,8 @@ public class SettingsFragment extends PreferenceFragment
         clPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
 
-                Intent intent = new Intent(getActivity(),ChangeLogActivity.class);
-                intent.putExtra("darkMode",false);
+                Intent intent = new Intent(getActivity(), ChangeLogActivity.class);
+                intent.putExtra("darkMode", false);
                 intent.putExtra("tabMode", false);
                 startActivity(intent);
                 return true;
@@ -140,11 +140,11 @@ public class SettingsFragment extends PreferenceFragment
         if (key.equals("offline")) {
             Preference pr = findPreference("update");
             Preference pref = findPreference("dataSaver");
-            if(sharedPreferences.getBoolean("offline",false)){
+            if (sharedPreferences.getBoolean("offline", false)) {
                 pr.setEnabled(true);
                 pref.setEnabled(false);
                 restartApp();
-            }else{
+            } else {
                 pr.setEnabled(false);
                 pref.setEnabled(true);
                 restartApp();
@@ -154,9 +154,9 @@ public class SettingsFragment extends PreferenceFragment
         if (key.equals("dataSaver")) {
             Preference pref = findPreference("offline");
 
-            if(sharedPreferences.getBoolean("dataSaver",false)){
+            if (sharedPreferences.getBoolean("dataSaver", false)) {
                 pref.setEnabled(false);
-            }else{
+            } else {
                 pref.setEnabled(true);
             }
             restartApp();
@@ -168,9 +168,9 @@ public class SettingsFragment extends PreferenceFragment
 
     }
 
-    public void restartApp(){
+    public void restartApp() {
         Intent i = getActivity().getBaseContext().getPackageManager()
-                .getLaunchIntentForPackage( getActivity().getBaseContext().getPackageName() );
+                .getLaunchIntentForPackage(getActivity().getBaseContext().getPackageName());
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Intent in = getActivity().getIntent();
         in.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -201,7 +201,7 @@ public class SettingsFragment extends PreferenceFragment
                 final String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/ver";
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Version ver= restTemplate.getForObject(url, Version.class);
+                Version ver = restTemplate.getForObject(url, Version.class);
                 return ver;
             } catch (Exception e) {
                 Intent i = new Intent(getActivity(), ErrorActivity.class);
@@ -217,7 +217,7 @@ public class SettingsFragment extends PreferenceFragment
         protected void onPostExecute(Version ver) {
             String verName = ver.getVersion();
 
-            if (Integer.valueOf(verName) > Integer.valueOf(BuildConfig.VERSION_CODE)){
+            if (Integer.valueOf(verName) > Integer.valueOf(BuildConfig.VERSION_CODE)) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Új verzió")
                         .setMessage("Új verzió érhető el. Frissítsünk?")
@@ -236,7 +236,7 @@ public class SettingsFragment extends PreferenceFragment
                             }
                         })
                         .show();
-            }else{
+            } else {
 
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Legfrissebb verzió")
@@ -251,7 +251,7 @@ public class SettingsFragment extends PreferenceFragment
         }
     }
 
-    public void checkVersion(){
+    public void checkVersion() {
 
         if (checkInternet() == true) {
             new HttpRequestVersion().execute();
@@ -270,7 +270,7 @@ public class SettingsFragment extends PreferenceFragment
 
     }
 
-    public boolean checkInternet(){
+    public boolean checkInternet() {
 
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);

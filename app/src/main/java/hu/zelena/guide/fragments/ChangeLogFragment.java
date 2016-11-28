@@ -12,9 +12,10 @@ import hu.zelena.guide.R;
  * Created by patrik on 2016.10.09..
  */
 
-public class ChangeLogFragment extends Fragment{
+public class ChangeLogFragment extends Fragment {
 
-    public ChangeLogFragment(){}
+    public ChangeLogFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

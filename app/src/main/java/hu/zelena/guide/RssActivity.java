@@ -36,12 +36,12 @@ public class RssActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        Bundle mainBundle  = getIntent().getExtras();
+        Bundle mainBundle = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
 
         ActivityHelper.initialize(this);
 
-        if(isDark){
+        if (isDark) {
             setTheme(R.style.SpecDarkTheme);
         }
 
@@ -77,11 +77,11 @@ public class RssActivity extends AppCompatActivity {
         protected Void doInBackground(String... params) {
             try {
                 rssReader = new RssReader(params[0]);
-                         aList = rssReader.getItems();
+                aList = rssReader.getItems();
             } catch (Exception e) {
                 Intent i = new Intent(RssActivity.this, ErrorActivity.class);
                 i.putExtra("darkMode", false);
-                i.putExtra("error", "Feldolgozási hiba: "+e.getMessage());
+                i.putExtra("error", "Feldolgozási hiba: " + e.getMessage());
                 startActivity(i);
                 Log.v("Error Parsing Data", e + "");
             }

@@ -17,17 +17,17 @@ import hu.zelena.guide.util.ActivityHelper;
 
 public class UssdCodeActivity extends ActionBarActivity {
 
-    private boolean tabletMode =false;
+    private boolean tabletMode = false;
 
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
 
-        Bundle mainBundle  = getIntent().getExtras();
+        Bundle mainBundle = getIntent().getExtras();
         Boolean isDark = mainBundle.getBoolean("darkMode");
 
         ActivityHelper.initialize(this);
 
-        if(isDark){
+        if (isDark) {
             setTheme(R.style.SpecDarkTheme);
         }
 
@@ -42,14 +42,15 @@ public class UssdCodeActivity extends ActionBarActivity {
                 .replace(android.R.id.content, fragment)
                 .commit();
     }
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         return true;
     }
 
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
@@ -58,19 +59,19 @@ public class UssdCodeActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void ussdCode(View view){
+    public void ussdCode(View view) {
         Intent i = new Intent(this, WebViewActivity.class);
-        i.putExtra("URL","http://magicbook.telekom.intra/mb/tmobile/keszulekek/gsmkodok/lcc/ussd.html");
-        i.putExtra("title","USSD Kódok");
-        i.putExtra("tabMode",tabletMode);
+        i.putExtra("URL", "http://magicbook.telekom.intra/mb/tmobile/keszulekek/gsmkodok/lcc/ussd.html");
+        i.putExtra("title", "USSD Kódok");
+        i.putExtra("tabMode", tabletMode);
         startActivity(i);
     }
 
-    public void gsmCode(View view){
+    public void gsmCode(View view) {
         Intent i = new Intent(this, WebViewActivity.class);
-        i.putExtra("URL","http://magicbook.telekom.intra/mb/tmobile/keszulekek/gsmkodok/gsmkod.html");
-        i.putExtra("title","GSM Kódok");
-        i.putExtra("tabMode",tabletMode);
+        i.putExtra("URL", "http://magicbook.telekom.intra/mb/tmobile/keszulekek/gsmkodok/gsmkod.html");
+        i.putExtra("title", "GSM Kódok");
+        i.putExtra("tabMode", tabletMode);
         startActivity(i);
     }
- }
+}

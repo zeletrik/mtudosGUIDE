@@ -34,7 +34,7 @@ public class TutorialActivity extends AppIntro2 {
         showStatusBar(true);
 
         // Edit the color of the nav bar on Lollipop+ devices
-       // setNavBarColor(Color.MAGENTA);
+        // setNavBarColor(Color.MAGENTA);
 
         // Turn vibration on and set intensity
         // NOTE: you will need to ask VIBRATE permission in Manifest if you haven't already
@@ -50,12 +50,12 @@ public class TutorialActivity extends AppIntro2 {
         setCustomTransformer(yourCustomTransformer);*/
 
         // Permissions -- takes a permission and slide number
-     //  askForPermissions(new String[]{Manifest.permission.CAMERA}, 2);
+        //  askForPermissions(new String[]{Manifest.permission.CAMERA}, 2);
     }
 
     @Override
     public void onNextPressed() {
-     //   super.onNextPressed(oldFragment, newFragment);
+        //   super.onNextPressed(oldFragment, newFragment);
     }
 
     @Override
@@ -72,7 +72,7 @@ public class TutorialActivity extends AppIntro2 {
     }
 
     @Override
-    public void  onSkipPressed(){
+    public void onSkipPressed() {
         super.finish();
     }
 }

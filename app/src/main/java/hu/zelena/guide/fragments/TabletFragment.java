@@ -14,7 +14,8 @@ import hu.zelena.guide.R;
 
 public class TabletFragment extends Fragment {
 
-    public TabletFragment(){}
+    public TabletFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

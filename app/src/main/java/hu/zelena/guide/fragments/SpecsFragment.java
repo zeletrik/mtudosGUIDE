@@ -38,7 +38,8 @@ public class SpecsFragment extends Fragment {
     private boolean offline;
     View rootView;
 
-    public SpecsFragment(){}
+    public SpecsFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,24 +58,23 @@ public class SpecsFragment extends Fragment {
         PreferenceManager.getDefaultSharedPreferences(getActivity());
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-        if(preferences.getBoolean("offline",false)){
+        if (preferences.getBoolean("offline", false)) {
             offline = true;
-        }else offline = false;
+        } else offline = false;
 
         if (offline) {
-            baseURL = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/"+brand+"/specs/"+phone+".xml";
+            baseURL = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/" + brand + "/specs/" + phone + ".xml";
             new GetOfflineSpecs().execute(baseURL);
-        }else {
-            baseURL = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones/"+brand+"/specs/"+phone;
+        } else {
+            baseURL = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones/" + brand + "/specs/" + phone;
             new HttpRequestSpecs().execute();
         }
-
 
 
         return rootView;
     }
 
-    private class HttpRequestSpecs  extends AsyncTask<Void, Void, Specs> {
+    private class HttpRequestSpecs extends AsyncTask<Void, Void, Specs> {
         @Override
         protected Specs doInBackground(Void... params) {
             try {
@@ -86,7 +86,7 @@ public class SpecsFragment extends Fragment {
             } catch (Exception e) {
                 Intent i = new Intent(getActivity(), ErrorActivity.class);
                 i.putExtra("darkMode", darkMode);
-                i.putExtra("error", "HTTPAsyncTask: "+e.getMessage());
+                i.putExtra("error", "HTTPAsyncTask: " + e.getMessage());
                 startActivity(i);
                 Log.e("Async ERROR:", e.getMessage(), e);
             }
@@ -170,7 +170,7 @@ public class SpecsFragment extends Fragment {
             } catch (Exception e) {
                 Intent i = new Intent(getActivity(), ErrorActivity.class);
                 i.putExtra("darkMode", darkMode);
-                i.putExtra("error", "SAXAsyncTask: "+e.getMessage());
+                i.putExtra("error", "SAXAsyncTask: " + e.getMessage());
                 startActivity(i);
                 Log.v("Error Parsing Data", e + "");
             }

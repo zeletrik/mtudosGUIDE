@@ -12,9 +12,10 @@ import hu.zelena.guide.R;
  * Created by patrik on 2016.10.24..
  */
 
-public class WatchFragment extends Fragment{
+public class WatchFragment extends Fragment {
 
-    public WatchFragment(){}
+    public WatchFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
