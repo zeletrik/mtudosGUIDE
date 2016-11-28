@@ -193,33 +193,43 @@ public class MainActivity extends AppCompatActivity {
 				brand = "Alcatel";
 				break;
 			case R.id.apple_frag:
+				fragment = new PhonesFragment();
 				brand = "Apple";
 				break;
 			case R.id.balckberry_frag:
+				fragment = new PhonesFragment();
 				brand = "BlackBerry";
 				break;
 			case R.id.coolpad_frag:
+				fragment = new PhonesFragment();
 				brand = "Coolpad";
 				break;
 			case R.id.honor_frag:
+				fragment = new PhonesFragment();
 				brand = "Honor";
 				break;
 			case R.id.HTC_frag:
+				fragment = new PhonesFragment();
 				brand = "HTC";
 				break;
 			case R.id.huawei_frag:
+				fragment = new PhonesFragment();
 				brand = "Huawei";
 				break;
 			case R.id.lg_frag:
+				fragment = new PhonesFragment();
 				brand = "LG";
 				break;
 			case R.id.microsoft_frag:
+				fragment = new PhonesFragment();
 				brand = "Microsoft";
 				break;
 			case R.id.samsung_frag:
+				fragment = new PhonesFragment();
 				brand = "Samsung";
 				break;
 			case R.id.sony_frag:
+				fragment = new PhonesFragment();
 				brand = "Sony";
 				break;
 			case R.id.watch_frag:
