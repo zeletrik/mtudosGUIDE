@@ -12,7 +12,6 @@ import hu.zelena.guide.modell.Specs;
 
 public class SpecsHandler extends DefaultHandler {
     private Specs specs;
-    private Specs currentItem;
     private boolean parsingName;
     private boolean parsingDisplayType;
     private boolean parsingDisplaySize;

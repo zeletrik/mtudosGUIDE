@@ -9,6 +9,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
@@ -24,7 +25,10 @@ import hu.zelena.guide.ErrorActivity;
 import hu.zelena.guide.R;
 import hu.zelena.guide.TutorialActivity;
 import hu.zelena.guide.UserSettingsActivity;
+import hu.zelena.guide.modell.DbVersion;
 import hu.zelena.guide.modell.Version;
+import hu.zelena.guide.util.DBVersionReader;
+import hu.zelena.guide.util.DeleteOfflineDir;
 import hu.zelena.guide.util.DownloadActivity;
 
 /**
@@ -33,6 +37,8 @@ import hu.zelena.guide.util.DownloadActivity;
 
 public class SettingsFragment extends PreferenceFragment
         implements SharedPreferences.OnSharedPreferenceChangeListener {
+
+    private DbVersion  offlineVer;
 
     public SettingsFragment() {
     }
@@ -126,8 +132,7 @@ public class SettingsFragment extends PreferenceFragment
         Preference updPref = findPreference("update");
         updPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
-                Intent i = new Intent(getActivity(), DownloadActivity.class);
-                startActivity(i);
+                new HttpRequestDBVersion().execute();
                 return true;
             }
         });
@@ -240,6 +245,67 @@ public class SettingsFragment extends PreferenceFragment
 
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Legfrissebb verzió")
+                        .setMessage("Az alkalmazás naprakész")
+                        .setNegativeButton("Rendben", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .show();
+            }
+        }
+    }
+
+    private class HttpRequestDBVersion extends AsyncTask<Void, Void, DbVersion> {
+        @Override
+        protected DbVersion doInBackground(Void... params) {
+            try {
+                final String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/offline/currentVer";
+                RestTemplate restTemplate = new RestTemplate();
+                restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+                DbVersion currentVer = restTemplate.getForObject(url, DbVersion.class);
+
+                DBVersionReader dbRead = new DBVersionReader(Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/version/ver.xml");
+                offlineVer= dbRead.getDBVer();
+
+                return currentVer;
+            } catch (Exception e) {
+                Intent i = new Intent(getActivity(), ErrorActivity.class);
+                i.putExtra("darkMode", false);
+                i.putExtra("error", e.getMessage());
+                startActivity(i);
+                Log.e("Settings", e.getMessage(), e);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(DbVersion currVer) {
+            String curverName = currVer.getVersion();
+            String offlineVerName = offlineVer.getVersion();
+
+            if (Integer.valueOf(curverName) > Integer.valueOf(offlineVerName)) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Új verzió")
+                        .setMessage("Új adatbázis verzió érhető el. Frissítsünk?")
+                        .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                new DeleteOfflineDir(Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide");
+                                Intent i = new Intent(getActivity(), DownloadActivity.class);
+                                startActivity(i);
+                            }
+                        })
+                        .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .show();
+            } else {
+
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Legfrissebb adatbázis")
                         .setMessage("Az alkalmazás naprakész")
                         .setNegativeButton("Rendben", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
