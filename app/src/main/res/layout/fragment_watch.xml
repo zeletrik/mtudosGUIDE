@@ -510,6 +510,230 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/watch13"
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingStart="10dp"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/pic_13"
+                android:src="@drawable/watch_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pic_13"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/name_13"
+                android:text="fitbit charge 2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_13"
+                android:layout_toRightOf="@+id/pic_13"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/ip13Fix"
+                android:text="IP : cseppálló" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ip13Fix"
+                android:layout_toRightOf="@+id/pic_13"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/comp13Fix"
+                android:text="Kompatibilis: Android 4.3 / iOS8.2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/watch14"
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingStart="10dp"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/pic_14"
+                android:src="@drawable/watch_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pic_14"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/name_14"
+                android:text="fitbit flex 2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_14"
+                android:layout_toRightOf="@+id/pic_14"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/ip14Fix"
+                android:text="IP : 50m-ig vízálló" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ip14Fix"
+                android:layout_toRightOf="@+id/pic_14"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/comp14Fix"
+                android:text="Kompatibilis: Android 4.3 / iOS8.2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/watch15"
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingStart="10dp"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/pic_15"
+                android:src="@drawable/watch_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pic_15"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/name_15"
+                android:text="fitbit alta" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_15"
+                android:layout_toRightOf="@+id/pic_15"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/ip15Fix"
+                android:text="IP : cseppálló" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ip15Fix"
+                android:layout_toRightOf="@+id/pic_15"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/comp15Fix"
+                android:text="Kompatibilis: Android 4.3 / iOS8.2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/watch16"
+            android:background="@drawable/item_bg"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingStart="10dp"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/pic_16"
+                android:src="@drawable/watch_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pic_16"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/name_16"
+                android:text="fitbit blaze" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_16"
+                android:layout_toRightOf="@+id/pic_16"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/ip16Fix"
+                android:text="IP : cseppálló" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ip16Fix"
+                android:layout_toRightOf="@+id/pic_16"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/comp16Fix"
+                android:text="Kompatibilis: Android 4.3 / iOS8.2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/item_bg"
             android:layout_margin="20dp"

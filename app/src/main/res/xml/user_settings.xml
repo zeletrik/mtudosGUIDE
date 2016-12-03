@@ -10,7 +10,7 @@
             android:key="version" />
         <Preference
             android:title="Verziótörténet"
-            android:summary="Unreleased"
+            android:summary="2016-12-03"
             android:key="changelog" />
          <Preference
             android:title="Visszajelzés"

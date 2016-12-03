@@ -49,7 +49,7 @@
             android:textColor="@android:color/black"
             android:textSize="16dp"
             android:layout_gravity="center_horizontal"
-            android:text="Release date: Unreleased"/>
+            android:text="Release date: 2016-12-03" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
             android:textColor="@android:color/black"
             android:textSize="16dp"
             android:layout_gravity="center_horizontal"
-            android:text="2016-03-01"/>
+            android:text="2016-12-01" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
             android:textColor="@android:color/black"
             android:textSize="16dp"
             android:gravity="center"
-            android:text="Az alkalmazás kifejezetten a Mobiltudósoknak készült. Hasznos információk találhatók benne a Magyar Telekom Nyrt. kínálatában lévő eszközökről valamint szolgáltatásokról. A használata mindenki számára engedélyzett viszont egyes funkciók csak az INTRANET-hez való kapcsolódás után érhetők el. Amennyiben hibát tapasztal akár a működésben, akár a tartalomban, az alsó gomb megérintésével tudja ezt jelezni."/>
+            android:text="Az alkalmazás kifejezetten a Mobiltudósoknak készült. Hasznos információk találhatók benne a Magyar Telekom Nyrt. kínálatában lévő eszközökről valamint szolgáltatásokról. Az itt megjelenített adatok nem feltétlenül publikusak és naprakészek. Ha hibát tapasztalsz jelentsd a beállítások menüből." />
 
         <TextView
             android:layout_width="wrap_content"

@@ -25,8 +25,12 @@ public class TutorialActivity extends AppIntro2 {
 
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest
-        addSlide(AppIntroFragment.newInstance(" Title 1", "description 1", R.drawable.ic_launcher, Color.parseColor("#2196F3")));
-        addSlide(AppIntroFragment.newInstance(" Title 2", "description 2", R.drawable.ic_launcher, Color.MAGENTA));
+        addSlide(AppIntroFragment.newInstance("MOBILTUDÓS GUIDE", "Gyors válaszok, hogy ne a neted bújd a válaszokat keresve", R.drawable.splash, Color.parseColor("#f51e97")));
+        addSlide(AppIntroFragment.newInstance("Specifikációk", "Az értékesített készülékek alap specifikációja, hogy midnig kéznél legyen", R.drawable.tut_spec, Color.MAGENTA));
+        addSlide(AppIntroFragment.newInstance("Data kímélő mód", "Ha kevés a net, kapcsold be, hogy ne töltse le a képeket így spórolhatsz az adatforgalommal", R.drawable.tut_datasave, Color.parseColor("#8e24aa")));
+        addSlide(AppIntroFragment.newInstance("Offline mód", "Ha elszakadnál a világhálótól", R.drawable.tut_offline, Color.parseColor("#8bc34a")));
+        addSlide(AppIntroFragment.newInstance("INTRANET", "Ne feledd, bizonyos funkicók eléréséhez szükség van VPN kapcsolatra!", R.drawable.tut_vpn, Color.parseColor("#FF5722")));
+        addSlide(AppIntroFragment.newInstance("MOBILTUDÓS GUIDE", "Jó munkát, kedves ügyfeleket!", R.drawable.splash, Color.parseColor("#f51e97")));
 
         // OPTIONAL METHODS
 

@@ -342,7 +342,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:id="@+id/name_6"
-                android:text="Huawei MediaPad T1"/>
+                android:text="Samsung Tab A 2016" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -354,7 +354,7 @@
                 android:layout_marginTop="5dp"
                 android:textColor="#E20074"
                 android:id="@+id/os_6"
-                android:text="Android 4.3"/>
+                android:text="Android 6.0" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -364,7 +364,7 @@
                 android:layout_marginStart="15dp"
                 android:textColor="#E20074"
                 android:id="@+id/sim_6"
-                android:text="Micro-sim"/>
+                android:text="Nano-sim" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -374,7 +374,137 @@
                 android:layout_marginStart="15dp"
                 android:textColor="#E20074"
                 android:id="@+id/ma_rate_6"
+                android:text="Mobilarena: n/a" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/item_bg"
+            android:layout_margin="16dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/tab_7"
+            android:onClick="tab7Click">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:paddingStart="15dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/pic_7"
+                android:src="@drawable/tab_7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pic_7"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/name_7"
+                android:text="Huawei MediaPad T1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_7"
+                android:layout_toRightOf="@+id/pic_7"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/os_7"
+                android:text="Android 4.3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/os_7"
+                android:layout_toRightOf="@+id/pic_7"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:textColor="#E20074"
+                android:id="@+id/sim_7"
+                android:text="Micro-sim" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sim_7"
+                android:layout_toRightOf="@+id/pic_7"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:textColor="#E20074"
+                android:id="@+id/ma_rate_7"
                 android:text="Mobilarena: Tetszett"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/item_bg"
+            android:layout_margin="16dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp"
+            android:id="@+id/tab_8"
+            android:onClick="tab8Click">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:paddingStart="15dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/pic_8"
+                android:src="@drawable/tab_8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pic_8"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E20074"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/name_8"
+                android:text="Huawei MediaPad M3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_8"
+                android:layout_toRightOf="@+id/pic_8"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#E20074"
+                android:id="@+id/os_8"
+                android:text="Android 6.0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/os_8"
+                android:layout_toRightOf="@+id/pic_8"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:textColor="#E20074"
+                android:id="@+id/sim_8"
+                android:text="Nano-sim" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sim_8"
+                android:layout_toRightOf="@+id/pic_8"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:textColor="#E20074"
+                android:id="@+id/ma_rate_8"
+                android:text="Mobilarena: Ajánlott" />
         </RelativeLayout>
 
     </LinearLayout>

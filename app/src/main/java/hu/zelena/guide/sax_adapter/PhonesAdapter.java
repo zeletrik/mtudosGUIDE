@@ -21,7 +21,6 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
-import hu.zelena.guide.MainActivity;
 import hu.zelena.guide.R;
 import hu.zelena.guide.modell.PhonesModell;
 
@@ -77,7 +76,7 @@ public class PhonesAdapter extends ArrayAdapter<PhonesModell> {
         }else offline = false;
 
         if(offline){
-            basePath = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/offline/phones";
+            basePath = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/data/offline/";
         }else{
             basePath = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones";
         }

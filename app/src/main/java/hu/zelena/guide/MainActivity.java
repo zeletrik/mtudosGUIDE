@@ -595,5 +595,13 @@ public class MainActivity extends AppCompatActivity {
     public void tab6Click(View view) {
         SpecAct("6");
     }
+
+    public void tab7Click(View view) {
+        SpecAct("7");
+    }
+
+    public void tab8Click(View view) {
+        SpecAct("8");
+    }
 }
 

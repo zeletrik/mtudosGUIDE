@@ -60,7 +60,7 @@ public class SpecsFragment extends Fragment {
         } else offline = false;
 
         if (offline) {
-            baseURL = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/data/offline" + brand + "/specs/" + phone + ".xml";
+            baseURL = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/data/offline/" + brand + "/specs/" + phone + ".xml";
             new GetOfflineSpecs().execute(baseURL);
         } else {
             baseURL = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones/" + brand + "/specs/" + phone;
@@ -158,12 +158,13 @@ public class SpecsFragment extends Fragment {
         }
     }
 
-    private class GetOfflineSpecs extends AsyncTask<String, Void, Void> {
+    private class GetOfflineSpecs extends AsyncTask<String, Void, Specs> {
         @Override
-        protected Void doInBackground(String... params) {
+        protected Specs doInBackground(String... params) {
             try {
-                SpecsReader specsReader = new SpecsReader(params[0]);
-                specs = specsReader.getSpecs();
+                SpecsReader specsReader = new SpecsReader(baseURL);
+                Specs spec = specsReader.getSpecs();
+                return spec;
             } catch (Exception e) {
                 Intent i = new Intent(getActivity(), ErrorActivity.class);
                 i.putExtra("darkMode", darkMode);
@@ -175,7 +176,7 @@ public class SpecsFragment extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(Void aVoid) {
+        protected void onPostExecute(Specs specs) {
 
             getActivity().setTitle(specs.getName());
 
@@ -238,8 +239,6 @@ public class SpecsFragment extends Fragment {
 
             TextView IPcer = (TextView) rootView.findViewById(R.id.ipcertified);
             IPcer.setText(specs.getIpCertified());
-
-            super.onPostExecute(aVoid);
 
         }
     }

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -16,9 +15,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import hu.zelena.guide.sax_adapter.RssAdapter;
 import hu.zelena.guide.modell.RssItem;
 import hu.zelena.guide.rss.RssReader;
+import hu.zelena.guide.sax_adapter.RssAdapter;
 import hu.zelena.guide.util.ActivityHelper;
 
 /**
@@ -53,7 +52,6 @@ public class RssActivity extends AppCompatActivity {
         setContentView(R.layout.rss_feed_main);
         mList = (ListView) findViewById(R.id.list);
         new GetRssFeed().execute("http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/rss.xml");
-
     }
 
     @Override

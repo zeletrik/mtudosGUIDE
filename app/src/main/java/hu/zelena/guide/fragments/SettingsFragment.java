@@ -24,7 +24,6 @@ import hu.zelena.guide.ChangeLogActivity;
 import hu.zelena.guide.ErrorActivity;
 import hu.zelena.guide.R;
 import hu.zelena.guide.TutorialActivity;
-import hu.zelena.guide.UserSettingsActivity;
 import hu.zelena.guide.modell.DbVersion;
 import hu.zelena.guide.modell.Version;
 import hu.zelena.guide.util.DBVersionReader;
@@ -123,8 +122,13 @@ public class SettingsFragment extends PreferenceFragment
         Preference offPref = findPreference("offline");
         offPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
-                Intent i = new Intent(getActivity(), DownloadActivity.class);
-                startActivity(i);
+                SharedPreferences sharedPrefs = PreferenceManager
+                        .getDefaultSharedPreferences(getActivity());
+                if (sharedPrefs.getBoolean("offline", false)) {
+                    CallDownload();
+                } else {
+                    new DeleteOfflineDir(Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide");
+                }
                 return true;
             }
         });
@@ -139,6 +143,11 @@ public class SettingsFragment extends PreferenceFragment
 
     }
 
+    public void CallDownload() {
+        Intent i = new Intent(getActivity(), DownloadActivity.class);
+        startActivity(i);
+    }
+
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 
@@ -146,6 +155,7 @@ public class SettingsFragment extends PreferenceFragment
             Preference pr = findPreference("update");
             Preference pref = findPreference("dataSaver");
             if (sharedPreferences.getBoolean("offline", false)) {
+                CallDownload();
                 pr.setEnabled(true);
                 pref.setEnabled(false);
                 restartApp();
@@ -265,7 +275,7 @@ public class SettingsFragment extends PreferenceFragment
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 DbVersion currentVer = restTemplate.getForObject(url, DbVersion.class);
 
-                DBVersionReader dbRead = new DBVersionReader(Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/version/ver.xml");
+                DBVersionReader dbRead = new DBVersionReader(Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/data/version/ver.xml");
                 offlineVer= dbRead.getDBVer();
 
                 return currentVer;
@@ -290,8 +300,6 @@ public class SettingsFragment extends PreferenceFragment
                         .setMessage("Új adatbázis verzió érhető el. Frissítsünk?")
                         .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-
-                                new DeleteOfflineDir(Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide");
                                 Intent i = new Intent(getActivity(), DownloadActivity.class);
                                 startActivity(i);
                             }
