@@ -15,16 +15,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import hu.zelena.guide.ErrorActivity;
-import hu.zelena.guide.MainActivity;
 import hu.zelena.guide.R;
-import hu.zelena.guide.SpecsAvtivity;
 import hu.zelena.guide.modell.Specs;
 import hu.zelena.guide.util.SpecsReader;
 
@@ -63,7 +60,7 @@ public class SpecsFragment extends Fragment {
         } else offline = false;
 
         if (offline) {
-            baseURL = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/" + brand + "/specs/" + phone + ".xml";
+            baseURL = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/data/offline" + brand + "/specs/" + phone + ".xml";
             new GetOfflineSpecs().execute(baseURL);
         } else {
             baseURL = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones/" + brand + "/specs/" + phone;

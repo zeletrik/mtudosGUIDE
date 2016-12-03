@@ -38,10 +38,6 @@
                     android:icon="@drawable/ic_phone"
                     android:title="LG" />
                 <item
-                    android:id="@+id/microsoft_frag"
-                    android:icon="@drawable/ic_phone"
-                    android:title="Microsoft" />
-                <item
                     android:id="@+id/samsung_frag"
                     android:icon="@drawable/ic_phone"
                     android:title="Samsung" />

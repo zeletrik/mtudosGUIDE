@@ -1,20 +1,6 @@
 package hu.zelena.guide;
 
 
-import hu.zelena.guide.fragments.AboutFragment;
-import hu.zelena.guide.fragments.InternetFragment;
-import hu.zelena.guide.fragments.MagicbookFragment;
-import hu.zelena.guide.fragments.OthersFragment;
-import hu.zelena.guide.fragments.PhonesFragment;
-import hu.zelena.guide.fragments.PostPaidFragment;
-import hu.zelena.guide.fragments.PrePaidFragment;
-import hu.zelena.guide.fragments.TabletFragment;
-import hu.zelena.guide.fragments.WatchFragment;
-import hu.zelena.guide.modell.Schedule;
-import hu.zelena.guide.modell.Version;
-import hu.zelena.guide.util.ActivityHelper;
-import hu.zelena.guide.util.DownloadActivity;
-
 import android.Manifest;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -32,11 +18,12 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -44,10 +31,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import android.support.design.widget.Snackbar;
-
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
+
+import hu.zelena.guide.fragments.AboutFragment;
+import hu.zelena.guide.fragments.InternetFragment;
+import hu.zelena.guide.fragments.MagicbookFragment;
+import hu.zelena.guide.fragments.OthersFragment;
+import hu.zelena.guide.fragments.PhonesFragment;
+import hu.zelena.guide.fragments.PostPaidFragment;
+import hu.zelena.guide.fragments.PrePaidFragment;
+import hu.zelena.guide.fragments.TabletFragment;
+import hu.zelena.guide.fragments.WatchFragment;
+import hu.zelena.guide.modell.Schedule;
+import hu.zelena.guide.modell.Version;
+import hu.zelena.guide.util.ActivityHelper;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -219,10 +217,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.lg_frag:
                 fragment = new PhonesFragment();
                 brand = "LG";
-                break;
-            case R.id.microsoft_frag:
-                fragment = new PhonesFragment();
-                brand = "Microsoft";
                 break;
             case R.id.samsung_frag:
                 fragment = new PhonesFragment();

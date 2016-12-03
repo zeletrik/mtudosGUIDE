@@ -48,15 +48,15 @@ public class SpecsHandler extends DefaultHandler {
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         if (qName.equals("name"))
             parsingName = true;
-        else if (qName.equals("displaytype"))
+        else if (qName.equals("displayType"))
             parsingDisplayType = true;
-        else if (qName.equals("displaysize"))
+        else if (qName.equals("displaySize"))
             parsingDisplaySize = true;
-        else if (qName.equals("displayres"))
+        else if (qName.equals("displayRes"))
             parsingDisplayRes = true;
-        else if (qName.equals("displayprotect"))
+        else if (qName.equals("displayProtect"))
             parsingDisplayProtect = true;
-        else if (qName.equals("os"))
+        else if (qName.equals("os_spec"))
             parsingOS = true;
         else if (qName.equals("chipset"))
             parsingChipset = true;
@@ -70,11 +70,11 @@ public class SpecsHandler extends DefaultHandler {
             parsingROM = true;
         else if (qName.equals("expand"))
             parsingExpand = true;
-        else if (qName.equals("rearcam"))
+        else if (qName.equals("rCam"))
             parsingRCam = true;
-        else if (qName.equals("frontcam"))
+        else if (qName.equals("fCam"))
             parsingFCam = true;
-        else if (qName.equals("battery"))
+        else if (qName.equals("batt"))
             parsingBattery = true;
         else if (qName.equals("speaker"))
             parsingSpeaker = true;
@@ -82,7 +82,7 @@ public class SpecsHandler extends DefaultHandler {
             parsingNFC = true;
         else if (qName.equals("radio"))
             parsingRadio = true;
-        else if (qName.equals("ip"))
+        else if (qName.equals("ipCertified"))
             parsingIP = true;
     }
 
@@ -91,15 +91,15 @@ public class SpecsHandler extends DefaultHandler {
     public void endElement(String uri, String localName, String qName) throws SAXException {
      if (qName.equals("name"))
             parsingName = false;
-        else if (qName.equals("displaytype"))
+     else if (qName.equals("displayType"))
             parsingDisplayType = false;
-        else if (qName.equals("displaysize"))
+     else if (qName.equals("displaySize"))
             parsingDisplaySize = false;
-        else if (qName.equals("displayres"))
+     else if (qName.equals("displayRes"))
             parsingDisplayRes = false;
-        else if (qName.equals("displayprotect"))
+     else if (qName.equals("displayProtect"))
             parsingDisplayProtect = false;
-        else if (qName.equals("os"))
+     else if (qName.equals("os_spec"))
             parsingOS = false;
         else if (qName.equals("chipset"))
             parsingChipset = false;
@@ -113,11 +113,11 @@ public class SpecsHandler extends DefaultHandler {
             parsingROM = false;
         else if (qName.equals("expand"))
             parsingExpand = false;
-        else if (qName.equals("rearcam"))
+     else if (qName.equals("rCam"))
             parsingRCam = false;
-        else if (qName.equals("frontcam"))
+     else if (qName.equals("fCam"))
             parsingFCam = false;
-        else if (qName.equals("battery"))
+     else if (qName.equals("batt"))
             parsingBattery = false;
         else if (qName.equals("speaker"))
             parsingSpeaker = false;
@@ -125,7 +125,7 @@ public class SpecsHandler extends DefaultHandler {
             parsingNFC = false;
         else if (qName.equals("radio"))
             parsingRadio = false;
-        else if (qName.equals("ip"))
+     else if (qName.equals("ipCertified"))
             parsingIP = false;
     }
 

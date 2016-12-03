@@ -17,11 +17,11 @@ import java.util.List;
 
 import hu.zelena.guide.ErrorActivity;
 import hu.zelena.guide.MainActivity;
-import hu.zelena.guide.util.PhoneListReader;
 import hu.zelena.guide.R;
 import hu.zelena.guide.SpecsAvtivity;
 import hu.zelena.guide.modell.PhonesModell;
 import hu.zelena.guide.sax_adapter.PhonesAdapter;
+import hu.zelena.guide.util.PhoneListReader;
 
 
 /**
@@ -67,7 +67,7 @@ public class PhonesFragment extends Fragment {
                 offline = true;
             }
             if (offline) {
-                path = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/offline/phones/" + brand + "/phones.xml";
+                path = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/data/offline/" + brand + "/phones.xml";
             } else {
                 path = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones/" + brand + "/phones.xml";
             }
