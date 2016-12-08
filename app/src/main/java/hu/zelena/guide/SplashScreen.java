@@ -6,14 +6,26 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import hu.zelena.guide.util.ActivityHelper;
-
 /**
- * Created by patrik on 2016.11.14..
+ Copyright Patrik G. Zelena
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
  */
 
 public class SplashScreen extends Activity {
 
-    // Splash screen timer
+    // Splash screen számláló
     private static int SPLASH_TIME_OUT = 2000;
 
     @Override
@@ -25,19 +37,10 @@ public class SplashScreen extends Activity {
 
         new Handler().postDelayed(new Runnable() {
 
-            /*
-             * Showing splash screen with a timer. This will be useful when you
-             * want to show case your app logo / company
-             */
-
             @Override
             public void run() {
-                // This method will be executed once the timer is over
-                // Start your app main activity
                 Intent i = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(i);
-
-                // close this activity
                 finish();
             }
         }, SPLASH_TIME_OUT);

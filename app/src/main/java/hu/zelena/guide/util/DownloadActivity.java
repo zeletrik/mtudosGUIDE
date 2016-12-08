@@ -20,13 +20,25 @@ import java.net.URLConnection;
 import hu.zelena.guide.ErrorActivity;
 
 /**
- * Created by patrik on 2016.11.22..
+ Copyright Patrik G. Zelena
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
  */
 
 public class DownloadActivity  extends ActionBarActivity {
 
     public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
-    public static final int DIALOG_BUILD = 1;
 
 
     private ProgressDialog mProgressDialog;
@@ -79,7 +91,7 @@ public class DownloadActivity  extends ActionBarActivity {
                 Log.d("ANDRO_ASYNC", "Lenght of file: " + lenghtOfFile);
 
                 InputStream input = new BufferedInputStream(url.openStream());
-                Log.d("Input strem", "OK");
+                Log.d("Input stream", "OK");
 
                 File folder = new File(Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide");
                 boolean success = true;
