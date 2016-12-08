@@ -1,4 +1,4 @@
-package hu.zelena.guide.sax_adapter;
+package hu.zelena.guide.adapter_sax;
 
 import android.app.Activity;
 import android.content.Context;

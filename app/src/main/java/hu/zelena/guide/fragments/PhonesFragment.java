@@ -19,8 +19,8 @@ import hu.zelena.guide.ErrorActivity;
 import hu.zelena.guide.MainActivity;
 import hu.zelena.guide.R;
 import hu.zelena.guide.SpecsAvtivity;
+import hu.zelena.guide.adapter_sax.PhonesAdapter;
 import hu.zelena.guide.modell.PhonesModell;
-import hu.zelena.guide.sax_adapter.PhonesAdapter;
 import hu.zelena.guide.util.PhoneListReader;
 
 

@@ -15,10 +15,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import hu.zelena.guide.adapter_sax.RssAdapter;
 import hu.zelena.guide.modell.RssItem;
-import hu.zelena.guide.rss.RssReader;
-import hu.zelena.guide.sax_adapter.RssAdapter;
 import hu.zelena.guide.util.ActivityHelper;
+import hu.zelena.guide.util.RssReader;
 
 /**
  Copyright Patrik G. Zelena
