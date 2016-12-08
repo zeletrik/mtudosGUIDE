@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hu.zelena.guide"
-    android:versionCode="3"
-    android:versionName="1.1.3" >
+    android:versionCode="6"
+    android:versionName="2.0.5">
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -18,7 +18,8 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        android:name=".util.AnalyticsApplication">
         <activity
         android:name="hu.zelena.guide.SplashScreen"
         android:label="@string/app_name"
@@ -43,7 +44,7 @@
                 android:theme="@style/AppIntroTheme" />
 
         <activity android:name="hu.zelena.guide.UserSettingsActivity"
-            android:label="Settings"
+            android:label="Beállítások"
             android:theme="@style/SettingsTheme" />
 
         <activity android:name="hu.zelena.guide.SpecsAvtivity"
@@ -64,7 +65,7 @@
             android:theme="@style/SpecTheme" />
 
         <activity android:name="hu.zelena.guide.ChangeLogActivity"
-            android:label="ChangeLog"
+            android:label="Verziótörténet"
             android:theme="@style/SettingsTheme"/>
 
         <activity android:name="hu.zelena.guide.util.DownloadActivity"

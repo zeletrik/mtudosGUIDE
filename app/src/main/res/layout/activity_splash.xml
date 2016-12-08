@@ -21,6 +21,6 @@
         android:gravity="center_horizontal"
         android:textAllCaps="true"
         android:layout_alignBottom="@id/imgLogo"
-        android:text="Mobiltudós  Guide v2.0.0" />
+        android:text="Mobiltudós  Guide v2.0.5" />
 
 </RelativeLayout>

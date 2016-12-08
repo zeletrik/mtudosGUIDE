@@ -34,9 +34,11 @@
 
     <style name="SettingsDarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/magenta</item>
-        <item name="colorPrimaryDark">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/almostBlack</item>
         <item name="colorAccent">@color/magenta</item>
        <item name="android:background">@color/almostBlack</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/magenta</item>
     </style>
 
     <style name="SpecTheme" parent="Theme.AppCompat.Light.DarkActionBar">

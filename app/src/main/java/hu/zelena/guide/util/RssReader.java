@@ -1,15 +1,14 @@
-package hu.zelena.guide.rss;
+package hu.zelena.guide.util;
 
 /**
  * Created by patrik on 2016.11.08..
  */
 
 
+import java.util.List;
+
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
-import java.io.File;
-import java.util.List;
 
 import hu.zelena.guide.modell.RssItem;
 

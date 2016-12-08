@@ -22,6 +22,7 @@ import org.springframework.web.client.RestTemplate;
 import hu.zelena.guide.BuildConfig;
 import hu.zelena.guide.ChangeLogActivity;
 import hu.zelena.guide.ErrorActivity;
+import hu.zelena.guide.MainActivity;
 import hu.zelena.guide.R;
 import hu.zelena.guide.TutorialActivity;
 import hu.zelena.guide.modell.DbVersion;
@@ -184,13 +185,10 @@ public class SettingsFragment extends PreferenceFragment
     }
 
     public void restartApp() {
-        Intent i = getActivity().getBaseContext().getPackageManager()
-                .getLaunchIntentForPackage(getActivity().getBaseContext().getPackageName());
+        Intent i = new Intent(getActivity(), MainActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Intent in = getActivity().getIntent();
-        in.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
-        startActivity(in);
     }
 
     @Override

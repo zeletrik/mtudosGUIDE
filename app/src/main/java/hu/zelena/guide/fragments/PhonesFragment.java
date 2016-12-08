@@ -19,8 +19,8 @@ import hu.zelena.guide.ErrorActivity;
 import hu.zelena.guide.MainActivity;
 import hu.zelena.guide.R;
 import hu.zelena.guide.SpecsAvtivity;
+import hu.zelena.guide.adapter_sax.PhonesAdapter;
 import hu.zelena.guide.modell.PhonesModell;
-import hu.zelena.guide.sax_adapter.PhonesAdapter;
 import hu.zelena.guide.util.PhoneListReader;
 
 
@@ -107,7 +107,8 @@ public class PhonesFragment extends Fragment {
                 @Override
                 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                     PhonesModell data = aList.get(arg2);
-                    String phone = String.valueOf(arg2 + 1);
+                    //  String phone = String.valueOf(arg2 + 1);
+                    String phone = aList.get(arg2).getName();
 
                     Intent i = new Intent(getActivity(), SpecsAvtivity.class);
                     i.putExtra("brand", brand);

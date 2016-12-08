@@ -6,11 +6,11 @@
 
         <Preference
             android:title="Verzió"
-            android:summary="2.0.0"
+            android:summary="2.0.5"
             android:key="version" />
         <Preference
             android:title="Verziótörténet"
-            android:summary="2016-12-03"
+            android:summary="2017-02-05"
             android:key="changelog" />
          <Preference
             android:title="Visszajelzés"
@@ -58,6 +58,13 @@
                 android:title="Sötét mód"
                 android:summary="Kísérleti - Instabilitást okozhat"
                 android:key="darkMode"
+                android:defaultValue="false" />
+
+            <CheckBoxPreference
+                android:title="Beta frissítés"
+                android:summary="Hamarosan"
+                android:key="betaMode"
+                android:enabled="false"
                 android:defaultValue="false" />
 
             <!-- and other preference objects ... -->

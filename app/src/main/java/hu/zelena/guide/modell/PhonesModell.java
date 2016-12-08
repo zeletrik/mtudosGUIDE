@@ -37,7 +37,7 @@ public class PhonesModell {
     }
 
     public String getMobilarena() {
-        return mobilarena;
+        return "Mobilarena: " + mobilarena;
     }
 
     public void setMobilarena(String mobilarena) {

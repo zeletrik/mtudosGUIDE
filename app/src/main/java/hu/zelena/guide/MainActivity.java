@@ -16,6 +16,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -29,7 +30,13 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
@@ -46,6 +53,8 @@ import hu.zelena.guide.fragments.WatchFragment;
 import hu.zelena.guide.modell.Schedule;
 import hu.zelena.guide.modell.Version;
 import hu.zelena.guide.util.ActivityHelper;
+import hu.zelena.guide.util.AnalyticsApplication;
+
 
 /**
  * Copyright Patrik G. Zelena
@@ -65,6 +74,7 @@ import hu.zelena.guide.util.ActivityHelper;
 
 
 public class MainActivity extends AppCompatActivity {
+
 
     private String brand;
 
@@ -86,12 +96,18 @@ public class MainActivity extends AppCompatActivity {
     private boolean writeStorage = true;
     private boolean offlineMode = false;
 
+    private boolean firstFrag = false;
+
+    private Tracker mTracker;
 
     final int MY_PERMISSIONS_REQUEST_READ_STORAGE = 0;
 
     @SuppressWarnings("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        AnalyticsApplication application = (AnalyticsApplication) getApplication();
+        mTracker = application.getDefaultTracker();
 
 		/* Request user permissions in runtime */
         ActivityCompat.requestPermissions(MainActivity.this,
@@ -140,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
 
         Fragment fragment = new AboutFragment();
         if (fragment != null) {
+            firstFrag = true;
             FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.frame_container, fragment).commit();
@@ -181,6 +198,11 @@ public class MainActivity extends AppCompatActivity {
 
                 i.putExtra("writeStorage", writeStorage);
                 startActivityForResult(i, RESULT_SETTINGS);
+                mTracker.send(new HitBuilders.EventBuilder()
+                        .setCategory("Action")
+                        .setAction("Settings")
+                        .build());
+
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -268,6 +290,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (fragment != null) {
+            firstFrag = false;
             bundle.putString("brand", brand);
             fragment.setArguments(bundle);
             FragmentManager fragmentManager = getFragmentManager();
@@ -280,6 +303,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             Log.e("MainActivity", "Error in creating fragment");
         }
+
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("Drawer Select")
+                .build());
 
         // Highlight the selected item has been done by NavigationView
         menuItem.setChecked(true);
@@ -375,11 +403,60 @@ public class MainActivity extends AppCompatActivity {
      * Back gomb gombnyomásra történő NavBar zárás vagy kilépés
      */
 
+    boolean doubleBackToExitPressedOnce = false;
+
+
     @Override
     public void onBackPressed() {
         if (mDrawer.isDrawerOpen(GravityCompat.START)) {
             mDrawer.closeDrawers();
-        } else finish();
+        } else {
+
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+
+            Fragment fragment = new AboutFragment();
+            if (fragment != null) {
+                firstFrag = true;
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_container, fragment).commit();
+                setTitle("MOBILTUDÓS GUIDE");
+
+                final Menu menu = nvDrawer.getMenu();
+                for (int i = 0; i < menu.size(); i++) {
+                    MenuItem item = menu.getItem(i);
+                    if (item.hasSubMenu()) {
+                        SubMenu subMenu = item.getSubMenu();
+                        for (int j = 0; j < subMenu.size(); j++) {
+                            MenuItem subMenuItem = subMenu.getItem(j);
+                            subMenuItem.setChecked(false);
+                        }
+                    } else {
+                        item.setChecked(false);
+                    }
+                }
+            } else {
+                Intent i = new Intent(this, ErrorActivity.class);
+                i.putExtra("darkMode", isDark);
+                i.putExtra("error", "Nem sikerült a HOME-FRAGMENT betöltése. [Null object]");
+                startActivity(i);
+
+                Log.e("MainActivity", "Error in creating fragment");
+            }
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Nyomja meg mégegyszer a kilépéshez", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
+        }
     }
 
 
@@ -581,6 +658,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void SpecAct(String no) {
 
+
         Intent i = new Intent(MainActivity.this, SpecsAvtivity.class);
         i.putExtra("brand", "tablet");
         i.putExtra("phone", no);
@@ -589,35 +667,62 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tab1Click(View view) {
-        SpecAct("1");
+
+        TextView title = (TextView) findViewById(R.id.name_1);
+        String no = (String) title.getText();
+
+        SpecAct(no);
     }
 
     public void tab2Click(View view) {
-        SpecAct("2");
+
+        TextView title = (TextView) findViewById(R.id.name_2);
+        String no = (String) title.getText();
+
+        SpecAct(no);
     }
 
     public void tab3Click(View view) {
-        SpecAct("3");
+
+        TextView title = (TextView) findViewById(R.id.name_3);
+        String no = (String) title.getText();
+
+        SpecAct(no);
     }
 
     public void tab4Click(View view) {
-        SpecAct("4");
+        TextView title = (TextView) findViewById(R.id.name_4);
+        String no = (String) title.getText();
+
+        SpecAct(no);
     }
 
     public void tab5Click(View view) {
-        SpecAct("5");
+        TextView title = (TextView) findViewById(R.id.name_5);
+        String no = (String) title.getText();
+
+        SpecAct(no);
     }
 
     public void tab6Click(View view) {
-        SpecAct("6");
+        TextView title = (TextView) findViewById(R.id.name_6);
+        String no = (String) title.getText();
+
+        SpecAct(no);
     }
 
     public void tab7Click(View view) {
-        SpecAct("7");
+        TextView title = (TextView) findViewById(R.id.name_7);
+        String no = (String) title.getText();
+
+        SpecAct(no);
     }
 
     public void tab8Click(View view) {
-        SpecAct("8");
+        TextView title = (TextView) findViewById(R.id.name_8);
+        String no = (String) title.getText();
+
+        SpecAct(no);
     }
 }
 

@@ -15,6 +15,56 @@
             android:textColor="@android:color/black"
             android:textSize="18dp"
             android:textStyle="bold"
+            android:text="v2.0.5 - 2017.02.05" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Bug javítások" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Google Analytics implementálás" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="v2.0.1 - 2016.12.20" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Bug javítások" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Dialógus kilépéshez" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
             android:text="v2.0.0 - 2016.12.03" />
 
         <TextView
