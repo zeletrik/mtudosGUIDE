@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean dataSaver = false;
     private boolean writeStorage = true;
     private boolean offlineMode = false;
+    private boolean betaMode = false;
 
     private boolean firstFrag = false;
 
@@ -131,6 +132,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (sharedPrefs.getBoolean("offline", false)) {
             offlineMode = true;
+        }
+        if (sharedPrefs.getBoolean("betaMode", false)) {
+            betaMode = true;
         }
 
         super.onCreate(savedInstanceState);
@@ -490,8 +494,11 @@ public class MainActivity extends AppCompatActivity {
         manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
-
         String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/guide.apk";
+        if (betaMode) {
+            url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/beta/guide.apk";
+        }
+
         intent.setData(Uri.parse(url));
         PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 1, intent, 0);
 
@@ -516,7 +523,10 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Version doInBackground(Void... params) {
             try {
-                final String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/ver";
+                String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/ver";
+                if (betaMode) {
+                    url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/beta/ver";
+                }
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 Version ver = restTemplate.getForObject(url, Version.class);
@@ -540,7 +550,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void CheckVersion() {
-
         if (checkInternet()) {
             new HttpRequestVersion().execute();
         }
@@ -724,5 +733,6 @@ public class MainActivity extends AppCompatActivity {
 
         SpecAct(no);
     }
+
 }
 

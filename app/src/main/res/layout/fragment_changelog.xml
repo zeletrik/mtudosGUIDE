@@ -15,6 +15,56 @@
             android:textColor="@android:color/black"
             android:textSize="18dp"
             android:textStyle="bold"
+            android:text="v2.0.X - 2017.02.XX" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Watch Fragment fejlesztése" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="v2.0.6 - 2017.02.06" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Dark Mode fejlesztése" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Beta Mode engedélyezése" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Funkicó előrejelzés" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
             android:text="v2.0.5 - 2017.02.05" />
 
         <TextView

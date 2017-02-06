@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mobiltudós Guide - v2.0.0"
+            android:text="Mobiltudós Guide - v2.0.6"
             android:textColor="@android:color/white"
             android:textAllCaps="true"
             android:textSize="14sp"

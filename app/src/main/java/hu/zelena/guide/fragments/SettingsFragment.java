@@ -1,5 +1,6 @@
 package hu.zelena.guide.fragments;
 
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -39,6 +40,7 @@ public class SettingsFragment extends PreferenceFragment
         implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     private DbVersion  offlineVer;
+    private boolean betaMode = false;
 
     public SettingsFragment() {
     }
@@ -74,6 +76,9 @@ public class SettingsFragment extends PreferenceFragment
             updatePref.setEnabled(false);
         }
 
+        if (sharedPrefs.getBoolean("betaMode", false)) {
+            betaMode = true;
+        }
 
         Preference fPref = findPreference("feedback");
         fPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -182,6 +187,11 @@ public class SettingsFragment extends PreferenceFragment
             restartApp();
         }
 
+        if (key.equals("betaMode")) {
+            clearNotification();
+            restartApp();
+        }
+
     }
 
     public void restartApp() {
@@ -211,7 +221,10 @@ public class SettingsFragment extends PreferenceFragment
         @Override
         protected Version doInBackground(Void... params) {
             try {
-                final String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/ver";
+                String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/ver";
+                if (betaMode) {
+                    url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/beta/ver";
+                }
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
                 Version ver = restTemplate.getForObject(url, Version.class);
@@ -231,6 +244,7 @@ public class SettingsFragment extends PreferenceFragment
             String verName = ver.getVersion();
 
             if (Integer.valueOf(verName) > Integer.valueOf(BuildConfig.VERSION_CODE)) {
+                if (!betaMode) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Új verzió")
                         .setMessage("Új verzió érhető el. Frissítsünk?")
@@ -249,6 +263,27 @@ public class SettingsFragment extends PreferenceFragment
                             }
                         })
                         .show();
+                } else {
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle("Új verzió")
+                            .setMessage("Új BETA verzió érhető el. Nem tesztelt. Instabilitást okozhat. Frissítsünk?")
+                            .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                                    String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/guide.apk";
+                                    intent.setData(Uri.parse(url));
+                                    startActivity(intent);
+                                }
+                            })
+                            .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // do nothing
+                                }
+                            })
+                            .show();
+                }
+
             } else {
 
                 new AlertDialog.Builder(getActivity())
@@ -348,5 +383,11 @@ public class SettingsFragment extends PreferenceFragment
                 = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    public void clearNotification() {
+        NotificationManager notificationManager = (NotificationManager) getActivity()
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.cancelAll();
     }
 }
