@@ -1,0 +1,62 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="magicbook"
+        android:enabled="true"
+        android:icon="@drawable/ic_magicbook"
+        android:shortcutShortLabel="@string/shortcut_magicb"
+        android:shortcutLongLabel="@string/shortcut_magicb_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="hu.zelena.guide"
+            android:targetClass="hu.zelena.guide.WebViewActivity">
+            <extra
+                android:name="title"
+                android:value="Magic Book" />
+            <extra
+                android:name="URL"
+                android:value="http://magicbook.telekom.intra/" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="phoneprice"
+        android:enabled="true"
+        android:icon="@drawable/ic_bill"
+        android:shortcutShortLabel="@string/shortcut_prices"
+        android:shortcutLongLabel="@string/shortcut_prices_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="hu.zelena.guide"
+            android:targetClass="hu.zelena.guide.WebViewActivity">
+            <extra
+                android:name="title"
+                android:value="Készülék árlista" />
+            <extra
+                android:name="URL"
+                android:value="https://docs.google.com/gview?embedded=true&amp;url=http://www.telekom.hu/static-la/sw/file/Akcios_keszulek_arlista_kijelolt_dijcsomagokhoz.pdf" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="emailCollect"
+        android:enabled="true"
+        android:icon="@drawable/ic_phone"
+        android:shortcutShortLabel="@string/shortcut_email"
+        android:shortcutLongLabel="@string/shortcut_email_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="hu.zelena.guide"
+            android:targetClass="hu.zelena.guide.WebViewActivity">
+            <extra
+                android:name="title"
+                android:value="Email gyűjtő - Public" />
+            <extra
+                android:name="URL"
+                android:value="http://www.telekom.hu/lakossagi/szolgaltatasok/mobiltudos" />
+        </intent>
+    </shortcut>
+
+</shortcuts>

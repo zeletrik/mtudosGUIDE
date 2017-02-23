@@ -6,7 +6,6 @@
     tools:context=".MainActivity"
     android:background="?attr/theme_background"
     android:paddingTop="?attr/actionBarSize">
-
     <ListView
         android:id="@+id/list"
         android:layout_width="fill_parent"

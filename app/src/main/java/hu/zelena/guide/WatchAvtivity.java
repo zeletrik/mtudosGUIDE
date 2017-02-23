@@ -8,31 +8,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import hu.zelena.guide.fragments.SpecsFragment;
+import hu.zelena.guide.fragments.WatchSpecFragment;
 import hu.zelena.guide.util.ActivityHelper;
 
 /**
- Copyright Patrik G. Zelena
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-
+ * Created by patrik on 2017.02.19..
  */
-public class SpecsAvtivity extends AppCompatActivity {
 
-    String brand;
-    String phone;
+public class WatchAvtivity extends AppCompatActivity {
 
-    public SpecsAvtivity() {
+    String name;
+
+    public WatchAvtivity() {
     }
 
     @Override
@@ -55,23 +42,16 @@ public class SpecsAvtivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-
-
-       /* Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);*/
-
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Fragment fragment = new SpecsFragment();
+        Fragment fragment = new WatchSpecFragment();
 
         mainBundle = getIntent().getExtras();
-        brand = mainBundle.getString("brand");
-        phone = mainBundle.getString("phone");
+        name = mainBundle.getString("watch");
 
         Bundle bundle = new Bundle();
-        bundle.putString("brand", brand);
-        bundle.putString("phone", phone);
+        bundle.putString("watch", name);
 
 
         fragment.setArguments(bundle);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:colorPrimaryDark">@color/magenta</item>
         <item name="android:colorPrimary">@color/magenta</item>
         <item name="colorPrimary">@color/magenta</item>
@@ -15,7 +15,7 @@
     </style>
 
 
-    <style name="AppDarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="MainDarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:colorPrimaryDark">@color/magenta</item>
         <item name="android:colorPrimary">@color/magenta</item>
         <item name="colorPrimary">@color/magenta</item>
@@ -32,7 +32,8 @@
         <!-- Customize your theme here. -->
         <item name="android:windowTranslucentStatus">true</item>
     </style>
-    <style name="SpecTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="Main2Theme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/magenta</item>
         <item name="colorPrimaryDark">@color/magenta</item>
         <item name="colorAccent">@color/magenta</item>
@@ -42,7 +43,8 @@
         <item name="android:itemBackground">@color/white</item>
         <item name="android:textColor">@color/magenta</item>
     </style>
-    <style name="SpecDarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="Main2DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/magenta</item>
         <item name="colorPrimaryDark">@color/magenta</item>
         <item name="colorAccent">@color/magenta</item>

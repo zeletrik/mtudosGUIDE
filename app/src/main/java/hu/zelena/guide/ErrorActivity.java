@@ -43,7 +43,7 @@ public class ErrorActivity extends ActionBarActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         if (isDark) {
-            setTheme(R.style.SpecDarkTheme);
+            setTheme(R.style.Main2DarkTheme);
         }
 
         ActivityHelper.initialize(this);

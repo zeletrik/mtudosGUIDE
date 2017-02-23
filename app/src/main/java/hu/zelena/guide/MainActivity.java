@@ -32,7 +32,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.analytics.HitBuilders;
@@ -122,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPrefs = PreferenceManager
                 .getDefaultSharedPreferences(this);
         if (sharedPrefs.getBoolean("darkMode", false)) {
-            setTheme(R.style.AppDarkTheme);
+            setTheme(R.style.MainDarkTheme);
             isDark = true;
         }
 
@@ -191,14 +190,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(this, UserSettingsActivity.class);
                 i.putExtra("darkMode", isDark);
 
-                if (ContextCompat.checkSelfPermission(MainActivity.this,
+                writeStorage = ContextCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        == PackageManager.PERMISSION_GRANTED) {
-                    writeStorage = true;
-
-                } else {
-                    writeStorage = false;
-                }
+                        == PackageManager.PERMISSION_GRANTED;
 
                 i.putExtra("writeStorage", writeStorage);
                 startActivityForResult(i, RESULT_SETTINGS);
@@ -256,6 +250,10 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new PhonesFragment();
                 brand = "Huawei";
                 break;
+            case R.id.lenovo_frag:
+                fragment = new PhonesFragment();
+                brand = "Lenovo";
+                break;
             case R.id.lg_frag:
                 fragment = new PhonesFragment();
                 brand = "LG";
@@ -294,6 +292,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (fragment != null) {
+            mTracker.send(new HitBuilders.EventBuilder()
+                    .setCategory("Action")
+                    .setAction(brand + "drawer select")
+                    .build());
             firstFrag = false;
             bundle.putString("brand", brand);
             fragment.setArguments(bundle);
@@ -308,10 +310,6 @@ public class MainActivity extends AppCompatActivity {
             Log.e("MainActivity", "Error in creating fragment");
         }
 
-        mTracker.send(new HitBuilders.EventBuilder()
-                .setCategory("Action")
-                .setAction("Drawer Select")
-                .build());
 
         // Highlight the selected item has been done by NavigationView
         menuItem.setChecked(true);
@@ -387,10 +385,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT, "Verzió: " + version);
         startActivity(Intent.createChooser(intent, ""));
 
-    }
-
-    public boolean getSaverMode() {
-        return dataSaver;
     }
 
     public boolean getOfflineMode() {
@@ -665,73 +659,26 @@ public class MainActivity extends AppCompatActivity {
      * Tablet Click-ek
      */
 
-    public void SpecAct(String no) {
-
-
+    public void tabSpec(View view) {
+        String name = view.getTag().toString();
         Intent i = new Intent(MainActivity.this, SpecsAvtivity.class);
         i.putExtra("brand", "tablet");
-        i.putExtra("phone", no);
+        i.putExtra("phone", name);
         i.putExtra("darkMode", isDark);
         startActivity(i);
     }
 
-    public void tab1Click(View view) {
-
-        TextView title = (TextView) findViewById(R.id.name_1);
-        String no = (String) title.getText();
-
-        SpecAct(no);
+    public void watchSpec(View view) {
+        String name = view.getTag().toString();
+        Intent i = new Intent(MainActivity.this, WatchAvtivity.class);
+        i.putExtra("watch", name);
+        i.putExtra("darkMode", isDark);
+        startActivity(i);
     }
 
-    public void tab2Click(View view) {
-
-        TextView title = (TextView) findViewById(R.id.name_2);
-        String no = (String) title.getText();
-
-        SpecAct(no);
-    }
-
-    public void tab3Click(View view) {
-
-        TextView title = (TextView) findViewById(R.id.name_3);
-        String no = (String) title.getText();
-
-        SpecAct(no);
-    }
-
-    public void tab4Click(View view) {
-        TextView title = (TextView) findViewById(R.id.name_4);
-        String no = (String) title.getText();
-
-        SpecAct(no);
-    }
-
-    public void tab5Click(View view) {
-        TextView title = (TextView) findViewById(R.id.name_5);
-        String no = (String) title.getText();
-
-        SpecAct(no);
-    }
-
-    public void tab6Click(View view) {
-        TextView title = (TextView) findViewById(R.id.name_6);
-        String no = (String) title.getText();
-
-        SpecAct(no);
-    }
-
-    public void tab7Click(View view) {
-        TextView title = (TextView) findViewById(R.id.name_7);
-        String no = (String) title.getText();
-
-        SpecAct(no);
-    }
-
-    public void tab8Click(View view) {
-        TextView title = (TextView) findViewById(R.id.name_8);
-        String no = (String) title.getText();
-
-        SpecAct(no);
+    public void notImplemented(View view) {
+        //  String test = view.getTag().toString();
+        sendSnack("Jelenleg nincs implementálva. ");
     }
 
 }

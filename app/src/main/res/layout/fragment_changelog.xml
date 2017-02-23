@@ -15,7 +15,7 @@
             android:textColor="@android:color/black"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:text="v2.0.X - 2017.02.XX" />
+            android:text="v3.0.0 - 2017.03.XX" />
 
         <TextView
             android:layout_width="match_parent"
@@ -23,7 +23,73 @@
             android:padding="10dp"
             android:textColor="@android:color/black"
             android:textSize="15dp"
-            android:text=" - Watch Fragment fejlesztése" />
+            android:text=" - Compare Activity" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="v2.1.0 - 2017.02.23" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Watch Spec Activity" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - App Shortcut implementáció" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Analytics optimalizáció" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="v2.1.0-Beta1 - 2017.02.10" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Watch Fragment design" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - Új fragment: Lenovo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text=" - android:tag bevezetése" />
 
         <TextView
             android:layout_width="match_parent"

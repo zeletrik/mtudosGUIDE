@@ -1,0 +1,228 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:id="@+id/watchCompatibilityLayout"
+                android:text="Kompatibilitás" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/watchCompatibilityLayout"
+                android:layout_marginTop="2dp"
+                android:background="@color/magenta" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/watchCompatibilityLayout"
+                android:id="@+id/watchAndroid"
+                android:layout_marginTop="5dp"
+                android:text="Android: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/watchCompatibilityLayout"
+                android:layout_toRightOf="@+id/watchAndroid"
+                android:id="@+id/watchAndroidComp"
+                android:layout_marginTop="5dp"
+                android:text="Android version" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/watchAndroid"
+                android:id="@+id/watchIOS"
+                android:text="iOS: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/watchAndroid"
+                android:layout_toRightOf="@+id/watchIOS"
+                android:id="@+id/watchIOSComp"
+                android:text="iOS version" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/watchIOS"
+                android:id="@+id/watchWP"
+                android:text="Windows: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/watchIOS"
+                android:layout_toRightOf="@+id/watchWP"
+                android:id="@+id/watchWPComp"
+                android:text="Windows version" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:id="@+id/watchIPLayout"
+                android:text="Vízállóság" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/watchIPLayout"
+                android:layout_marginTop="2dp"
+                android:background="@color/magenta" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:id="@+id/watchIP"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/watchIPLayout"
+                android:text="IP: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/watchIP"
+                android:id="@+id/watchIPtxt"
+                android:layout_below="@+id/watchIPLayout"
+                android:layout_marginTop="2dp"
+                android:text="IP cert" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_below="@+id/watchIP"
+                android:id="@+id/watchIPother"
+                android:text="Egyéb: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:padding="5dp"
+                android:layout_below="@+id/watchIP"
+                android:layout_toRightOf="@+id/watchIPother"
+                android:id="@+id/watchIPothertxt"
+                android:text="other IP relate" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_bg"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#E20074"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:id="@+id/watchDescLayout"
+                android:text="Leírás" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/watchDescLayout"
+                android:layout_marginTop="2dp"
+                android:background="@color/magenta" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#E20074"
+                android:padding="10dp"
+                android:id="@+id/watchDesc"
+                android:layout_below="@+id/watchDescLayout"
+                android:text="Watch description" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

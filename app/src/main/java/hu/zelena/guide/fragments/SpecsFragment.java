@@ -11,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,7 @@ public class SpecsFragment extends Fragment {
     private String baseURL;
     private boolean darkMode;
     private boolean offline;
+    private FloatingActionButton fab;
     View rootView;
 
     public SpecsFragment() {
@@ -55,9 +57,7 @@ public class SpecsFragment extends Fragment {
         PreferenceManager.getDefaultSharedPreferences(getActivity());
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-        if (preferences.getBoolean("offline", false)) {
-            offline = true;
-        } else offline = false;
+        offline = preferences.getBoolean("offline", false);
 
         if (offline) {
             baseURL = Environment.getExternalStorageDirectory() + "/Android/data/hu.zelena.guide/data/offline/" + brand + "/specs/" + phone + ".xml";
@@ -67,6 +67,13 @@ public class SpecsFragment extends Fragment {
             new HttpRequestSpecs().execute();
         }
 
+    /*    fab = (FloatingActionButton) rootView.findViewById(R.id.Comparefab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("FAB", "onClick: Test");
+            }
+        });*/
 
         return rootView;
     }

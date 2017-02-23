@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory
-        android:title="Mobiltudós Guide">
-
-        <Preference
-            android:title="Verzió"
-            android:summary="2.0.6"
-            android:key="version" />
-        <Preference
-            android:title="Verziótörténet"
-            android:summary="2017-02-06"
-            android:key="changelog" />
-         <Preference
-            android:title="Visszajelzés"
-            android:summary="zelena.patrikgergo@ext.telekom.hu"
-            android:key="feedback" />
-        <Preference
-            android:title="Bemutató"
-            android:summary="Az alkalmazás gyors áttekintése"
-            android:key="tutorial" />
-
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="Advanced">
+    <PreferenceCategory android:title="Beállítások">
 
         <CheckBoxPreference
             android:title="Data kímélő mód"
@@ -42,34 +18,45 @@
             android:key="update"
             android:persistent="true"
             android:enabled="false"/>
-
+        <CheckBoxPreference
+            android:title="Sötét mód"
+            android:summary="Sötét design megjelenítése"
+            android:key="darkMode"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="Experimental">
-
-        <PreferenceScreen
-            android:key="experimental_category"
-            android:title="Kísérleti"
-            android:persistent="false">
-
-            <CheckBoxPreference
-                android:title="Sötét mód"
-                android:summary="Kísérleti - Instabilitást okozhat"
-                android:key="darkMode"
-                android:defaultValue="false" />
-
+    <PreferenceCategory android:title="Haladó">
             <CheckBoxPreference
                 android:title="Beta frissítés"
                 android:summary="Instabil verziók tesztelése"
                 android:key="betaMode"
                 android:defaultValue="false" />
+    </PreferenceCategory>
 
-            <!-- and other preference objects ... -->
+    <PreferenceCategory android:title="Mobiltudós Guide">
 
+        <PreferenceScreen
+            android:key="about_category"
+            android:title="Névjegy"
+            android:persistent="false">
+            <Preference
+                android:title="Verzió"
+                android:summary="2.1.0"
+                android:key="version" />
+            <Preference
+                android:title="Verziótörténet"
+                android:summary="2017-02-23"
+                android:key="changelog" />
+            <Preference
+                android:title="Visszajelzés"
+                android:summary="zelena.patrikgergo@ext.telekom.hu"
+                android:key="feedback" />
+            <Preference
+                android:title="Bemutató"
+                android:summary="Az alkalmazás gyors áttekintése"
+                android:key="tutorial" />
         </PreferenceScreen>
-
     </PreferenceCategory>
 
 </PreferenceScreen>

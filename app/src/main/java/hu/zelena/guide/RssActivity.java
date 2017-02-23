@@ -54,7 +54,7 @@ public class RssActivity extends AppCompatActivity {
         ActivityHelper.initialize(this);
 
         if (isDark) {
-            setTheme(R.style.SpecDarkTheme);
+            setTheme(R.style.Main2DarkTheme);
         }
 
         super.onCreate(savedInstanceState);

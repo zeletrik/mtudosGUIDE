@@ -1,81 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hu.zelena.guide"
-    android:versionCode="7"
-    android:versionName="2.0.6">
+    android:versionCode="9"
+    android:versionName="2.1.0">
 
     <uses-sdk
         android:minSdkVersion="19"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="25" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
+        android:name=".util.AnalyticsApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:name=".util.AnalyticsApplication">
+        android:label="@string/app_name">
         <activity
-        android:name="hu.zelena.guide.SplashScreen"
-        android:label="@string/app_name"
-        android:screenOrientation="portrait"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity
-            android:name="hu.zelena.guide.MainActivity"
+            android:name=".SplashScreen"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="nosensor"
-            android:noHistory = "false">
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
-
-        <activity android:name="hu.zelena.guide.TutorialActivity"
-                android:label="intro"
-                android:theme="@style/AppIntroTheme" />
-
-        <activity android:name="hu.zelena.guide.UserSettingsActivity"
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:noHistory="false"
+            android:screenOrientation="nosensor"
+            android:theme="@style/MainTheme">
+        </activity>
+        <activity
+            android:name=".TutorialActivity"
+            android:label="intro"
+            android:theme="@style/AppIntroTheme" />
+        <activity
+            android:name=".UserSettingsActivity"
             android:label="Beállítások"
             android:theme="@style/SettingsTheme" />
-
-        <activity android:name="hu.zelena.guide.SpecsAvtivity"
+        <activity
+            android:name=".SpecsAvtivity"
             android:configChanges="orientation|screenSize"
             android:label="Specs"
-            android:theme="@style/SpecTheme" />
-
-        <activity android:name="hu.zelena.guide.WebViewActivity"
+            android:theme="@style/Main2Theme" />
+        <activity
+            android:name=".WebViewActivity"
             android:label="Webview"
-            android:theme="@style/SpecTheme" />
-
-        <activity android:name="hu.zelena.guide.RssActivity"
+            android:theme="@style/Main2Theme" />
+        <activity
+            android:name=".RssActivity"
             android:label="RSS"
-            android:theme="@style/SpecTheme" />
-
-        <activity android:name="hu.zelena.guide.UssdCodeActivity"
+            android:theme="@style/Main2Theme" />
+        <activity
+            android:name=".UssdCodeActivity"
             android:label="USSD Codes"
-            android:theme="@style/SpecTheme" />
-
-        <activity android:name="hu.zelena.guide.ChangeLogActivity"
+            android:theme="@style/Main2Theme" />
+        <activity
+            android:name=".ChangeLogActivity"
             android:label="Verziótörténet"
-            android:theme="@style/SettingsTheme"/>
-
-        <activity android:name="hu.zelena.guide.util.DownloadActivity"
-        android:label="Download"
-        android:theme="@style/SettingsTheme"/>
-
-        <activity android:name="hu.zelena.guide.ErrorActivity"
+            android:theme="@style/SettingsTheme" />
+        <activity
+            android:name=".util.DownloadActivity"
+            android:label="Download"
+            android:theme="@style/SettingsTheme" />
+        <activity
+            android:name=".ErrorActivity"
             android:label="Error"
-            android:theme="@style/SettingsTheme"/>
-
+            android:theme="@style/SettingsTheme" />
+        <activity
+            android:name=".WatchAvtivity"
+            android:label="Watch"
+            android:theme="@style/Main2Theme" />
     </application>
 
 </manifest>

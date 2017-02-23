@@ -40,7 +40,7 @@ public class UssdCodeActivity extends ActionBarActivity {
         ActivityHelper.initialize(this);
 
         if (isDark) {
-            setTheme(R.style.SpecDarkTheme);
+            setTheme(R.style.Main2DarkTheme);
         }
 
         super.onCreate(savedInstanceState);

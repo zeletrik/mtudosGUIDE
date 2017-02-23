@@ -19,7 +19,8 @@
             android:elevation="8dp"
             android:id="@+id/tab_1"
             android:background="@drawable/item_bg"
-            android:onClick="tab1Click">
+            android:onClick="tabSpec"
+            android:tag="Apple iPad Mini 4">
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -80,7 +81,8 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/tab_2"
-            android:onClick="tab2Click">
+            android:onClick="tabSpec"
+            android:tag="Apple iPad Air 2">
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -141,7 +143,8 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/tab_3"
-            android:onClick="tab3Click">
+            android:onClick="tabSpec"
+            android:tag="Apple iPad Pro">
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -202,7 +205,8 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/tab_4"
-            android:onClick="tab4Click">
+            android:onClick="tabSpec"
+            android:tag="Apple iPad Pro 9.7">
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -263,7 +267,8 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/tab_5"
-            android:onClick="tab5Click">
+            android:onClick="tabSpec"
+            android:tag="Samsung Tab S2">
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -324,7 +329,8 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/tab_6"
-            android:onClick="tab6Click">
+            android:onClick="tabSpec"
+            android:tag="Samsung Tab A 2016">
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -385,7 +391,8 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/tab_7"
-            android:onClick="tab7Click">
+            android:onClick="tabSpec"
+            android:tag="Huawei MediaPad T1">
 
             <ImageView
                 android:layout_width="120dp"
@@ -450,7 +457,8 @@
             android:translationZ="1.5dp"
             android:elevation="8dp"
             android:id="@+id/tab_8"
-            android:onClick="tab8Click">
+            android:onClick="tabSpec"
+            android:tag="Huawei MediaPad M3">
 
             <ImageView
                 android:layout_width="120dp"

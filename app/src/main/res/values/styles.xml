@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/magenta</item>
         <item name="colorPrimaryDark">@color/magenta</item>
         <item name="colorAccent">@color/magenta</item>
@@ -12,7 +12,7 @@
         <item name="item_background">@color/white</item>
     </style>
 
-    <style name="AppDarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="MainDarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/magenta</item>
         <item name="colorPrimaryDark">@color/magenta</item>
         <item name="colorAccent">@color/magenta</item>
@@ -36,12 +36,12 @@
         <item name="colorPrimary">@color/magenta</item>
         <item name="colorPrimaryDark">@color/almostBlack</item>
         <item name="colorAccent">@color/magenta</item>
-       <item name="android:background">@color/almostBlack</item>
+        <item name="android:background">@color/almostBlack</item>
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorSecondary">@color/magenta</item>
     </style>
 
-    <style name="SpecTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Main2Theme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/magenta</item>
         <item name="colorPrimaryDark">@color/magenta</item>
         <item name="colorAccent">@color/magenta</item>
@@ -51,7 +51,7 @@
         <item name="android:textColor">@color/magenta</item>
     </style>
 
-    <style name="SpecDarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Main2DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/magenta</item>
         <item name="colorPrimaryDark">@color/magenta</item>
         <item name="colorAccent">@color/magenta</item>
@@ -60,5 +60,9 @@
         <item name="android:itemBackground">@color/white</item>
         <item name="android:textColor">@color/magenta</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
