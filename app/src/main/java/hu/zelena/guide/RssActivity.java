@@ -20,6 +20,7 @@ import hu.zelena.guide.modell.RssItem;
 import hu.zelena.guide.util.ActivityHelper;
 import hu.zelena.guide.util.RssReader;
 
+
 /**
  Copyright Patrik G. Zelena
 
@@ -39,11 +40,11 @@ import hu.zelena.guide.util.RssReader;
 
 public class RssActivity extends AppCompatActivity {
 
-    private ListView mList;
     Context context = this;
     RssAdapter adapter;
     RssReader rssReader;
     List<RssItem> aList = new ArrayList<RssItem>();
+    private ListView mList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

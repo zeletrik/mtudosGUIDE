@@ -6,650 +6,650 @@
     android:paddingTop="?attr/actionBarSize">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:paddingTop="16dp">
 
         <RelativeLayout
+            android:id="@+id/appleWatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/appleWatch">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
+                android:id="@+id/awText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="5dp"
-                android:id="@+id/awText"
-                android:text="Apple Watch"/>
+                android:text="Apple Watch"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:padding="5dp"
-            android:id="@+id/watch1"
             android:background="@drawable/item_bg"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="AppleWatchS1">
+            android:padding="5dp"
+            android:tag="AppleWatchS1"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/apples1" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Apple Watch S1"
                 android:textColor="#E20074"
-                android:text="Apple Watch S1"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:padding="5dp"
-            android:id="@+id/watch2"
             android:background="@drawable/item_bg"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="AppleWatchS2">
+            android:padding="5dp"
+            android:tag="AppleWatchS2"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/runtgps" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Apple Watch S2"
                 android:textColor="#E20074"
-                android:text="Apple Watch S2"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/androidWatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
             android:padding="10dp"
             android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/androidWatch"
             >
 
             <TextView
+                android:id="@+id/androidwText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="5dp"
-                android:id="@+id/androidwText"
-                android:text="Android Wear"/>
+                android:text="Android Wear"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch3"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="HuaweiWatch">
+            android:padding="5dp"
+            android:tag="HuaweiWatch"
+            android:translationZ="1.5dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/huawatch" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Huawei Watch"
                 android:textColor="#E20074"
-                android:text="Huawei Watch"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch4"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="LGUrbane">
+            android:padding="5dp"
+            android:tag="LGUrbane"
+            android:translationZ="1.5dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/lgwatchurb" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="LG Watch Urbane"
                 android:textColor="#E20074"
-                android:text="LG Watch Urbane"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/fitnessWatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/fitnessWatch">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
+                android:id="@+id/fitnessWaText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="5dp"
-                android:id="@+id/fitnessWaText"
-                android:text="Fitness karkötő"/>
+                android:text="Fitness karkötő"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch5"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="SamFit2">
+            android:padding="5dp"
+            android:tag="SamFit2"
+            android:translationZ="1.5dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/samfit2" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Samsung Gear Fit 2"
                 android:textColor="#E20074"
-                android:text="Samsung Gear Fit 2" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch6"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="runtbasic">
+            android:padding="5dp"
+            android:tag="runtbasic"
+            android:translationZ="1.5dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/runtbasic" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="RUNTASTIC BASIC"
                 android:textColor="#E20074"
-                android:text="RUNTASTIC BASIC"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch7"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="runtfun">
+            android:padding="5dp"
+            android:tag="runtfun"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/runtfun" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="RUNTASTIC FUN"
                 android:textColor="#E20074"
-                android:text="RUNTASTIC FUN"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch8"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="runtgps">
+            android:padding="5dp"
+            android:tag="runtgps"
+            android:translationZ="1.5dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/runtgps" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="RUNTASTIC GPS WATCH"
                 android:textColor="#E20074"
-                android:text="RUNTASTIC GPS WATCH"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch13"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch13"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="fitcharge2">
+            android:padding="5dp"
+            android:tag="fitcharge2"
+            android:translationZ="1.5dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/fitbitch2" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="fitbit Charge 2"
                 android:textColor="#E20074"
-                android:text="fitbit Charge 2" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch14"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch14"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="fitflex2">
+            android:padding="5dp"
+            android:tag="fitflex2"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/fitbiitflex2" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="fitbit Flex 2"
                 android:textColor="#E20074"
-                android:text="fitbit Flex 2" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch15"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch15"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="fitalta">
+            android:padding="5dp"
+            android:tag="fitalta"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/fitbitalta" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="fitbit alta"
                 android:textColor="#E20074"
-                android:text="fitbit alta" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch16"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch16"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="fitblaze">
+            android:padding="5dp"
+            android:tag="fitblaze"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/fitbitblaze" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="fitbit blaze"
                 android:textColor="#E20074"
-                android:text="fitbit blaze" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/otherWatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/otherWatch">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
+                android:id="@+id/otherwText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="5dp"
-                android:id="@+id/otherwText"
-                android:text="Egyéb"/>
+                android:text="Egyéb"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch9"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="huab0">
+            android:padding="5dp"
+            android:tag="huab0"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/huaweib0" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Huawei B0"
                 android:textColor="#E20074"
-                android:text="Huawei B0"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch10"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="gears2">
+            android:padding="5dp"
+            android:tag="gears2"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/gears2" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Samsung Gear S2"
                 android:textColor="#E20074"
-                android:text="Samsung Gear S2"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/gears3fr"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/gears3fr"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="gears3front">
+            android:padding="5dp"
+            android:tag="gears3front"
+            android:translationZ="1.5dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/gears3front" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Samsung Gear S3 Frontier "
                 android:textColor="#E20074"
-                android:text="Samsung Gear S3 Frontier " />
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/gears3class"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/gears3class"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="gears3class">
+            android:padding="5dp"
+            android:tag="gears3class"
+            android:translationZ="1.5dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/s3class" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Samsung Gear S3 Classic"
                 android:textColor="#E20074"
-                android:text="Samsung Gear S3 Classic" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch11"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch11"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="alcago">
+            android:padding="5dp"
+            android:tag="alcago"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/alcatelgo" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="Alcatel GO Watch"
                 android:textColor="#E20074"
-                android:text="Alcatel GO Watch"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/watch12"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/watch12"
             android:background="@drawable/item_bg"
-            android:padding="5dp"
+            android:elevation="8dp"
             android:onClick="watchSpec"
-            android:tag="zeclock">
+            android:padding="5dp"
+            android:tag="zeclock"
+            android:translationZ="1.5dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:paddingStart="10dp"
-                android:layout_margin="10dp"
                 android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:paddingStart="10dp"
                 android:src="@drawable/zeclock" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:textSize="20dp"
                 android:paddingStart="25dp"
-                android:textStyle="bold"
+                android:text="MYKRONOZ ZeClock"
                 android:textColor="#E20074"
-                android:text="MYKRONOZ ZeClock"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
     </LinearLayout>

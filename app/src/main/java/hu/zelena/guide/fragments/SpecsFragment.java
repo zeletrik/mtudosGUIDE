@@ -28,6 +28,7 @@ import hu.zelena.guide.util.SpecsReader;
 
 public class SpecsFragment extends Fragment {
 
+    View rootView;
     private String brand;
     private Specs specs;
     private String phone;
@@ -35,7 +36,6 @@ public class SpecsFragment extends Fragment {
     private boolean darkMode;
     private boolean offline;
     private FloatingActionButton fab;
-    View rootView;
 
     public SpecsFragment() {
     }

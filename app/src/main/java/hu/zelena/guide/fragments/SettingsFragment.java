@@ -217,6 +217,39 @@ public class SettingsFragment extends PreferenceFragment
                 .unregisterOnSharedPreferenceChangeListener(this);
     }
 
+    public void checkVersion() {
+
+        if (checkInternet() == true) {
+            new HttpRequestVersion().execute();
+        } else {
+
+            new AlertDialog.Builder(getActivity())
+                    .setTitle("Nincs elérhető hálózat")
+                    .setMessage("Internet elérés nélkül nem lehetséges ellenőrizni a frissítéseket")
+                    .setNegativeButton("Rendben", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // do nothing
+                        }
+                    })
+                    .show();
+        }
+
+    }
+
+    public boolean checkInternet() {
+
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    public void clearNotification() {
+        NotificationManager notificationManager = (NotificationManager) getActivity()
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.cancelAll();
+    }
+
     private class HttpRequestVersion extends AsyncTask<Void, Void, Version> {
         @Override
         protected Version doInBackground(Void... params) {
@@ -356,38 +389,5 @@ public class SettingsFragment extends PreferenceFragment
                         .show();
             }
         }
-    }
-
-    public void checkVersion() {
-
-        if (checkInternet() == true) {
-            new HttpRequestVersion().execute();
-        } else {
-
-            new AlertDialog.Builder(getActivity())
-                    .setTitle("Nincs elérhető hálózat")
-                    .setMessage("Internet elérés nélkül nem lehetséges ellenőrizni a frissítéseket")
-                    .setNegativeButton("Rendben", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // do nothing
-                        }
-                    })
-                    .show();
-        }
-
-    }
-
-    public boolean checkInternet() {
-
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
-
-    public void clearNotification() {
-        NotificationManager notificationManager = (NotificationManager) getActivity()
-                .getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.cancelAll();
     }
 }

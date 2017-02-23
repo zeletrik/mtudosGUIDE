@@ -11,6 +11,7 @@ import hu.zelena.guide.modell.Specs;
  */
 
 public class SpecsHandler extends DefaultHandler {
+    private final StringBuilder characters = new StringBuilder(64);
     private Specs specs;
     private boolean parsingName;
     private boolean parsingDisplayType;
@@ -31,7 +32,6 @@ public class SpecsHandler extends DefaultHandler {
     private boolean parsingNFC;
     private boolean parsingRadio;
     private boolean parsingIP;
-    private final StringBuilder characters = new StringBuilder(64);
 
 
     public SpecsHandler() {

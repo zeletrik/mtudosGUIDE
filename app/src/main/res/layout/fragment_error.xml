@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hoppá..."
         android:layout_gravity="center_horizontal"
-        android:textSize="35sp"
-        android:textColor="@color/magenta"
         android:padding="15dp"
+        android:text="Hoppá..."
         android:textAllCaps="true"
+        android:textColor="@color/magenta"
+        android:textSize="35sp"
         android:textStyle="bold"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nem várt hiba történt"
         android:layout_gravity="center_horizontal"
-        android:textSize="25sp"
         android:padding="15dp"
+        android:text="Nem várt hiba történt"
+        android:textAllCaps="false"
         android:textColor="@color/magenta"
-        android:textAllCaps="false"/>
+        android:textSize="25sp" />
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_alert"
+        android:layout_gravity="center_horizontal"
         android:padding="15dp"
-        android:layout_gravity="center_horizontal"/>
+        android:src="@drawable/ic_alert" />
 
     <TextView
+        android:id="@+id/errorDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="id/errorDetails"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:padding="15dp"
-        android:textColor="@color/magenta"
-        android:textAllCaps="false"
         android:gravity="center_horizontal"
-        android:id="@+id/errorDetails"/>
+        android:padding="15dp"
+        android:text="id/errorDetails"
+        android:textAllCaps="false"
+        android:textColor="@color/magenta"
+        android:textSize="20sp" />
 </LinearLayout>

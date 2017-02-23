@@ -6,232 +6,232 @@
     android:paddingTop="?attr/actionBarSize">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:paddingTop="16dp">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
             android:id="@+id/emailCollectIntra"
-            android:onClick="emailCollectIn">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:onClick="emailCollectIn"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="16dp"
-                android:text="E-mail gyűjtő (INTRANET)"/>
+                android:text="E-mail gyűjtő (INTRANET)"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
             android:id="@+id/emailCollectInter"
-            android:onClick="emailCollectOut">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:onClick="emailCollectOut"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="16dp"
-                android:text="E-mail gyűjtő"/>
+                android:text="E-mail gyűjtő"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
-            android:elevation="8dp"
             android:id="@+id/workSchedules"
-            android:onClick="workSchedules">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:onClick="workSchedules"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="16dp"
-                android:text="Beosztás"/>
+                android:text="Beosztás"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/apn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
             android:padding="10dp"
             android:translationZ="1.5dp"
-            android:elevation="8dp"
-            android:id="@+id/apn"
             >
 
             <TextView
+                android:id="@+id/apnHead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="16dp"
                 android:text="APN"
-                android:id="@+id/apnHead"/>
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:paddingBottom="16dp"
                 android:layout_below="@id/apnHead"
-                android:text="Hozzáférési pont: internet.telekom"/>
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="16dp"
+                android:text="Hozzáférési pont: internet.telekom"
+                android:textColor="#E20074"
+                android:textSize="14dp" />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_gravity="center"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="16dp"
-                android:text="APN MMS" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:text="APN MMS"
                 android:textAllCaps="true"
+                android:textColor="#E20074"
                 android:textSize="15dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="6dp"
-                android:text="Android:" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14dp"
-                android:layout_gravity="center"
-                android:textColor="#E20074"
-                android:paddingBottom="6dp"
-                android:text="APN típusa:  mms"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:text="Android:"
                 android:textAllCaps="true"
+                android:textColor="#E20074"
                 android:textSize="15dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:paddingBottom="6dp"
+                android:text="APN típusa:  mms"
                 android:textColor="#E20074"
-                android:textStyle="bold"
+                android:textSize="14dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="6dp"
-                android:text="Windows:" />
+                android:text="Windows:"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
-                android:textColor="#E20074"
+                android:layout_gravity="center"
                 android:paddingBottom="6dp"
-                android:layout_gravity="center"
-                android:text="Hozzáférési pont: mms"/>
+                android:text="Hozzáférési pont: mms"
+                android:textColor="#E20074"
+                android:textSize="14dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
                 android:layout_gravity="center"
-                android:textColor="#E20074"
                 android:paddingBottom="6dp"
-                android:text="Felhasználó és jelszó: mms"/>
+                android:text="Felhasználó és jelszó: mms"
+                android:textColor="#E20074"
+                android:textSize="14dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
                 android:layout_gravity="center"
-                android:textColor="#E20074"
                 android:paddingBottom="6dp"
-                android:text="MMS központ: mms.t-mobile.hu/servlets/mms"/>
+                android:text="MMS központ: mms.t-mobile.hu/servlets/mms"
+                android:textColor="#E20074"
+                android:textSize="14dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
                 android:layout_gravity="center"
-                android:textColor="#E20074"
                 android:paddingBottom="6dp"
-                android:text="MMS proxy: 212.051.126.010"/>
+                android:text="MMS proxy: 212.051.126.010"
+                android:textColor="#E20074"
+                android:textSize="14dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
                 android:layout_gravity="center"
-                android:textColor="#E20074"
                 android:paddingBottom="16dp"
-                android:text="MMS port: 8080"/>
+                android:text="MMS port: 8080"
+                android:textColor="#E20074"
+                android:textSize="14dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:orientation="vertical"
+            android:padding="10dp"
+            android:translationZ="1.5dp"
             >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_gravity="center"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="16dp"
-                android:text="SMS" />
+                android:text="SMS"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
                 android:layout_gravity="center"
-                android:textColor="#E20074"
                 android:paddingBottom="16dp"
-                android:text="SMS központ száma: +36309888000"/>
+                android:text="SMS központ száma: +36309888000"
+                android:textColor="#E20074"
+                android:textSize="14dp" />
         </LinearLayout>
 
 

@@ -25,10 +25,10 @@ import hu.zelena.guide.util.WatchSpecReader;
 public class WatchSpecFragment extends Fragment {
 
 
+    View rootView;
     private String watch;
     private String baseURL;
     private boolean offline;
-    View rootView;
 
     public WatchSpecFragment() {
     }

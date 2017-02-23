@@ -1,15 +1,15 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
-        android:shortcutId="magicbook"
         android:enabled="true"
-        android:icon="@drawable/ic_magicbook"
-        android:shortcutShortLabel="@string/shortcut_magicb"
+        android:icon="@drawable/ic_shortcut_magicbook"
+        android:shortcutDisabledMessage="@string/shortcut_disabled"
+        android:shortcutId="magicbook"
         android:shortcutLongLabel="@string/shortcut_magicb_long"
-        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        android:shortcutShortLabel="@string/shortcut_magicb">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="hu.zelena.guide"
-            android:targetClass="hu.zelena.guide.WebViewActivity">
+            android:targetClass="hu.zelena.guide.WebViewActivity"
+            android:targetPackage="hu.zelena.guide">
             <extra
                 android:name="title"
                 android:value="Magic Book" />
@@ -20,16 +20,16 @@
     </shortcut>
 
     <shortcut
-        android:shortcutId="phoneprice"
         android:enabled="true"
-        android:icon="@drawable/ic_bill"
-        android:shortcutShortLabel="@string/shortcut_prices"
+        android:icon="@drawable/ic_shortcut_list"
+        android:shortcutDisabledMessage="@string/shortcut_disabled"
+        android:shortcutId="phoneprice"
         android:shortcutLongLabel="@string/shortcut_prices_long"
-        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        android:shortcutShortLabel="@string/shortcut_prices">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="hu.zelena.guide"
-            android:targetClass="hu.zelena.guide.WebViewActivity">
+            android:targetClass="hu.zelena.guide.WebViewActivity"
+            android:targetPackage="hu.zelena.guide">
             <extra
                 android:name="title"
                 android:value="Készülék árlista" />
@@ -40,16 +40,16 @@
     </shortcut>
 
     <shortcut
-        android:shortcutId="emailCollect"
         android:enabled="true"
-        android:icon="@drawable/ic_phone"
-        android:shortcutShortLabel="@string/shortcut_email"
+        android:icon="@drawable/ic_shortcut_email"
+        android:shortcutDisabledMessage="@string/shortcut_disabled"
+        android:shortcutId="emailCollect"
         android:shortcutLongLabel="@string/shortcut_email_long"
-        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        android:shortcutShortLabel="@string/shortcut_email">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="hu.zelena.guide"
-            android:targetClass="hu.zelena.guide.WebViewActivity">
+            android:targetClass="hu.zelena.guide.WebViewActivity"
+            android:targetPackage="hu.zelena.guide">
             <extra
                 android:name="title"
                 android:value="Email gyűjtő - Public" />

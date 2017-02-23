@@ -30,14 +30,14 @@ import hu.zelena.guide.util.PhoneListReader;
 
 public class PhonesFragment extends Fragment {
 
-    private String brand;
-    private boolean darkMode;
-    private boolean offline;
-    private ListView mList;
     PhonesAdapter adapter;
     PhoneListReader phoneListReader;
     String path;
     List<PhonesModell> aList = new ArrayList<PhonesModell>();
+    private String brand;
+    private boolean darkMode;
+    private boolean offline;
+    private ListView mList;
 
     public PhonesFragment() {
     }

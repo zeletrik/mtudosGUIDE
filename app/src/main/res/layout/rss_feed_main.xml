@@ -3,17 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RssActivity"
-    android:background="?attr/theme_background">
+    android:background="?attr/theme_background"
+    tools:context=".RssActivity">
 
     <ListView
         android:id="@+id/list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingBottom="3dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="10dp"/>
+        android:paddingTop="3dp" />
 </RelativeLayout>

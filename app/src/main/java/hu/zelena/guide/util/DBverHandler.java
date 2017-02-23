@@ -24,9 +24,9 @@ import hu.zelena.guide.modell.DbVersion;
  */
 
 public class DBverHandler extends DefaultHandler {
+    private final StringBuilder characters = new StringBuilder(64);
     private DbVersion dbVer;
     private boolean parsingVersion;
-    private final StringBuilder characters = new StringBuilder(64);
 
 
     public DBverHandler() {

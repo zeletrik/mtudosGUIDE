@@ -3,66 +3,66 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingBottom="10dp"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:paddingTop="13dp"
-    android:paddingBottom="10dp"
-    android:clipToPadding="false">
+    android:paddingTop="13dp">
 <RelativeLayout
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/item_bg"
+    android:elevation="4dp"
+    android:paddingBottom="5dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    android:translationZ="1.5dp"
-    android:elevation="4dp"
-    android:background="@drawable/item_bg" >
+    android:translationZ="1.5dp">
     <ImageView
+        android:id="@+id/pic"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:paddingStart="15dp"
         android:layout_centerVertical="true"
-        android:id="@+id/pic" />
+        android:paddingStart="15dp" />
     <TextView
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/pic"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="#E20074"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:id="@+id/name" />
+        android:layout_toRightOf="@+id/pic"
+        android:textColor="#E20074"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/os"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
-        android:layout_toRightOf="@+id/pic"
-        android:textSize="18dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/pic"
         android:textColor="#E20074"
-        android:id="@+id/os" />
+        android:textSize="18dp" />
     <TextView
+        android:id="@+id/sim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/os"
-        android:layout_toRightOf="@+id/pic"
-        android:textSize="18dp"
         android:layout_marginStart="15dp"
+        android:layout_toRightOf="@+id/pic"
         android:textColor="#E20074"
-        android:id="@+id/sim" />
+        android:textSize="18dp" />
     <TextView
+        android:id="@+id/ma_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sim"
-        android:layout_toRightOf="@+id/pic"
-        android:textSize="18dp"
         android:layout_marginBottom="13dp"
         android:layout_marginStart="15dp"
+        android:layout_toRightOf="@+id/pic"
         android:textColor="#E20074"
-        android:id="@+id/ma_rate" />
+        android:textSize="18dp" />
 </RelativeLayout>
 </LinearLayout>

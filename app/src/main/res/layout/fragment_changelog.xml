@@ -5,391 +5,392 @@
     android:layout_height="match_parent"
     android:background="#fff">
     <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v3.0.0 - 2017.03.XX"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v3.0.0 - 2017.03.XX" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Compare Activity"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Compare Activity" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v2.1.0 - 2017.02.23"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v2.1.0 - 2017.02.23" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Watch Spec Activity"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Watch Spec Activity" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - App Shortcut implementáció"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - App Shortcut implementáció" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Analytics optimalizáció"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Analytics optimalizáció" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v2.1.0-Beta1 - 2017.02.10"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v2.1.0-Beta1 - 2017.02.10" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Watch Fragment design"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Watch Fragment design" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Új fragment: Lenovo"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Új fragment: Lenovo" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - android:tag bevezetése"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - android:tag bevezetése" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v2.0.6 - 2017.02.06"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v2.0.6 - 2017.02.06" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Dark Mode fejlesztése"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Dark Mode fejlesztése" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Beta Mode engedélyezése"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Beta Mode engedélyezése" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Funkicó előrejelzés"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Funkicó előrejelzés" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v2.0.5 - 2017.02.05"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v2.0.5 - 2017.02.05" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Bug javítások"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Bug javítások" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Google Analytics implementálás"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Google Analytics implementálás" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v2.0.1 - 2016.12.20"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v2.0.1 - 2016.12.20" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Bug javítások"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Bug javítások" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Dialógus kilépéshez"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Dialógus kilépéshez" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v2.0.0 - 2016.12.03"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v2.0.0 - 2016.12.03" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Bug javítások"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Bug javítások" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Offline Adatbázis feltöltése"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Offline Adatbázis feltöltése" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v1.8.9 "
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.8.9 " />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - SAX implementáció"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - SAX implementáció" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Offline mód beiktatása"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Offline mód beiktatása" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Verzió ellenőrzés"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Verzió ellenőrzés" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - WebView intergáció"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - WebView intergáció" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Experimental: sötét mód"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Experimental: sötét mód" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v1.5.5"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.5.5" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Data kímélő mód implementálsa"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Data kímélő mód implementálsa" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:textColor="@android:color/black"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.5.0" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Bug javítások" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - NavigationView használata DrawerView helyett" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v1.5.0"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.3.0" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Bug javítások"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - REST API használata" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:textColor="@android:color/black"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.1.9" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - NavigationView használata DrawerView helyett"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Bug javítások" />
+            android:textSize="15dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v1.3.0"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.1.3 - 2016.03.09"/>
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - REST API használata"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Material Design - API v21 és fölötte"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Optimalizálás szálasítással"/>
+            android:textSize="15dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v1.1.9"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.1.2 - 2016.03.06"/>
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Bug javítások"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Drawer optimalizálás"/>
+            android:textSize="15dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v1.1.3 - 2016.03.09"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.1.1 - 2016.03.03"/>
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Material Design - API v21 és fölötte"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Specifikáció fragmentálása"/>
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text=" - Optimalizálás szálasítással"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="v1.1.2 - 2016.03.06"
             android:textColor="@android:color/black"
             android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="v1.1.0 - 2016.03.01"/>
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text=" - Drawer optimalizálás"
             android:textColor="@android:color/black"
-            android:textSize="15dp"
-            android:text=" - Új készülékek: Galaxy S7 / Galaxy S7 Edge / Huawei P8"/>
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="v1.1.1 - 2016.03.03"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text=" - Specifikáció fragmentálása"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="v1.1.0 - 2016.03.01"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text=" - Új készülékek: Galaxy S7 / Galaxy S7 Edge / Huawei P8"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
 
 
 

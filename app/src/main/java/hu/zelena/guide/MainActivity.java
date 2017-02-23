@@ -75,13 +75,15 @@ import hu.zelena.guide.util.AnalyticsApplication;
 public class MainActivity extends AppCompatActivity {
 
 
-    private String brand;
-
-    String verName;
-
     private static final int RESULT_SETTINGS = 1;
+    final int MY_PERMISSIONS_REQUEST_READ_STORAGE = 0;
+    String verName;
+    /**
+     * Back gomb gombnyomásra történő NavBar zárás vagy kilépés
+     */
 
-
+    boolean doubleBackToExitPressedOnce = false;
+    private String brand;
     /**
      * NavigationBar / Toolbar
      */
@@ -89,18 +91,14 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView nvDrawer;
     private ActionBarDrawerToggle drawerToggle;
-
     private boolean isDark = false;
     private boolean dataSaver = false;
     private boolean writeStorage = true;
     private boolean offlineMode = false;
     private boolean betaMode = false;
-
+    private String analyticINFO;
     private boolean firstFrag = false;
-
     private Tracker mTracker;
-
-    final int MY_PERMISSIONS_REQUEST_READ_STORAGE = 0;
 
     @SuppressWarnings("ResourceType")
     @Override
@@ -225,67 +223,85 @@ public class MainActivity extends AppCompatActivity {
             case R.id.alcatel_frag:
                 fragment = new PhonesFragment();
                 brand = "Alcatel";
+                analyticINFO = brand;
                 break;
             case R.id.apple_frag:
                 fragment = new PhonesFragment();
                 brand = "Apple";
+                analyticINFO = brand;
                 break;
             case R.id.balckberry_frag:
                 fragment = new PhonesFragment();
                 brand = "BlackBerry";
+                analyticINFO = brand;
                 break;
             case R.id.coolpad_frag:
                 fragment = new PhonesFragment();
                 brand = "Coolpad";
+                analyticINFO = brand;
                 break;
             case R.id.honor_frag:
                 fragment = new PhonesFragment();
                 brand = "Honor";
+                analyticINFO = brand;
                 break;
             case R.id.HTC_frag:
                 fragment = new PhonesFragment();
                 brand = "HTC";
+                analyticINFO = brand;
                 break;
             case R.id.huawei_frag:
                 fragment = new PhonesFragment();
                 brand = "Huawei";
+                analyticINFO = brand;
                 break;
             case R.id.lenovo_frag:
                 fragment = new PhonesFragment();
                 brand = "Lenovo";
+                analyticINFO = brand;
                 break;
             case R.id.lg_frag:
                 fragment = new PhonesFragment();
                 brand = "LG";
+                analyticINFO = brand;
                 break;
             case R.id.samsung_frag:
                 fragment = new PhonesFragment();
                 brand = "Samsung";
+                analyticINFO = brand;
                 break;
             case R.id.sony_frag:
                 fragment = new PhonesFragment();
                 brand = "Sony";
+                analyticINFO = brand;
                 break;
             case R.id.watch_frag:
                 fragment = new WatchFragment();
+                analyticINFO = "Watch";
                 break;
             case R.id.tablet_frag:
                 fragment = new TabletFragment();
+                analyticINFO = "Tablet";
                 break;
             case R.id.postpaid_frag:
                 fragment = new PostPaidFragment();
+                analyticINFO = "PostPaid";
                 break;
             case R.id.prepaid_frag:
                 fragment = new PrePaidFragment();
+                analyticINFO = "PrePaid";
                 break;
             case R.id.net_frag:
                 fragment = new InternetFragment();
+                analyticINFO = "Net";
                 break;
             case R.id.magicbook_frag:
                 fragment = new MagicbookFragment();
+                analyticINFO = "MagicBook";
                 break;
             case R.id.others_frag:
                 fragment = new OthersFragment();
+                analyticINFO = "Others";
                 break;
             default:
                 break;
@@ -294,7 +310,7 @@ public class MainActivity extends AppCompatActivity {
         if (fragment != null) {
             mTracker.send(new HitBuilders.EventBuilder()
                     .setCategory("Action")
-                    .setAction(brand + "drawer select")
+                    .setAction(analyticINFO + " drawer select")
                     .build());
             firstFrag = false;
             bundle.putString("brand", brand);
@@ -309,13 +325,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             Log.e("MainActivity", "Error in creating fragment");
         }
-
-
-        // Highlight the selected item has been done by NavigationView
+        // Kiválasztott kijelölése
         menuItem.setChecked(true);
-        // Set action bar title
+        // Cím beállítás
         setTitle(menuItem.getTitle());
-        // Close the navigation drawer
+        // Drawer bezárása
         mDrawer.closeDrawers();
     }
 
@@ -325,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
-        // Sync the toggle state after onRestoreInstanceState has occurred.
+        // onRestoreInstanceState utáni szinkronizáció
         super.onPostCreate(savedInstanceState);
         drawerToggle.syncState();
     }
@@ -391,18 +405,10 @@ public class MainActivity extends AppCompatActivity {
         return offlineMode;
     }
 
-
     public void startTutorial(View view) {
         Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
         startActivity(intent);
     }
-
-    /**
-     * Back gomb gombnyomásra történő NavBar zárás vagy kilépés
-     */
-
-    boolean doubleBackToExitPressedOnce = false;
-
 
     @Override
     public void onBackPressed() {
@@ -513,36 +519,6 @@ public class MainActivity extends AppCompatActivity {
         manager.notify(11, myNotication);
     }
 
-    private class HttpRequestVersion extends AsyncTask<Void, Void, Version> {
-        @Override
-        protected Version doInBackground(Void... params) {
-            try {
-                String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/ver";
-                if (betaMode) {
-                    url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/beta/ver";
-                }
-                RestTemplate restTemplate = new RestTemplate();
-                restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Version ver = restTemplate.getForObject(url, Version.class);
-                return ver;
-            } catch (Exception e) {
-                Log.e("VersionCheck", e.getMessage(), e);
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Version ver) {
-            verName = ver.getVersion();
-
-
-            if (Integer.valueOf(verName) > Integer.valueOf(BuildConfig.VERSION_CODE)) {
-                VersionNotify();
-            }
-        }
-    }
-
-
     private void CheckVersion() {
         if (checkInternet()) {
             new HttpRequestVersion().execute();
@@ -628,6 +604,56 @@ public class MainActivity extends AppCompatActivity {
         new HttpRequestSchedule().execute();
     }
 
+    /**
+     * Tablet Click-ek
+     */
+
+    public void tabSpec(View view) {
+        String name = view.getTag().toString();
+        Intent i = new Intent(MainActivity.this, SpecsAvtivity.class);
+        i.putExtra("brand", "tablet");
+        i.putExtra("phone", name);
+        i.putExtra("darkMode", isDark);
+        startActivity(i);
+    }
+
+    public void watchSpec(View view) {
+        String name = view.getTag().toString();
+        Intent i = new Intent(MainActivity.this, WatchAvtivity.class);
+        i.putExtra("watch", name);
+        i.putExtra("darkMode", isDark);
+        startActivity(i);
+    }
+
+    private class HttpRequestVersion extends AsyncTask<Void, Void, Version> {
+        @Override
+        protected Version doInBackground(Void... params) {
+            try {
+                String url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/current/ver";
+                if (betaMode) {
+                    url = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/version/beta/ver";
+                }
+                RestTemplate restTemplate = new RestTemplate();
+                restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+                Version ver = restTemplate.getForObject(url, Version.class);
+                return ver;
+            } catch (Exception e) {
+                Log.e("VersionCheck", e.getMessage(), e);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Version ver) {
+            verName = ver.getVersion();
+
+
+            if (Integer.valueOf(verName) > Integer.valueOf(BuildConfig.VERSION_CODE)) {
+                VersionNotify();
+            }
+        }
+    }
+
     private class HttpRequestSchedule extends AsyncTask<Void, Void, Schedule> {
 
 
@@ -654,32 +680,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
-    /**
-     * Tablet Click-ek
-     */
-
-    public void tabSpec(View view) {
-        String name = view.getTag().toString();
-        Intent i = new Intent(MainActivity.this, SpecsAvtivity.class);
-        i.putExtra("brand", "tablet");
-        i.putExtra("phone", name);
-        i.putExtra("darkMode", isDark);
-        startActivity(i);
-    }
-
-    public void watchSpec(View view) {
-        String name = view.getTag().toString();
-        Intent i = new Intent(MainActivity.this, WatchAvtivity.class);
-        i.putExtra("watch", name);
-        i.putExtra("darkMode", isDark);
-        startActivity(i);
-    }
-
-    public void notImplemented(View view) {
-        //  String test = view.getTag().toString();
-        sendSnack("Jelenleg nincs implementálva. ");
-    }
-
+    
 }
 

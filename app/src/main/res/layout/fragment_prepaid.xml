@@ -6,761 +6,761 @@
     android:paddingTop="?attr/actionBarSize">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:paddingTop="16dp">
 
         <RelativeLayout
+            android:id="@+id/domino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/domino">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
+                android:id="@+id/domText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
                 android:padding="5dp"
-                android:id="@+id/domText"
-                android:text="Domino Csomagok"/>
+                android:text="Domino Csomagok"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
 
         <RelativeLayout
+            android:id="@+id/domSurf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/domSurf">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:id="@+id/domSurfText"
-                android:text="Domino surf"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:padding="5dp"
-                android:layout_below="@+id/domSurfText"
+                android:text="Domino surf"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/price1FIX"
-                android:text="időszaki díj: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/domSurfText"
                 android:padding="5dp"
+                android:text="időszaki díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/domSurfText"
                 android:layout_toRightOf="@+id/price1FIX"
-                android:id="@+id/price1"
-                android:text="890 ft/30 nap"/>
+                android:padding="5dp"
+                android:text="890 ft/30 nap"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/internet1FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/price1FIX"
-                android:id="@+id/internet1FIX"
-                android:text="Internet: "/>
+                android:padding="5dp"
+                android:text="Internet: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/internet1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/price1FIX"
                 android:layout_toRightOf="@+id/internet1FIX"
-                android:id="@+id/internet1"
-                android:text="150 mb (max 30 mbit/s)"/>
+                android:padding="5dp"
+                android:text="150 mb (max 30 mbit/s)"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/calls1FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/internet1FIX"
-                android:id="@+id/calls1FIX"
-                android:text="percdíjak: "/>
+                android:padding="5dp"
+                android:text="percdíjak: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/calls1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/internet1FIX"
                 android:layout_toRightOf="@+id/calls1FIX"
-                android:id="@+id/calls1"
-                android:text="29 ft / 39 ft"/>
+                android:padding="5dp"
+                android:text="29 ft / 39 ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
-                android:layout_below="@+id/calls1FIX"
                 android:id="@+id/sms1FIX"
-                android:text="sms küldés: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/calls1FIX"
                 android:padding="5dp"
+                android:text="sms küldés: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sms1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/calls1FIX"
                 android:layout_toRightOf="@+id/sms1FIX"
-                android:id="@+id/sms1"
-                android:text="29 ft / 39 ft"/>
+                android:padding="5dp"
+                android:text="29 ft / 39 ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/domAktiv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/domAktiv">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:id="@+id/domAText"
-                android:text="Domino Aktiv"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:padding="5dp"
-                android:layout_below="@+id/domAText"
+                android:text="Domino Aktiv"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/price2FIX"
-                android:text="időszaki díj: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/domAText"
                 android:padding="5dp"
+                android:text="időszaki díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/domAText"
                 android:layout_toRightOf="@+id/price2FIX"
-                android:id="@+id/price2"
-                android:text="650 ft/30 nap"/>
+                android:padding="5dp"
+                android:text="650 ft/30 nap"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/internet2FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/price2FIX"
-                android:id="@+id/internet2FIX"
-                android:text="Internet: "/>
+                android:padding="5dp"
+                android:text="Internet: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/internet2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/price2FIX"
                 android:layout_toRightOf="@+id/internet2FIX"
-                android:id="@+id/internet2"
-                android:text="Nincs"/>
+                android:padding="5dp"
+                android:text="Nincs"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/calls2FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/internet2FIX"
-                android:id="@+id/calls2FIX"
-                android:text="percdíjak csúcsidőben: "/>
+                android:padding="5dp"
+                android:text="percdíjak csúcsidőben: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/calls2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/internet2FIX"
                 android:layout_toRightOf="@+id/calls2FIX"
-                android:id="@+id/calls2"
-                android:text="36 ft / 46 ft"/>
+                android:padding="5dp"
+                android:text="36 ft / 46 ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/calls21FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/calls2FIX"
-                android:id="@+id/calls21FIX"
-                android:text="percdíjak: "/>
+                android:padding="5dp"
+                android:text="percdíjak: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/calls21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/calls2FIX"
                 android:layout_toRightOf="@+id/calls21FIX"
-                android:id="@+id/calls21"
-                android:text="24 ft / 36 ft"/>
+                android:padding="5dp"
+                android:text="24 ft / 36 ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
-                android:layout_below="@+id/calls21FIX"
                 android:id="@+id/sms2FIX"
-                android:text="sms küldés: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/calls21FIX"
                 android:padding="5dp"
+                android:text="sms küldés: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sms2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/calls21FIX"
                 android:layout_toRightOf="@+id/sms2FIX"
-                android:id="@+id/sms2"
-                android:text="37 ft"/>
+                android:padding="5dp"
+                android:text="37 ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/dom5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/dom5">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:id="@+id/dom5Text"
-                android:text="Domino 5"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:padding="5dp"
-                android:layout_below="@+id/dom5Text"
+                android:text="Domino 5"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/price4FIX"
-                android:text="idöszaki díj: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/dom5Text"
                 android:padding="5dp"
+                android:text="idöszaki díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/dom5Text"
                 android:layout_toRightOf="@+id/price4FIX"
-                android:id="@+id/price4"
-                android:text="Nincs"/>
+                android:padding="5dp"
+                android:text="Nincs"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/internet4FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/price4FIX"
-                android:id="@+id/internet4FIX"
-                android:text="Internet: "/>
+                android:padding="5dp"
+                android:text="Internet: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/internet4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/price4FIX"
                 android:layout_toRightOf="@+id/internet4FIX"
-                android:id="@+id/internet4"
-                android:text="Nincs"/>
+                android:padding="5dp"
+                android:text="Nincs"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/calls4FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/internet4FIX"
-                android:id="@+id/calls4FIX"
-                android:text="percdíjak: " />
+                android:padding="5dp"
+                android:text="percdíjak: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/calls4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/internet4FIX"
                 android:layout_toRightOf="@+id/calls4FIX"
-                android:id="@+id/calls4"
-                android:text="39 ft"/>
+                android:padding="5dp"
+                android:text="39 ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
-                android:layout_below="@+id/calls4FIX"
                 android:id="@+id/sms4FIX"
-                android:text="sms küldés: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/calls4FIX"
                 android:padding="5dp"
+                android:text="sms küldés: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sms4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/calls4FIX"
                 android:layout_toRightOf="@+id/sms4FIX"
-                android:id="@+id/sms4"
-                android:text="49 ft"/>
+                android:padding="5dp"
+                android:text="49 ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
-                android:layout_below="@+id/sms4FIX"
                 android:id="@+id/otherD5FIX"
-                android:text="egyéb: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/sms4FIX"
                 android:padding="5dp"
+                android:text="egyéb: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/otherD5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/sms4FIX"
                 android:layout_toRightOf="@+id/otherD5FIX"
-                android:id="@+id/otherD5"
-                android:text="39 Ft-os perc- és SMS díjak 5 bármely belföldi hálózathoz tartozó telefonszámra"/>
+                android:padding="5dp"
+                android:text="39 Ft-os perc- és SMS díjak 5 bármely belföldi hálózathoz tartozó telefonszámra"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/domMost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/domMost">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:id="@+id/domMostText"
-                android:text="Domino Most"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:padding="5dp"
-                android:layout_below="@+id/domMostText"
+                android:text="Domino Most"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/price5FIX"
-                android:text="idöszaki díj: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/domMostText"
                 android:padding="5dp"
+                android:text="idöszaki díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/domMostText"
                 android:layout_toRightOf="@+id/price5FIX"
-                android:id="@+id/price5"
-                android:text="Nincs"/>
+                android:padding="5dp"
+                android:text="Nincs"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/internet5FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/price5FIX"
-                android:id="@+id/internet5FIX"
-                android:text="Internet: "/>
+                android:padding="5dp"
+                android:text="Internet: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/internet5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/price5FIX"
                 android:layout_toRightOf="@+id/internet5FIX"
-                android:id="@+id/internet5"
-                android:text="Nincs"/>
+                android:padding="5dp"
+                android:text="Nincs"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/calls5FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/internet5FIX"
-                android:id="@+id/calls5FIX"
-                android:text="percdíjak: " />
+                android:padding="5dp"
+                android:text="percdíjak: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/calls5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/internet5FIX"
                 android:layout_toRightOf="@+id/calls5FIX"
-                android:id="@+id/calls5"
-                android:text="9 ft / 19 Ft"/>
+                android:padding="5dp"
+                android:text="9 ft / 19 Ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
-                android:layout_below="@+id/calls5FIX"
                 android:id="@+id/sms5FIX"
-                android:text="sms küldés: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/calls5FIX"
                 android:padding="5dp"
+                android:text="sms küldés: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sms5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/calls5FIX"
                 android:layout_toRightOf="@+id/sms5FIX"
-                android:id="@+id/sms5"
-                android:text="9 ft / 19 ft"/>
+                android:padding="5dp"
+                android:text="9 ft / 19 ft"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
-                android:layout_below="@+id/sms5FIX"
                 android:id="@+id/otherDMFIX"
-                android:text="egyéb: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/sms5FIX"
                 android:padding="5dp"
+                android:text="egyéb: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/otherDM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/sms5FIX"
                 android:layout_toRightOf="@+id/otherDMFIX"
-                android:id="@+id/otherDM"
-                android:text="A Domino Most opció 2017. január 31-ig promóciósan vehető igénybe."/>
+                android:padding="5dp"
+                android:text="A Domino Most opció 2017. január 31-ig promóciósan vehető igénybe."
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/domS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/domS">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:id="@+id/dSText"
-                android:text="Domino s"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:padding="5dp"
-                android:layout_below="@+id/dSText"
+                android:text="Domino s"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/price6FIX"
-                android:text="idöszaki díj: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/dSText"
                 android:padding="5dp"
+                android:text="idöszaki díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/dSText"
                 android:layout_toRightOf="@+id/price6FIX"
-                android:id="@+id/price6"
-                android:text="3 990 Ft / 30 nap"/>
+                android:padding="5dp"
+                android:text="3 990 Ft / 30 nap"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/internet6FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/price6FIX"
-                android:id="@+id/internet6FIX"
-                android:text="Internet: "/>
+                android:padding="5dp"
+                android:text="Internet: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/internet6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/price6FIX"
                 android:layout_toRightOf="@+id/internet6FIX"
-                android:id="@+id/internet6"
-                android:text="Nincs"/>
+                android:padding="5dp"
+                android:text="Nincs"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/calls6FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/internet6FIX"
-                android:id="@+id/calls6FIX"
-                android:text="perc és SMS díj: " />
+                android:padding="5dp"
+                android:text="perc és SMS díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/calls6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/internet6FIX"
                 android:layout_toRightOf="@+id/calls6FIX"
-                android:id="@+id/calls6"
+                android:padding="5dp"
                 android:text="korlátlan hálózaton belül belföldi alapdíjas hívásirányokba, minden időszakban
-ügyfél díjcsomagjának megfelelő hálózaton kívül és vezetékes hálózatban belföldi alapdíjas hívásirányokba, minden időszakban"/>
+ügyfél díjcsomagjának megfelelő hálózaton kívül és vezetékes hálózatban belföldi alapdíjas hívásirányokba, minden időszakban"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
 
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/domM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item_bg"
             android:layout_margin="20dp"
-            android:padding="10dp"
-            android:translationZ="1.5dp"
+            android:background="@drawable/item_bg"
             android:elevation="8dp"
-            android:id="@+id/domM">
+            android:padding="10dp"
+            android:translationZ="1.5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:id="@+id/domMText"
-                android:text="Domino m"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:padding="5dp"
-                android:layout_below="@+id/domMText"
+                android:text="Domino m"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/price7FIX"
-                android:text="idöszaki díj: "/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
+                android:layout_below="@+id/domMText"
                 android:padding="5dp"
+                android:text="idöszaki díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/domMText"
                 android:layout_toRightOf="@+id/price7FIX"
-                android:id="@+id/price7"
-                android:text="14 990 Ft / 30 nap"/>
+                android:padding="5dp"
+                android:text="14 990 Ft / 30 nap"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/internet7FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/price7FIX"
-                android:id="@+id/internet7FIX"
-                android:text="Internet: "/>
+                android:padding="5dp"
+                android:text="Internet: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/internet7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/price7FIX"
                 android:layout_toRightOf="@+id/internet7FIX"
-                android:id="@+id/internet7"
-                android:text="Nincs"/>
+                android:padding="5dp"
+                android:text="Nincs"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
             <TextView
+                android:id="@+id/calls7FIX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:textStyle="bold"
-                android:padding="5dp"
                 android:layout_below="@+id/internet7FIX"
-                android:id="@+id/calls7FIX"
-                android:text="perc és SMS díj: " />
+                android:padding="5dp"
+                android:text="perc és SMS díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/calls7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:textSize="15dp"
-                android:textColor="#E20074"
-                android:padding="5dp"
                 android:layout_below="@+id/internet7FIX"
                 android:layout_toRightOf="@+id/calls7FIX"
-                android:id="@+id/calls7"
+                android:padding="5dp"
                 android:text="Korlátlan* hálózaton belül, kívül és vezetékes hálózatban belföldi alapdíjas hívásirányokba, minden időszakban:
-* A korlátlanságra vonatkozóan az ÁSzF-ben szerepelnek a Fair Play Policy feltételei, hasonlóan a Next díjcsomagokéhoz."/>
+* A korlátlanságra vonatkozóan az ÁSzF-ben szerepelnek a Fair Play Policy feltételei, hasonlóan a Next díjcsomagokéhoz."
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
         </RelativeLayout>
 
 

@@ -15,6 +15,10 @@ public class RssItem {
         return category;
     }
 
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public String getPubDate() {
         return pubDate;
     }
@@ -27,19 +31,15 @@ public class RssItem {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getLink() {
         return link;
     }
 
     public void setLink(String link) {
         this.link = link;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 }

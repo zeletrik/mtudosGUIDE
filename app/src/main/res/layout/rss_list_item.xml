@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/item_bg"
+    android:elevation="2dp"
+    android:paddingBottom="5dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    android:translationZ="1.5dp"
-    android:elevation="2dp"
-    android:background="@drawable/item_bg" >
+    android:translationZ="1.5dp">
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -20,11 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:ellipsize="end"
         android:maxLines="2"
         android:text="This is a good Post, I hope it will have 2 lines. Please give me 2 lines"
         android:textIsSelectable="false"
-        android:textSize="14sp"
-        android:ellipsize="end" />
+        android:textSize="14sp" />
     <TextView
         android:id="@+id/postCategoryLabel"
         android:layout_width="wrap_content"

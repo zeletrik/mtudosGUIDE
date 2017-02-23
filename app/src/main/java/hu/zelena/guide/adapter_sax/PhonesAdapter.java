@@ -115,9 +115,9 @@ public class PhonesAdapter extends ArrayAdapter<PhonesModell> {
     }
     
     static class ViewHolder {
+        public Bitmap bitmap;
         ImageView imgView;
         String imgPath;
-        public Bitmap bitmap;
     }
 
     private class DownloadImage extends AsyncTask<ViewHolder, Void, ViewHolder> {

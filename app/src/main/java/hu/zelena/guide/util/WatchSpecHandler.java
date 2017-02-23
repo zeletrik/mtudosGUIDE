@@ -11,6 +11,7 @@ import hu.zelena.guide.modell.WatchModell;
  */
 
 public class WatchSpecHandler extends DefaultHandler {
+    private final StringBuilder characters = new StringBuilder(64);
     private WatchModell specs;
     private boolean parsingName;
     private boolean parsingAndroidVer;
@@ -19,7 +20,6 @@ public class WatchSpecHandler extends DefaultHandler {
     private boolean parsingIPCert;
     private boolean parsingIPOther;
     private boolean parsingDesc;
-    private final StringBuilder characters = new StringBuilder(64);
 
 
     public WatchSpecHandler() {

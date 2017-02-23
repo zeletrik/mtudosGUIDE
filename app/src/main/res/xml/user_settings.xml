@@ -4,58 +4,58 @@
     <PreferenceCategory android:title="Beállítások">
 
         <CheckBoxPreference
-            android:title="Data kímélő mód"
-            android:summary="Csak az információk letöltése a képek nélkül"
+            android:defaultValue="false"
             android:key="dataSaver"
-            android:defaultValue="false" />
+            android:summary="Csak az információk letöltése a képek nélkül"
+            android:title="Data kímélő mód" />
         <CheckBoxPreference
-            android:title="Offline mód"
-            android:summary="A készülék adatbázis letöltése"
+            android:defaultValue="false"
             android:key="offline"
-            android:defaultValue="false" />
+            android:summary="A készülék adatbázis letöltése"
+            android:title="Offline mód" />
         <Preference
-            android:title="Frissítés"
+            android:enabled="false"
             android:key="update"
             android:persistent="true"
-            android:enabled="false"/>
+            android:title="Frissítés" />
         <CheckBoxPreference
-            android:title="Sötét mód"
-            android:summary="Sötét design megjelenítése"
+            android:defaultValue="false"
             android:key="darkMode"
-            android:defaultValue="false" />
+            android:summary="Sötét design megjelenítése"
+            android:title="Sötét mód" />
 
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Haladó">
             <CheckBoxPreference
-                android:title="Beta frissítés"
-                android:summary="Instabil verziók tesztelése"
+                android:defaultValue="false"
                 android:key="betaMode"
-                android:defaultValue="false" />
+                android:summary="Instabil verziók tesztelése"
+                android:title="Beta frissítés" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Mobiltudós Guide">
 
         <PreferenceScreen
             android:key="about_category"
-            android:title="Névjegy"
-            android:persistent="false">
+            android:persistent="false"
+            android:title="Névjegy">
             <Preference
-                android:title="Verzió"
+                android:key="version"
                 android:summary="2.1.0"
-                android:key="version" />
+                android:title="Verzió" />
             <Preference
-                android:title="Verziótörténet"
+                android:key="changelog"
                 android:summary="2017-02-23"
-                android:key="changelog" />
+                android:title="Verziótörténet" />
             <Preference
-                android:title="Visszajelzés"
+                android:key="feedback"
                 android:summary="zelena.patrikgergo@ext.telekom.hu"
-                android:key="feedback" />
+                android:title="Visszajelzés" />
             <Preference
-                android:title="Bemutató"
+                android:key="tutorial"
                 android:summary="Az alkalmazás gyors áttekintése"
-                android:key="tutorial" />
+                android:title="Bemutató" />
         </PreferenceScreen>
     </PreferenceCategory>
 

@@ -16,6 +16,7 @@ import hu.zelena.guide.modell.PhonesModell;
  */
 
 public class PhonesHandler extends DefaultHandler {
+    private final StringBuilder characters = new StringBuilder(64);
     private List<PhonesModell> phonesList;
     private PhonesModell currentItem;
     private boolean parsingName;
@@ -23,7 +24,6 @@ public class PhonesHandler extends DefaultHandler {
     private boolean parsingOS;
     private boolean parsingMA;
     private boolean parsingPic;
-    private final StringBuilder characters = new StringBuilder(64);
 
 
     public PhonesHandler() {
