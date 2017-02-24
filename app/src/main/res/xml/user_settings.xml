@@ -42,11 +42,11 @@
             android:title="Névjegy">
             <Preference
                 android:key="version"
-                android:summary="2.1.0"
+                android:summary="3.0"
                 android:title="Verzió" />
             <Preference
                 android:key="changelog"
-                android:summary="2017-02-23"
+                android:summary="2017-0"
                 android:title="Verziótörténet" />
             <Preference
                 android:key="feedback"

@@ -34,11 +34,9 @@ public class UssdCodeActivity extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        Bundle mainBundle = getIntent().getExtras();
-        Boolean isDark = mainBundle.getBoolean("darkMode");
 
         ActivityHelper.initialize(this);
-
+        Boolean isDark = ActivityHelper.darkMode(this);
         if (isDark) {
             setTheme(R.style.Main2DarkTheme);
         }

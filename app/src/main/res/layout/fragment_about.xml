@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="15dp"
-            android:text="v2.1.0"
+            android:text="v3.0"
             android:textColor="@android:color/black"
             android:textSize="16dp" />
         <TextView
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="15dp"
-            android:text="Release date: 2017-02-23"
+            android:text="Release date: -"
             android:textColor="@android:color/black"
             android:textSize="16dp" />
 

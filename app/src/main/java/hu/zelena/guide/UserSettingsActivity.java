@@ -31,10 +31,7 @@ import hu.zelena.guide.util.ActivityHelper;
 
 public class UserSettingsActivity extends ActionBarActivity {
 
-    private boolean darkMode = false;
     private boolean writeStorage = true;
-    private boolean tabletMode = false;
-
     public UserSettingsActivity() {
     }
 
@@ -42,22 +39,18 @@ public class UserSettingsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         Bundle mainBundle = getIntent().getExtras();
-        Boolean isDark = mainBundle.getBoolean("darkMode");
-        writeStorage = mainBundle.getBoolean("writeStorage");
-
         Bundle bundle = new Bundle();
+        writeStorage = mainBundle.getBoolean("writeStorage");
         bundle.putBoolean("writeStorage", writeStorage);
 
+        Boolean isDark = ActivityHelper.darkMode(this);
         if (isDark) {
             setTheme(R.style.SettingsDarkTheme);
-            darkMode = true;
         }
 
-        tabletMode = mainBundle.getBoolean("tabMode");
         ActivityHelper.initialize(this);
 
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_user_settings);
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);

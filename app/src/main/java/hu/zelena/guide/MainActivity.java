@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView nvDrawer;
     private ActionBarDrawerToggle drawerToggle;
     private boolean isDark = false;
-    private boolean dataSaver = false;
     private boolean writeStorage = true;
     private boolean offlineMode = false;
     private boolean betaMode = false;
@@ -107,25 +106,26 @@ public class MainActivity extends AppCompatActivity {
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
 
-		/* Request user permissions in runtime */
+		/* user permissions kérelmezés futásidőben */
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 MY_PERMISSIONS_REQUEST_READ_STORAGE);
 
-        /* Request user permissions in runtime */
+        ActivityHelper.initialize(this);
+
+        isDark = ActivityHelper.darkMode(this);
+        if (isDark) {
+            Log.d("DarkTheme: ", "TRUE");
+            setTheme(R.style.MainDarkTheme);
+        } else {
+            Log.d("DarkTheme: ", "False");
+        }
 
 
         SharedPreferences sharedPrefs = PreferenceManager
                 .getDefaultSharedPreferences(this);
-        if (sharedPrefs.getBoolean("darkMode", false)) {
-            setTheme(R.style.MainDarkTheme);
-            isDark = true;
-        }
 
-        if (sharedPrefs.getBoolean("dataSaver", false)) {
-            dataSaver = true;
-        }
 
         if (sharedPrefs.getBoolean("offline", false)) {
             offlineMode = true;
@@ -137,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActivityHelper.initialize(this);
         CheckVersion();
 
         // Toolbar az ActionBar helyére
@@ -163,10 +162,8 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.frame_container, fragment).commit();
         } else {
             Intent i = new Intent(this, ErrorActivity.class);
-            i.putExtra("darkMode", isDark);
             i.putExtra("error", "Nem sikerült a HOME-FRAGMENT betöltése. [Null object]");
             startActivity(i);
-
             Log.e("MainActivity", "Error in creating fragment");
         }
     }
@@ -186,8 +183,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.menu_settings:
                 Intent i = new Intent(this, UserSettingsActivity.class);
-                i.putExtra("darkMode", isDark);
-
                 writeStorage = ContextCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         == PackageManager.PERMISSION_GRANTED;
@@ -320,7 +315,6 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.frame_container, fragment).commit();
         } else {
             Intent i = new Intent(this, ErrorActivity.class);
-            i.putExtra("darkMode", isDark);
             i.putExtra("error", "Nem sikerült a FRAGMENT betöltése. [Null object]");
             startActivity(i);
             Log.e("MainActivity", "Error in creating fragment");
@@ -444,7 +438,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             } else {
                 Intent i = new Intent(this, ErrorActivity.class);
-                i.putExtra("darkMode", isDark);
                 i.putExtra("error", "Nem sikerült a HOME-FRAGMENT betöltése. [Null object]");
                 startActivity(i);
 
@@ -575,13 +568,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void rssRead(View view) {
         Intent i = new Intent(this, RssActivity.class);
-        i.putExtra("darkMode", isDark);
         startActivity(i);
     }
 
     public void ussdCodeActivity(View view) {
         Intent i = new Intent(this, UssdCodeActivity.class);
-        i.putExtra("darkMode", isDark);
         startActivity(i);
     }
 
@@ -613,7 +604,6 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, SpecsAvtivity.class);
         i.putExtra("brand", "tablet");
         i.putExtra("phone", name);
-        i.putExtra("darkMode", isDark);
         startActivity(i);
     }
 
@@ -621,7 +611,6 @@ public class MainActivity extends AppCompatActivity {
         String name = view.getTag().toString();
         Intent i = new Intent(MainActivity.this, WatchAvtivity.class);
         i.putExtra("watch", name);
-        i.putExtra("darkMode", isDark);
         startActivity(i);
     }
 

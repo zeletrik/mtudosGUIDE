@@ -1,26 +1,29 @@
 package hu.zelena.guide;
 
 import android.app.Fragment;
-import android.content.SharedPreferences;
+import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import hu.zelena.guide.fragments.WatchSpecFragment;
+import hu.zelena.guide.fragments.ComBrandFragment;
 import hu.zelena.guide.util.ActivityHelper;
 
+
 /**
- * Created by patrik on 2017.02.19..
+ * Created by patrik on 2017.02.24..
  */
 
-public class WatchAvtivity extends AppCompatActivity {
+public class SearchBrandActivity extends ActionBarActivity {
 
-    String name;
-
-    public WatchAvtivity() {
-    }
+    private String name;
+    private String device;
+    private String currentBrand;
+    private String brand;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,21 +39,20 @@ public class WatchAvtivity extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Fragment fragment = new WatchSpecFragment();
-
         Bundle mainBundle = getIntent().getExtras();
-        name = mainBundle.getString("watch");
+        name = mainBundle.getString("name");
+        device = mainBundle.getString("device");
+        currentBrand = mainBundle.getString("brand");
 
         Bundle bundle = new Bundle();
-        bundle.putString("watch", name);
+        bundle.putString("name", name);
 
-
+        Fragment fragment = new ComBrandFragment();
         fragment.setArguments(bundle);
 
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
                 .commit();
-
     }
 
     @Override
@@ -67,5 +69,22 @@ public class WatchAvtivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
+    public void selectBrand(View view) {
+        brand = view.getTag().toString();
+        Log.d("selectBrand:", brand);
+        Intent i = new Intent(this, SearchDeviceActivity.class);
+        i.putExtra("name", name);
+        i.putExtra("device", device);
+        i.putExtra("currentBrand", currentBrand);
+        i.putExtra("brand", brand);
+        startActivity(i);
+
     }
 }

@@ -1,45 +1,35 @@
 package hu.zelena.guide;
 
 import android.app.Fragment;
-import android.content.SharedPreferences;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import hu.zelena.guide.fragments.SpecsFragment;
+import hu.zelena.guide.fragments.CompareFragment;
 import hu.zelena.guide.util.ActivityHelper;
 
 /**
- Copyright Patrik G. Zelena
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-
+ * Created by patrik on 2017.02.24..
  */
-public class SpecsAvtivity extends AppCompatActivity {
+
+public class CompareActivity extends AppCompatActivity {
 
     String brand;
     String phone;
+    String currentBrand;
+    String currentPhone;
 
-    public SpecsAvtivity() {
+    public CompareActivity() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-
-        ActivityHelper.initialize(this);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         Boolean isDark = ActivityHelper.darkMode(this);
 
@@ -52,15 +42,21 @@ public class SpecsAvtivity extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Fragment fragment = new SpecsFragment();
+        Fragment fragment = new CompareFragment();
 
         Bundle mainBundle = getIntent().getExtras();
         brand = mainBundle.getString("brand");
         phone = mainBundle.getString("phone");
+        currentBrand = mainBundle.getString("currentBrand");
+        currentPhone = mainBundle.getString("currentPhone");
 
         Bundle bundle = new Bundle();
         bundle.putString("brand", brand);
         bundle.putString("phone", phone);
+        bundle.putString("currentBrand", currentBrand);
+        bundle.putString("currentPhone", currentPhone);
+
+        Log.d("Extra: " + brand + phone + currentBrand + currentPhone, "!");
 
 
         fragment.setArguments(bundle);
@@ -81,9 +77,21 @@ public class SpecsAvtivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
-                return true;
+                Intent i = new Intent(this, MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent i = new Intent(this, MainActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
+
     }
 }

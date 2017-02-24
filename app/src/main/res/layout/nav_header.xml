@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Mobiltudós Guide - v2.1.0"
+            android:text="Mobiltudós Guide - v3.0"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@android:color/white"

@@ -87,7 +87,6 @@ public class PhonesFragment extends Fragment {
                 aList = phoneListReader.getItems();
             } catch (Exception e) {
                 Intent i = new Intent(getActivity(), ErrorActivity.class);
-                i.putExtra("darkMode", darkMode);
                 i.putExtra("error", "Feldolgozási hiba: " + e.getMessage());
                 startActivity(i);
                 Log.v("Error Parsing Data", e + "");

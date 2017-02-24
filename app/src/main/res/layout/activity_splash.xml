@@ -17,7 +17,7 @@
         android:layout_alignBottom="@id/imgLogo"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
-        android:text="Mobiltudós  Guide v2.1.0"
+        android:text="Mobiltudós  Guide v3.0"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="16dp"

@@ -555,8 +555,6 @@
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
         </RelativeLayout>
-
-
     </LinearLayout>
 </ScrollView>
 

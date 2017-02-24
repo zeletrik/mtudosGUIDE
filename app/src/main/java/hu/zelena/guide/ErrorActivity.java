@@ -33,8 +33,8 @@ public class ErrorActivity extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
 
         Bundle mainBundle = getIntent().getExtras();
-        Boolean isDark = mainBundle.getBoolean("darkMode");
         String msg = mainBundle.getString("error");
+        Boolean isDark = ActivityHelper.darkMode(this);
 
         Bundle bundle = new Bundle();
         bundle.putString("error", msg);

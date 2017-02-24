@@ -1,8 +1,13 @@
 package hu.zelena.guide.util;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
+
+import hu.zelena.guide.R;
+
 /**
  Copyright Patrik G. Zelena
 
@@ -40,5 +45,15 @@ public class ActivityHelper {
             // Különben portrait
             activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         }
+    }
+
+    public static boolean darkMode(Activity activity) {
+        boolean isDark = false;
+        SharedPreferences sharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(activity);
+        if (sharedPrefs.getBoolean("darkMode", false)) {
+            isDark = true;
+        }
+        return isDark;
     }
 }

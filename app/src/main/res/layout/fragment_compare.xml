@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/device_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="15dp"
+                    android:text="Current"
+                    android:textColor="#E20074"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/display_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/displayText_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="Kijelző"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayTypeFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayText_1"
+                    android:padding="5dp"
+                    android:text="Típus: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayType_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayText_1"
+                    android:layout_toRightOf="@+id/displayTypeFIX_1"
+                    android:padding="5dp"
+                    android:text="id/displayType_1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/displaySizeFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayTypeFIX_1"
+                    android:padding="5dp"
+                    android:text="méret: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displaySize_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayTypeFIX_1"
+                    android:layout_toRightOf="@+id/displaySizeFIX_1"
+                    android:padding="5dp"
+                    android:text="id/displaySize_1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/displayResFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displaySizeFIX_1"
+                    android:padding="5dp"
+                    android:text="felbontás: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayRes_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displaySizeFIX_1"
+                    android:layout_toRightOf="@+id/displayResFIX_1"
+                    android:padding="5dp"
+                    android:text="id/displayRes_1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/displayProtectFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayResFIX_1"
+                    android:padding="5dp"
+                    android:text="Védelem: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayProtect_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayResFIX_1"
+                    android:layout_toRightOf="@+id/displayProtectFIX_1"
+                    android:padding="5dp"
+                    android:text="id/displayProtect_1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/platform_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/platformText_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="platform"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/osFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/platformText_1"
+                    android:padding="5dp"
+                    android:text="OS: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/os_spec_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/platformText_1"
+                    android:layout_toRightOf="@+id/osFIX_1"
+                    android:padding="5dp"
+                    android:text="id/os_spec_1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/chipsetFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/osFIX_1"
+                    android:padding="5dp"
+                    android:text="Chipset: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chipset_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/osFIX_1"
+                    android:layout_toRightOf="@+id/chipsetFIX_1"
+                    android:padding="5dp"
+                    android:text="id/chipset_1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/cpuFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chipsetFIX_1"
+                    android:padding="5dp"
+                    android:text="Cpu: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cpu_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chipsetFIX_1"
+                    android:layout_toRightOf="@+id/cpuFIX_1"
+                    android:padding="5dp"
+                    android:text="id/cpu_1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/gpuFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cpuFIX_1"
+                    android:padding="5dp"
+                    android:text="gpu: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/gpu_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cpuFIX_1"
+                    android:layout_toRightOf="@+id/gpuFIX_1"
+                    android:padding="5dp"
+                    android:text="id/gpu_1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/memória_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/memoryText_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="memória"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ramFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/memoryText_1"
+                    android:padding="5dp"
+                    android:text="RAM: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ram_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/memoryText_1"
+                    android:layout_toRightOf="@+id/ramFIX_1"
+                    android:padding="5dp"
+                    android:text="id/ram"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/romFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ramFIX_1"
+                    android:padding="5dp"
+                    android:text="ROM: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rom_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ramFIX_1"
+                    android:layout_toRightOf="@+id/romFIX_1"
+                    android:padding="5dp"
+                    android:text="id/rom"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/expandFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/romFIX_1"
+                    android:padding="5dp"
+                    android:text="bővíthető: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/expand_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/romFIX_1"
+                    android:layout_toRightOf="@+id/expandFIX_1"
+                    android:padding="5dp"
+                    android:text="id/expand"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/camera_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/cameraText_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="kamera"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rearcamFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cameraText_1"
+                    android:padding="5dp"
+                    android:text="hátlapi: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rcam_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cameraText_1"
+                    android:layout_toRightOf="@+id/rearcamFIX_1"
+                    android:padding="5dp"
+                    android:text="id/rcam"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/frontcamFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rearcamFIX_1"
+                    android:padding="5dp"
+                    android:text="előlapi: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fcam_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rearcamFIX_1"
+                    android:layout_toRightOf="@+id/frontcamFIX_1"
+                    android:padding="5dp"
+                    android:text="id/fcam"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/features_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5sp">
+
+                <TextView
+                    android:id="@+id/featuresText_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="tulajdonságok"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/batteryFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/featuresText_1"
+                    android:padding="5dp"
+                    android:text="Akku: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/batt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/featuresText_1"
+                    android:layout_toRightOf="@+id/batteryFIX_1"
+                    android:padding="5dp"
+                    android:text="id/batt"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/speakerFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/batteryFIX_1"
+                    android:padding="5dp"
+                    android:text="hangszóró: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/speaker_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/batteryFIX_1"
+                    android:layout_toRightOf="@+id/speakerFIX_1"
+                    android:padding="5dp"
+                    android:text="id/speaker"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/nfcFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/speakerFIX_1"
+                    android:padding="5dp"
+                    android:text="NFC: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nfc_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/speakerFIX_1"
+                    android:layout_toRightOf="@+id/nfcFIX_1"
+                    android:padding="5dp"
+                    android:text="id/nfc"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/radioFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nfcFIX_1"
+                    android:padding="5dp"
+                    android:text="rádio: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/radio_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nfcFIX_1"
+                    android:layout_toRightOf="@+id/radioFIX_1"
+                    android:padding="5dp"
+                    android:text="id/radio"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/ipFIX_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioFIX_1"
+                    android:padding="5dp"
+                    android:text="ip szabvány: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ipcertified_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioFIX_1"
+                    android:layout_toRightOf="@+id/ipFIX_1"
+                    android:padding="5dp"
+                    android:text="id/ipcertified"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/device_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="15dp"
+                    android:text="Current"
+                    android:textColor="#E20074"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/displayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="Kijelző"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayTypeFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayText"
+                    android:padding="5dp"
+                    android:text="Típus: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayText"
+                    android:layout_toRightOf="@+id/displayTypeFIX"
+                    android:padding="5dp"
+                    android:text="id/displayType"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/displaySizeFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayTypeFIX"
+                    android:padding="5dp"
+                    android:text="méret: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displaySize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayTypeFIX"
+                    android:layout_toRightOf="@+id/displaySizeFIX"
+                    android:padding="5dp"
+                    android:text="id/displaySize"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/displayResFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displaySizeFIX"
+                    android:padding="5dp"
+                    android:text="felbontás: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayRes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displaySizeFIX"
+                    android:layout_toRightOf="@+id/displayResFIX"
+                    android:padding="5dp"
+                    android:text="id/displayRes"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/displayProtectFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayResFIX"
+                    android:padding="5dp"
+                    android:text="Védelem: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayProtect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/displayResFIX"
+                    android:layout_toRightOf="@+id/displayProtectFIX"
+                    android:padding="5dp"
+                    android:text="id/displayProtect"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/platform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/platformText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="platform"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/osFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/platformText"
+                    android:padding="5dp"
+                    android:text="OS: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/os_spec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/platformText"
+                    android:layout_toRightOf="@+id/osFIX"
+                    android:padding="5dp"
+                    android:text="id/os_spec"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/chipsetFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/osFIX"
+                    android:padding="5dp"
+                    android:text="Chipset: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chipset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/osFIX"
+                    android:layout_toRightOf="@+id/chipsetFIX"
+                    android:padding="5dp"
+                    android:text="id/chipset"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/cpuFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chipsetFIX"
+                    android:padding="5dp"
+                    android:text="Cpu: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chipsetFIX"
+                    android:layout_toRightOf="@+id/cpuFIX"
+                    android:padding="5dp"
+                    android:text="id/cpu"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/gpuFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cpuFIX"
+                    android:padding="5dp"
+                    android:text="gpu: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/gpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cpuFIX"
+                    android:layout_toRightOf="@+id/gpuFIX"
+                    android:padding="5dp"
+                    android:text="id/gpu"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/memória"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/memoryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="memória"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ramFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/memoryText"
+                    android:padding="5dp"
+                    android:text="RAM: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/memoryText"
+                    android:layout_toRightOf="@+id/ramFIX"
+                    android:padding="5dp"
+                    android:text="id/ram"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/romFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ramFIX"
+                    android:padding="5dp"
+                    android:text="ROM: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ramFIX"
+                    android:layout_toRightOf="@+id/romFIX"
+                    android:padding="5dp"
+                    android:text="id/rom"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/expandFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/romFIX"
+                    android:padding="5dp"
+                    android:text="bővíthető: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/romFIX"
+                    android:layout_toRightOf="@+id/expandFIX"
+                    android:padding="5dp"
+                    android:text="id/expand"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/cameraText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="kamera"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rearcamFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cameraText"
+                    android:padding="5dp"
+                    android:text="hátlapi: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rcam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cameraText"
+                    android:layout_toRightOf="@+id/rearcamFIX"
+                    android:padding="5dp"
+                    android:text="id/rcam"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/frontcamFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rearcamFIX"
+                    android:padding="5dp"
+                    android:text="előlapi: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fcam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rearcamFIX"
+                    android:layout_toRightOf="@+id/frontcamFIX"
+                    android:padding="5dp"
+                    android:text="id/fcam"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/features"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/item_bg"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:translationZ="1.5dp">
+
+                <TextView
+                    android:id="@+id/featuresText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:text="tulajdonságok"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/batteryFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/featuresText"
+                    android:padding="5dp"
+                    android:text="Akku: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/batt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/featuresText"
+                    android:layout_toRightOf="@+id/batteryFIX"
+                    android:padding="5dp"
+                    android:text="id/batt"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/speakerFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/batteryFIX"
+                    android:padding="5dp"
+                    android:text="hangszóró: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/speaker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/batteryFIX"
+                    android:layout_toRightOf="@+id/speakerFIX"
+                    android:padding="5dp"
+                    android:text="id/speaker"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/nfcFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/speakerFIX"
+                    android:padding="5dp"
+                    android:text="NFC: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nfc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/speakerFIX"
+                    android:layout_toRightOf="@+id/nfcFIX"
+                    android:padding="5dp"
+                    android:text="id/nfc"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/radioFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nfcFIX"
+                    android:padding="5dp"
+                    android:text="rádio: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nfcFIX"
+                    android:layout_toRightOf="@+id/radioFIX"
+                    android:padding="5dp"
+                    android:text="id/radio"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/ipFIX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioFIX"
+                    android:padding="5dp"
+                    android:text="ip szabvány: "
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ipcertified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioFIX"
+                    android:layout_toRightOf="@+id/ipFIX"
+                    android:padding="5dp"
+                    android:text="id/ipcertified"
+                    android:textAllCaps="true"
+                    android:textColor="@color/magenta"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
