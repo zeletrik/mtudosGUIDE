@@ -106,14 +106,12 @@ public class PhonesFragment extends Fragment {
                 @Override
                 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                     PhonesModell data = aList.get(arg2);
-                    //  String phone = String.valueOf(arg2 + 1);
                     String phone = aList.get(arg2).getName();
 
                     Intent i = new Intent(getActivity(), SpecsAvtivity.class);
                     i.putExtra("brand", brand);
                     i.putExtra("phone", phone);
                     i.putExtra("name", data.getName());
-                    i.putExtra("darkMode", darkMode);
                     startActivity(i);
                 }
             };

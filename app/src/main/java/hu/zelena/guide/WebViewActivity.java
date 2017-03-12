@@ -53,7 +53,7 @@ public class WebViewActivity extends ActionBarActivity {
 
 
         webView = (WebView) findViewById(R.id.webView1);
-        webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+        //  webView.getSettings().setPluginState(WebSettings.PluginState.ON);
 
         webView.setWebViewClient(new Callback());
         webView.getSettings().setJavaScriptEnabled(true);

@@ -458,24 +458,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Menu Layoutok létrehozása
-     */
-
-    public void aboutClick(MenuItem item) {
-        Fragment fragment = new AboutFragment();
-
-        if (fragment != null) {
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.frame_container, fragment).commit();
-            setTitle("Névjegy");
-        } else {
-            // error in creating fragment
-            Log.e("MainActivity", "Error in creating fragment");
-        }
-    }
-
-    /**
      * Verzió ellenőrzés (async)
      */
 

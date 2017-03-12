@@ -85,6 +85,5 @@ public class SearchBrandActivity extends ActionBarActivity {
         i.putExtra("currentBrand", currentBrand);
         i.putExtra("brand", brand);
         startActivity(i);
-
     }
 }
