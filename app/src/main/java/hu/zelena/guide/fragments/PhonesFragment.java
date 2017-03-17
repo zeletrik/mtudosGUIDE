@@ -112,6 +112,7 @@ public class PhonesFragment extends Fragment {
                     i.putExtra("brand", brand);
                     i.putExtra("phone", phone);
                     i.putExtra("name", data.getName());
+                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(i);
                 }
             };

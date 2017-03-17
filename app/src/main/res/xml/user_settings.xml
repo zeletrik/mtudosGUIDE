@@ -32,6 +32,11 @@
                 android:key="betaMode"
                 android:summary="Instabil verziók tesztelése"
                 android:title="Beta frissítés" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="tabMode"
+            android:summary="Fekvő mód kényszerítése"
+            android:title="Tablet mód" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Mobiltudós Guide">
@@ -50,7 +55,7 @@
                 android:title="Verziótörténet" />
             <Preference
                 android:key="feedback"
-                android:summary="zelena.patrikgergo@ext.telekom.hu"
+                android:summary="zelena.patrik@simplesoft.hu"
                 android:title="Visszajelzés" />
             <Preference
                 android:key="tutorial"

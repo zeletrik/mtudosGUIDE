@@ -26,7 +26,7 @@ public class SearchDeviceActivity extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        //  ActivityHelper.initialize(this);
+        ActivityHelper.initialize(this);
         Boolean isDark = ActivityHelper.darkMode(this);
         if (isDark) {
             setTheme(R.style.Main2DarkTheme);

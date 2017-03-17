@@ -1,10 +1,10 @@
 package hu.zelena.guide;
 
 import android.app.Fragment;
-import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -48,6 +48,7 @@ public class SpecsAvtivity extends AppCompatActivity {
         }
 
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_specs);
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -65,9 +66,11 @@ public class SpecsAvtivity extends AppCompatActivity {
 
         fragment.setArguments(bundle);
 
+
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
                 .commit();
+
 
     }
 
@@ -85,5 +88,19 @@ public class SpecsAvtivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Log.d("Orientation: ", "landscape");
+
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Log.d("Orientation: ", "portrait");
+
+        }
     }
 }

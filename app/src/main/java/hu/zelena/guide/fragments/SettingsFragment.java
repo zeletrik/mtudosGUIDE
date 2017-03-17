@@ -88,7 +88,7 @@ public class SettingsFragment extends PreferenceFragment
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("plain/text");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"zelena.patrikgergo@ext.telekom.hu"});
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"zelena.patrik@simplesoft.hu"});
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Mobiltudós Guide - Visszajelző");
                 intent.putExtra(Intent.EXTRA_TEXT, "Verzió: " + version);
                 startActivity(Intent.createChooser(intent, ""));
@@ -189,6 +189,10 @@ public class SettingsFragment extends PreferenceFragment
 
         if (key.equals("betaMode")) {
             clearNotification();
+            restartApp();
+        }
+
+        if (key.equals("tabMode")) {
             restartApp();
         }
 

@@ -388,7 +388,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("plain/text");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"zelena.patrikgergo@ext.telekom.hu"});
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"zelena.patrik@simplesoft.hu"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "Mobiltudós Guide - Visszajelző");
         intent.putExtra(Intent.EXTRA_TEXT, "Verzió: " + version);
         startActivity(Intent.createChooser(intent, ""));

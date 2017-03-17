@@ -25,6 +25,7 @@ import hu.zelena.guide.ErrorActivity;
 import hu.zelena.guide.R;
 import hu.zelena.guide.SearchBrandActivity;
 import hu.zelena.guide.modell.Specs;
+import hu.zelena.guide.util.ActivityHelper;
 import hu.zelena.guide.util.SpecsReader;
 
 public class SpecsFragment extends Fragment {
@@ -40,9 +41,12 @@ public class SpecsFragment extends Fragment {
     public SpecsFragment() {
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        ActivityHelper.initialize(getActivity());
 
         rootView = inflater.inflate(R.layout.fragment_specs, container, false);
 

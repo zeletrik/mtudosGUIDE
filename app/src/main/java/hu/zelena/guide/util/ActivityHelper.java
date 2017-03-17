@@ -26,9 +26,13 @@ import hu.zelena.guide.R;
  */
 public class ActivityHelper {
 
-    public static void initialize(Activity activity) {
-        // kijelző DP meghatározás
 
+    public static void initialize(Activity activity) {
+
+        if (tabMode(activity)) {
+            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        } else {
+            // kijelző DP meghatározás
         DisplayMetrics metrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
         int widthPixels = metrics.widthPixels;
@@ -43,7 +47,8 @@ public class ActivityHelper {
             activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }else {
             // Különben portrait
-            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
+            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         }
     }
 
@@ -55,5 +60,15 @@ public class ActivityHelper {
             isDark = true;
         }
         return isDark;
+    }
+
+    public static boolean tabMode(Activity activity) {
+        boolean isTab = false;
+        SharedPreferences sharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(activity);
+        if (sharedPrefs.getBoolean("tabMode", false)) {
+            isTab = true;
+        }
+        return isTab;
     }
 }

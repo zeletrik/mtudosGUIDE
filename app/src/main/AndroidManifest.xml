@@ -23,7 +23,7 @@
         <activity
             android:name=".SplashScreen"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="nosensor"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,10 +35,10 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:configChanges="orientation|screenSize"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:noHistory="false"
-            android:screenOrientation="nosensor"
+            android:screenOrientation="locked"
             android:theme="@style/MainTheme">
         </activity>
         <activity
@@ -51,44 +51,53 @@
             android:theme="@style/SettingsTheme" />
         <activity
             android:name=".SpecsAvtivity"
-            android:configChanges="orientation|screenSize"
             android:label="Specs"
+            android:screenOrientation="locked"
             android:theme="@style/Main2Theme" />
         <activity
             android:name=".WebViewActivity"
             android:label="Webview"
+            android:screenOrientation="locked"
             android:theme="@style/Main2Theme" />
         <activity
             android:name=".RssActivity"
             android:label="RSS"
+            android:screenOrientation="locked"
             android:theme="@style/Main2Theme" />
         <activity
             android:name=".UssdCodeActivity"
             android:label="USSD Codes"
+            android:screenOrientation="locked"
             android:theme="@style/Main2Theme" />
         <activity
             android:name=".ChangeLogActivity"
             android:label="Verziótörténet"
+            android:screenOrientation="locked"
             android:theme="@style/SettingsTheme" />
         <activity
             android:name=".util.DownloadActivity"
             android:label="Download"
+            android:screenOrientation="locked"
             android:theme="@style/SettingsTheme" />
         <activity
             android:name=".ErrorActivity"
             android:label="Error"
+            android:screenOrientation="locked"
             android:theme="@style/SettingsTheme" />
         <activity
             android:name=".WatchAvtivity"
             android:label="Watch"
+            android:screenOrientation="locked"
             android:theme="@style/Main2Theme" />
         <activity
             android:name=".SearchBrandActivity"
             android:label="Brand Choose"
+            android:screenOrientation="locked"
             android:theme="@style/Main2Theme" />
         <activity
             android:name=".SearchDeviceActivity"
             android:label="Device Choose"
+            android:screenOrientation="locked"
             android:theme="@style/Main2Theme" />
         <activity
             android:name=".CompareActivity"
