@@ -1,0 +1,633 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/theme_background"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <RelativeLayout
+            android:id="@+id/move"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="MOBIL DÍJCSOMAGOK"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
+
+            <TextView
+                android:id="@+id/nullText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="0 Perc"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/price1FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nullText"
+                android:padding="5dp"
+                android:text="havi díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nullText"
+                android:layout_toRightOf="@+id/price1FIX"
+                android:padding="5dp"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callin1FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price1FIX"
+                android:padding="5dp"
+                android:text="Hálózaton belül: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price1FIX"
+                android:layout_toRightOf="@+id/callin1FIX"
+                android:padding="5dp"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callout1FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin1FIX"
+                android:padding="5dp"
+                android:text="Más hálózat: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin1FIX"
+                android:layout_toRightOf="@+id/callout1FIX"
+                android:padding="5dp"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/other1FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout1FIX"
+                android:padding="5dp"
+                android:text="Egyéb: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/other1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout1FIX"
+                android:layout_toRightOf="@+id/other1FIX"
+                android:padding="5dp"
+                android:text="Ha csak mobilinternetet szeretnél, akkor a 4, a 10 és a 30 GB-os Net csomagok közül választhatsz."
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
+
+            <TextView
+                android:id="@+id/mobilsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="Mobil S"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/price2FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilsText"
+                android:padding="5dp"
+                android:text="havi díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilsText"
+                android:layout_toRightOf="@+id/price2FIX"
+                android:padding="5dp"
+                android:text="2000 Ft (e-pack)"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callin2FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price2FIX"
+                android:padding="5dp"
+                android:text="Hálózaton belül: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price2FIX"
+                android:layout_toRightOf="@+id/callin2FIX"
+                android:padding="5dp"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callout2FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin2FIX"
+                android:padding="5dp"
+                android:text="Más hálózat: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin2FIX"
+                android:layout_toRightOf="@+id/callout2FIX"
+                android:padding="5dp"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/other2FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout2FIX"
+                android:padding="5dp"
+                android:text="Egyéb: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/other2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout2FIX"
+                android:layout_toRightOf="@+id/other2FIX"
+                android:padding="5dp"
+                android:text="80 perc vagy SMS, belföldi hálozatokba itthon és EU roaming esetén."
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
+
+            <TextView
+                android:id="@+id/mobilmText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="Mobil M"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/price3FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilmText"
+                android:padding="5dp"
+                android:text="havi díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilmText"
+                android:layout_toRightOf="@+id/price3FIX"
+                android:padding="5dp"
+                android:text="3000 Ft (e-pack)"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callin3FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price3FIX"
+                android:padding="5dp"
+                android:text="Hálózaton belül: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callin3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price3FIX"
+                android:layout_toRightOf="@+id/callin3FIX"
+                android:padding="5dp"
+                android:text="Korlátlan"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callout3FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin3FIX"
+                android:padding="5dp"
+                android:text="Más hálózat: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin3FIX"
+                android:layout_toRightOf="@+id/callout3FIX"
+                android:padding="5dp"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/other3FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout3FIX"
+                android:padding="5dp"
+                android:text="Egyéb: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/other3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout3FIX"
+                android:layout_toRightOf="@+id/other3FIX"
+                android:padding="5dp"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
+
+            <TextView
+                android:id="@+id/mobillText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="Mobil L"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/price4FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobillText"
+                android:padding="5dp"
+                android:text="havi díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobillText"
+                android:layout_toRightOf="@+id/price4FIX"
+                android:padding="5dp"
+                android:text="5500 Ft (e-pack)"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callin4FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price4FIX"
+                android:padding="5dp"
+                android:text="Hálózaton belül: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callin4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price4FIX"
+                android:layout_toRightOf="@+id/callin4FIX"
+                android:padding="5dp"
+                android:text="Korlátlan"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callout4FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin4FIX"
+                android:padding="5dp"
+                android:text="Más hálózat: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin4FIX"
+                android:layout_toRightOf="@+id/callout4FIX"
+                android:padding="5dp"
+                android:text="150 perc vagy SMS"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/other4FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout4FIX"
+                android:padding="5dp"
+                android:text="Egyéb: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/other4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout4FIX"
+                android:layout_toRightOf="@+id/other4FIX"
+                android:padding="5dp"
+                android:text="itthon és EU roaming esetén is."
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/item_bg"
+            android:elevation="8dp"
+            android:padding="10dp"
+            android:translationZ="1.5dp">
+
+            <TextView
+                android:id="@+id/mobilxlText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="Mobil XL"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/price5FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilxlText"
+                android:padding="5dp"
+                android:text="havi díj: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilxlText"
+                android:layout_toRightOf="@+id/price5FIX"
+                android:padding="5dp"
+                android:text="13.000 Ft (e-pack)"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callin5FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price5FIX"
+                android:padding="5dp"
+                android:text="Hálózaton belül: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callin5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price5FIX"
+                android:layout_toRightOf="@+id/callin5FIX"
+                android:padding="5dp"
+                android:text="Korlátlan"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/callout5FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin5FIX"
+                android:padding="5dp"
+                android:text="Más hálózat: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/callout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callin5FIX"
+                android:layout_toRightOf="@+id/callout5FIX"
+                android:padding="5dp"
+                android:text="Korlátlan"
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/other5FIX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout5FIX"
+                android:padding="5dp"
+                android:text="Egyéb: "
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/other5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callout5FIX"
+                android:layout_toRightOf="@+id/other5FIX"
+                android:padding="5dp"
+                android:text="Itthon és EU roaming esetén is."
+                android:textAllCaps="true"
+                android:textColor="#E20074"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
