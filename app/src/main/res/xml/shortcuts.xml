@@ -59,4 +59,17 @@
         </intent>
     </shortcut>
 
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_fb"
+        android:shortcutDisabledMessage="@string/shortcut_disabled"
+        android:shortcutId="Facebook"
+        android:shortcutLongLabel="@string/shortcut_fb_long"
+        android:shortcutShortLabel="@string/shortcut_facebook">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="fb://group/530837540309717"
+            android:targetPackage="com.facebook.katana"></intent>
+    </shortcut>
+
 </shortcuts>

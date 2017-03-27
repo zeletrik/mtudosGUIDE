@@ -7,7 +7,7 @@
 
     <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
     android:paddingTop="16dp">
 
@@ -38,12 +38,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal"
+            android:weightSum="2"
             >
         <RelativeLayout
             android:id="@+id/netplusS"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:padding="10dp"
@@ -134,9 +136,10 @@
 
         <RelativeLayout
             android:id="@+id/netplusM"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:padding="10dp"

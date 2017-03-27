@@ -38,12 +38,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        >
+        android:weightSum="2">
         <RelativeLayout
             android:id="@+id/domSurf"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:padding="10dp"
@@ -158,9 +159,10 @@
 
         <RelativeLayout
             android:id="@+id/domAktiv"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:padding="10dp"
@@ -301,12 +303,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        >
+        android:weightSum="2">
         <RelativeLayout
             android:id="@+id/dom5"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:padding="10dp"
@@ -445,9 +448,10 @@
 
         <RelativeLayout
             android:id="@+id/domMost"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:padding="10dp"
@@ -589,12 +593,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        >
+        android:weightSum="2">
         <RelativeLayout
             android:id="@+id/domS"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:padding="10dp"
@@ -686,9 +691,10 @@
 
         <RelativeLayout
             android:id="@+id/domM"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_weight="1"
             android:background="@drawable/item_bg"
             android:elevation="8dp"
             android:padding="10dp"

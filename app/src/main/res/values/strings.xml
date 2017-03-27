@@ -23,4 +23,7 @@
 
     <string name="shortcut_email">Email</string>
     <string name="shortcut_email_long">Email gyűjtő</string>
+
+    <string name="shortcut_facebook">Facebook</string>
+    <string name="shortcut_fb_long">Facebook csoport</string>
 </resources>

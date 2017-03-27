@@ -55,7 +55,6 @@
                 android:layout_toRightOf="@+id/displayTypeFIX"
                 android:padding="5dp"
                 android:text="id/displayType"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
 
@@ -79,7 +78,6 @@
                 android:layout_toRightOf="@+id/displaySizeFIX"
                 android:padding="5dp"
                 android:text="id/displaySize"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
 
@@ -103,7 +101,6 @@
                 android:layout_toRightOf="@+id/displayResFIX"
                 android:padding="5dp"
                 android:text="id/displayRes"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
 
@@ -127,7 +124,6 @@
                 android:layout_toRightOf="@+id/displayProtectFIX"
                 android:padding="5dp"
                 android:text="id/displayProtect"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
 
@@ -175,7 +171,6 @@
                 android:layout_toRightOf="@+id/osFIX"
                 android:padding="5dp"
                 android:text="id/os_spec"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
 
@@ -199,7 +194,6 @@
                 android:layout_toRightOf="@+id/chipsetFIX"
                 android:padding="5dp"
                 android:text="id/chipset"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
             <TextView
@@ -222,7 +216,6 @@
                 android:layout_toRightOf="@+id/cpuFIX"
                 android:padding="5dp"
                 android:text="id/cpu"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
 
@@ -246,7 +239,6 @@
                 android:layout_toRightOf="@+id/gpuFIX"
                 android:padding="5dp"
                 android:text="id/gpu"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
 
@@ -294,7 +286,6 @@
             android:layout_toRightOf="@+id/ramFIX"
             android:padding="5dp"
             android:text="id/ram"
-            android:textAllCaps="true"
             android:textColor="@color/magenta"
             android:textSize="15dp" />
 
@@ -318,7 +309,6 @@
             android:layout_toRightOf="@+id/romFIX"
             android:padding="5dp"
             android:text="id/rom"
-            android:textAllCaps="true"
             android:textColor="@color/magenta"
             android:textSize="15dp" />
 
@@ -342,7 +332,6 @@
             android:layout_toRightOf="@+id/expandFIX"
             android:padding="5dp"
             android:text="id/expand"
-            android:textAllCaps="true"
             android:textColor="@color/magenta"
             android:textSize="15dp" />
         </RelativeLayout>
@@ -389,7 +378,6 @@
             android:layout_toRightOf="@+id/rearcamFIX"
             android:padding="5dp"
             android:text="id/rcam"
-            android:textAllCaps="true"
             android:textColor="@color/magenta"
             android:textSize="15dp" />
         <TextView
@@ -412,7 +400,6 @@
             android:layout_toRightOf="@+id/frontcamFIX"
             android:padding="5dp"
             android:text="id/fcam"
-            android:textAllCaps="true"
             android:textColor="@color/magenta"
             android:textSize="15dp" />
         </RelativeLayout>
@@ -459,7 +446,6 @@
                 android:layout_toRightOf="@+id/batteryFIX"
                 android:padding="5dp"
                 android:text="id/batt"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
             <TextView
@@ -482,7 +468,6 @@
                 android:layout_toRightOf="@+id/speakerFIX"
                 android:padding="5dp"
                 android:text="id/speaker"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
             <TextView
@@ -505,7 +490,6 @@
                 android:layout_toRightOf="@+id/nfcFIX"
                 android:padding="5dp"
                 android:text="id/nfc"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
             <TextView
@@ -528,7 +512,6 @@
                 android:layout_toRightOf="@+id/radioFIX"
                 android:padding="5dp"
                 android:text="id/radio"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
 
@@ -551,7 +534,6 @@
                 android:layout_toRightOf="@+id/ipFIX"
                 android:padding="5dp"
                 android:text="id/ipcertified"
-                android:textAllCaps="true"
                 android:textColor="@color/magenta"
                 android:textSize="15dp" />
         </RelativeLayout>

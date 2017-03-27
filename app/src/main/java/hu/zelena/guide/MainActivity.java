@@ -99,6 +99,17 @@ public class MainActivity extends AppCompatActivity {
     private boolean firstFrag = false;
     private Tracker mTracker;
 
+    public static Intent getOpenFacebookIntent(Context context) {
+
+
+        try {
+            context.getPackageManager().getPackageInfo("com.facebook.katana", 0);
+            return new Intent(Intent.ACTION_VIEW, Uri.parse("fb://group/530837540309717"));
+        } catch (Exception e) {
+            return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/groups/530837540309717/"));
+        }
+    }
+
     @SuppressWarnings("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -376,6 +387,13 @@ public class MainActivity extends AppCompatActivity {
         snackbar.show();
     }
 
+    public void openFacebook(View view) {
+
+        Intent i = getOpenFacebookIntent(getApplicationContext());
+        startActivity(i);
+
+    }
+
     public boolean checkInternet() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -522,7 +540,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void phoneListkClick(View view) {
         Intent i = new Intent(this, WebViewActivity.class);
-        i.putExtra("URL", "https://docs.google.com/gview?embedded=true&url=http://www.telekom.hu/static-la/sw/file/Akcios_keszulek_arlista_kijelolt_dijcsomagokhoz.pdf");
+        i.putExtra("URL", "https://docs.google.com/gview?embedded=true&url=http://www.telekom.hu/static-la/sw/file/akcios-keszulek-arlista-mobil-dijcsomagokhoz.pdf");
         i.putExtra("title", "Készülék árlista");
         startActivity(i);
     }
