@@ -14,8 +14,10 @@ import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -26,6 +28,7 @@ import hu.zelena.guide.R;
 import hu.zelena.guide.SearchBrandActivity;
 import hu.zelena.guide.modell.Specs;
 import hu.zelena.guide.util.ActivityHelper;
+import hu.zelena.guide.util.MyScrollView;
 import hu.zelena.guide.util.SpecsReader;
 
 public class SpecsFragment extends Fragment {
@@ -81,6 +84,48 @@ public class SpecsFragment extends Fragment {
                 startActivity(i);
             }
         });
+
+
+       /* final ScrollView scrollView = (ScrollView) rootView.findViewById(R.id.specsScroll);
+
+        scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+            @Override
+            public void onScrollChanged() {
+                fab.hide();
+            }
+        });*/
+
+        final MyScrollView scrollView = (MyScrollView) rootView.findViewById(R.id.specsScroll);
+
+        scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+            @Override
+            public void onScrollChanged() {
+                fab.hide();
+            }
+        });
+
+        scrollView.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    scrollView.startScrollerTask();
+                }
+
+                return false;
+            }
+        });
+
+        scrollView.setOnScrollStoppedListener(new MyScrollView.OnScrollStoppedListener() {
+
+            public void onScrollStopped() {
+
+                fab.show();
+                Log.d("LOG: ", "STOPPED");
+
+            }
+        });
+
 
         return rootView;
     }

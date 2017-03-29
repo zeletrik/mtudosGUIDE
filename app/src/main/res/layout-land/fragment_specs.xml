@@ -1,7 +1,8 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <hu.zelena.guide.util.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/theme_background">
@@ -561,7 +562,7 @@
                     android:textSize="15dp" />
             </RelativeLayout>
         </LinearLayout>
-    </ScrollView>
+    </hu.zelena.guide.util.MyScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/Comparefab"
