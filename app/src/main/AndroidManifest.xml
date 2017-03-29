@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hu.zelena.guide"
-    android:versionCode="9"
+    android:versionCode="10"
     android:versionName="3.0">
 
     <uses-sdk
@@ -103,6 +103,10 @@
             android:name=".CompareActivity"
             android:label="Compare"
             android:screenOrientation="landscape"
+            android:theme="@style/Main2Theme" />
+        <activity
+            android:name=".util.LicenseActivity"
+            android:label="License"
             android:theme="@style/Main2Theme" />
     </application>
 

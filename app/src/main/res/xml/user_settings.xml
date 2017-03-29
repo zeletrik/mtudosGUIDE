@@ -10,8 +10,9 @@
             android:title="Data kímélő mód" />
         <CheckBoxPreference
             android:defaultValue="false"
+            android:enabled="false"
             android:key="offline"
-            android:summary="A készülék adatbázis letöltése"
+            android:summary="Server offline"
             android:title="Offline mód" />
         <Preference
             android:enabled="false"
@@ -51,7 +52,7 @@
                 android:title="Verzió" />
             <Preference
                 android:key="changelog"
-                android:summary="2017-0"
+                android:summary="2017-03-30"
                 android:title="Verziótörténet" />
             <Preference
                 android:key="feedback"
@@ -61,6 +62,10 @@
                 android:key="tutorial"
                 android:summary="Az alkalmazás gyors áttekintése"
                 android:title="Bemutató" />
+            <Preference
+                android:key="license"
+                android:summary="GNU GPL"
+                android:title="License" />
         </PreferenceScreen>
     </PreferenceCategory>
 

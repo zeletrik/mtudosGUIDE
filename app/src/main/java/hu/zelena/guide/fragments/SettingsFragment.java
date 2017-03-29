@@ -31,11 +31,29 @@ import hu.zelena.guide.modell.Version;
 import hu.zelena.guide.util.DBVersionReader;
 import hu.zelena.guide.util.DeleteOfflineDir;
 import hu.zelena.guide.util.DownloadActivity;
+import hu.zelena.guide.util.LicenseActivity;
 
 /**
  * Created by patrik on 2016.11.27..
  */
 
+/**
+ Copyright (C) <2017>  <Patrik G. Zelena>
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ */
 public class SettingsFragment extends PreferenceFragment
         implements SharedPreferences.OnSharedPreferenceChangeListener {
 
@@ -118,8 +136,15 @@ public class SettingsFragment extends PreferenceFragment
             public boolean onPreferenceClick(Preference preference) {
 
                 Intent intent = new Intent(getActivity(), ChangeLogActivity.class);
-                intent.putExtra("darkMode", false);
-                intent.putExtra("tabMode", false);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+        Preference lPref = findPreference("license");
+        lPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getActivity(), LicenseActivity.class);
                 startActivity(intent);
                 return true;
             }

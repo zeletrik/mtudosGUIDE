@@ -4,6 +4,23 @@ package hu.zelena.guide.fragments;
  * Created by patrik on 2016.02.13..
  */
 
+/**
+ * Copyright (C) <2017>  <Patrik G. Zelena>
+ * <p>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * <p>
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * <p>
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -71,6 +88,7 @@ public class SpecsFragment extends Fragment {
             baseURL = "http://users.iit.uni-miskolc.hu/~zelena5/work/telekom/mobiltud/phones/" + brand + "/specs/" + phone;
             new HttpRequestSpecs().execute();
         }
+        if(!brand.equals("tablet")){
 
         fab = (FloatingActionButton) rootView.findViewById(R.id.Comparefab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -84,16 +102,6 @@ public class SpecsFragment extends Fragment {
                 startActivity(i);
             }
         });
-
-
-       /* final ScrollView scrollView = (ScrollView) rootView.findViewById(R.id.specsScroll);
-
-        scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
-            @Override
-            public void onScrollChanged() {
-                fab.hide();
-            }
-        });*/
 
         final MyScrollView scrollView = (MyScrollView) rootView.findViewById(R.id.specsScroll);
 
@@ -119,13 +127,10 @@ public class SpecsFragment extends Fragment {
         scrollView.setOnScrollStoppedListener(new MyScrollView.OnScrollStoppedListener() {
 
             public void onScrollStopped() {
-
                 fab.show();
-                Log.d("LOG: ", "STOPPED");
-
             }
         });
-
+        }
 
         return rootView;
     }

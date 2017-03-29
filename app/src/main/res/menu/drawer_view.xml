@@ -17,9 +17,9 @@
                     android:icon="@drawable/ic_phone"
                     android:title="BlackBerry" />
                 <item
-                    android:id="@+id/coolpad_frag"
+                    android:id="@+id/cat_frag"
                     android:icon="@drawable/ic_phone"
-                    android:title="Coolpad" />
+                    android:title="CAT" />
                 <item
                     android:id="@+id/honor_frag"
                     android:icon="@drawable/ic_phone"

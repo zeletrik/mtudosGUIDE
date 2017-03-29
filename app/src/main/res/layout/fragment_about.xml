@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="15dp"
-            android:text="Release date: -"
+            android:text="Release date: 2017-03-30"
             android:textColor="@android:color/black"
             android:textSize="16dp" />
 

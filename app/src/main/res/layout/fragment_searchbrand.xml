@@ -113,7 +113,7 @@
                 android:background="@drawable/item_bg"
                 android:elevation="8dp"
                 android:onClick="selectBrand"
-                android:tag="Coolpad"
+                android:tag="CAT"
                 android:translationZ="1.5dp">
 
                 <TextView
@@ -121,7 +121,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="15dp"
-                    android:text="Coolpad"
+                    android:text="CAT"
                     android:textColor="#E20074"
                     android:textSize="20dp"
                     android:textStyle="bold" />

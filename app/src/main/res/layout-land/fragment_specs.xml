@@ -3,6 +3,7 @@
     android:layout_height="match_parent">
 
     <hu.zelena.guide.util.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/specsScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/theme_background">
