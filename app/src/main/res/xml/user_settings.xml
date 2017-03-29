@@ -61,6 +61,10 @@
                 android:key="tutorial"
                 android:summary="Az alkalmazás gyors áttekintése"
                 android:title="Bemutató" />
+            <Preference
+                android:key="license"
+                android:summary="GNU GPL"
+                android:title="License" />
         </PreferenceScreen>
     </PreferenceCategory>
 

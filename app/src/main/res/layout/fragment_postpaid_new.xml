@@ -147,7 +147,6 @@
                 android:layout_toRightOf="@+id/other1FIX"
                 android:padding="5dp"
                 android:text="Ha csak mobilinternetet szeretnél, akkor a 4, a 10 és a 30 GB-os Net csomagok közül választhatsz."
-                android:textAllCaps="true"
                 android:textColor="#E20074"
                 android:textSize="15dp" />
         </RelativeLayout>
@@ -266,7 +265,6 @@
                 android:layout_toRightOf="@+id/other2FIX"
                 android:padding="5dp"
                 android:text="80 perc vagy SMS, belföldi hálozatokba itthon és EU roaming esetén."
-                android:textAllCaps="true"
                 android:textColor="#E20074"
                 android:textSize="15dp" />
         </RelativeLayout>
@@ -385,7 +383,6 @@
                 android:layout_toRightOf="@+id/other3FIX"
                 android:padding="5dp"
                 android:text="-"
-                android:textAllCaps="true"
                 android:textColor="#E20074"
                 android:textSize="15dp" />
         </RelativeLayout>
@@ -503,8 +500,7 @@
                 android:layout_below="@+id/callout4FIX"
                 android:layout_toRightOf="@+id/other4FIX"
                 android:padding="5dp"
-                android:text="itthon és EU roaming esetén is."
-                android:textAllCaps="true"
+                android:text="Itthon és EU roaming esetén is."
                 android:textColor="#E20074"
                 android:textSize="15dp" />
         </RelativeLayout>
@@ -623,11 +619,8 @@
                 android:layout_toRightOf="@+id/other5FIX"
                 android:padding="5dp"
                 android:text="Itthon és EU roaming esetén is."
-                android:textAllCaps="true"
                 android:textColor="#E20074"
                 android:textSize="15dp" />
         </RelativeLayout>
-
-
     </LinearLayout>
 </ScrollView>

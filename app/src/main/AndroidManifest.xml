@@ -104,6 +104,10 @@
             android:label="Compare"
             android:screenOrientation="landscape"
             android:theme="@style/Main2Theme" />
+        <activity
+            android:name=".util.LicenseActivity"
+            android:label="License"
+            android:theme="@style/Main2Theme" />
     </application>
 
 </manifest>
